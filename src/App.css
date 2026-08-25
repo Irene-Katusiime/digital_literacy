@@ -571,3 +571,144 @@ h2 {
   color: #475569;
   line-height: 1.5;
 }
+
+
+/* ============================= */
+/* USSD SIMULATOR */
+/* ============================= */
+
+.offline-option {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.offline-icon {
+  font-size: 32px;
+}
+
+.offline-content {
+  flex: 1;
+}
+
+.offline-content h3 {
+  margin: 0 0 4px;
+}
+
+.offline-content p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.ussd-button {
+  padding: 11px 16px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ussd-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ussd-header {
+  text-align: center;
+  margin: 25px auto;
+}
+
+.ussd-large-icon {
+  font-size: 50px;
+}
+
+.phone-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.phone-screen {
+  width: 330px;
+  min-height: 520px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #111827;
+  color: #f8fafc;
+  border-radius: 25px;
+  border: 8px solid #374151;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.network-bar {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  color: #d1d5db;
+  font-size: 12px;
+}
+
+.ussd-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.ussd-menu {
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+.phone-screen input,
+.phone-screen textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #6b7280;
+  border-radius: 8px;
+  background: #1f2937;
+  color: white;
+  font-family: inherit;
+}
+
+.phone-screen textarea {
+  resize: none;
+}
+
+.phone-screen button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.phone-screen .ussd-secondary {
+  background: #4b5563;
+}
+
+.ussd-demo-note {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 12px;
+  color: #64748b;
+  text-align: center;
+  font-size: 13px;
+}
