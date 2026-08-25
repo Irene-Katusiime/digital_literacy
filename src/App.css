@@ -60,3 +60,514 @@ h2 {
   color: #666;
   font-size: 15px;
 }
+
+/* ============================= */
+/* SCAM CHECK */
+/* ============================= */
+
+.scam-header {
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.scam-icon {
+  font-size: 55px;
+}
+
+.scam-card {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.scam-card label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+}
+
+.scam-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+}
+
+.scam-card textarea:focus {
+  border-color: #2563eb;
+}
+
+.privacy-note {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.scam-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.primary-button,
+.example-button,
+.secondary-button,
+.back-button {
+  border: none;
+  border-radius: 10px;
+  padding: 13px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+.primary-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.example-button {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.secondary-button {
+  background: white;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  margin-top: 20px;
+}
+
+.back-button {
+  background: transparent;
+  color: #2563eb;
+  padding-left: 0;
+}
+
+.checking-card {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.loading-icon {
+  font-size: 45px;
+}
+
+.scam-result {
+  max-width: 700px;
+  margin: 25px auto;
+}
+
+.risk-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.risk-high {
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+}
+
+.risk-suspicious {
+  background: #fff7ed;
+  border: 2px solid #fed7aa;
+}
+
+.risk-caution {
+  background: #fefce8;
+  border: 2px solid #fde68a;
+}
+
+.risk-low {
+  background: #f0fdf4;
+  border: 2px solid #bbf7d0;
+}
+
+.risk-icon {
+  font-size: 40px;
+}
+
+.risk-label {
+  color: #64748b;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.risk-card h2 {
+  margin: 5px 0;
+}
+
+.risk-card p {
+  color: #475569;
+  margin-bottom: 0;
+}
+
+.risk-score {
+  margin-left: auto;
+  text-align: center;
+  min-width: 70px;
+}
+
+.risk-score strong {
+  display: block;
+  font-size: 32px;
+}
+
+.risk-score span {
+  color: #64748b;
+}
+
+.warning-section,
+.safety-actions-card {
+  margin-top: 25px;
+  padding: 25px;
+  background: white;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.warning-section h2,
+.safety-actions-card h2 {
+  margin-top: 0;
+}
+
+.warning-item {
+  display: flex;
+  gap: 15px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.warning-item:last-child {
+  border-bottom: none;
+}
+
+.warning-icon {
+  font-size: 28px;
+}
+
+.warning-item h3 {
+  margin: 0 0 5px;
+  color: #222;
+}
+
+.warning-item p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.safety-action {
+  padding: 15px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.safety-action:last-child {
+  border-bottom: none;
+}
+
+.safety-action strong {
+  color: #222;
+}
+
+.safety-action p {
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+.no-warning {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 15px;
+  background: #f0fdf4;
+  border-radius: 10px;
+}
+
+.no-warning span {
+  font-size: 25px;
+}
+
+.disclaimer {
+  max-width: 650px;
+  margin: 20px auto;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ============================= */
+/* RISK METER */
+/* ============================= */
+
+.risk-card {
+  padding: 25px;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.risk-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.risk-heading {
+  flex: 1;
+}
+
+.risk-icon {
+  font-size: 42px;
+}
+
+.risk-label {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.risk-heading h2 {
+  margin: 5px 0 0;
+  font-size: 25px;
+}
+
+.risk-score {
+  text-align: center;
+}
+
+.risk-score strong {
+  display: block;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.risk-score span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.risk-description {
+  margin: 20px 0;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.risk-meter {
+  width: 100%;
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.risk-meter-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.8s ease;
+}
+
+.risk-meter-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  color: #64748b;
+  font-size: 12px;
+}
+.risk-high .risk-meter-fill {
+  background: #dc2626;
+}
+
+.risk-suspicious .risk-meter-fill {
+  background: #f97316;
+}
+
+.risk-caution .risk-meter-fill {
+  background: #eab308;
+}
+
+.risk-low .risk-meter-fill {
+  background: #22c55e;
+}
+
+/* ============================= */
+/* MESSAGE ANALYSIS */
+/* ============================= */
+
+.message-preview {
+  margin-top: 25px;
+  padding: 25px;
+  background: white;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.message-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.message-preview-header h2 {
+  margin: 0;
+}
+
+.message-preview-header span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.message-content {
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.suspicious-highlight {
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: #fef3c7;
+  color: #92400e;
+  font-weight: 700;
+}
+
+.highlight-legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.legend-highlight {
+  padding: 3px 6px;
+  border-radius: 4px;
+  background: #fef3c7;
+  color: #92400e;
+  font-weight: 700;
+}
+
+.scam-category {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 5px 10px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ============================= */
+/* CATEGORY SAFETY ADVICE */
+/* ============================= */
+
+.advice-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.advice-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  border-radius: 14px;
+  font-size: 28px;
+}
+
+.advice-label {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.advice-header h2 {
+  margin: 5px 0 0;
+  font-size: 20px;
+}
+
+.advice-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.advice-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.advice-item:last-child {
+  border-bottom: none;
+}
+
+.advice-number {
+  min-width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.advice-item p {
+  margin: 3px 0 0;
+  color: #475569;
+  line-height: 1.5;
+}
