@@ -503,8 +503,6 @@ function App() {
           <button
             className="back-button"
             onClick={() => {
-              clearTimeout(scamTimerRef.current);
-              setIsCheckingScam(false);
               setPage("home");
               setScamResult(null);
             }}
