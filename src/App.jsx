@@ -1,8 +1,15 @@
 import { useState } from "react";
 import "./App.css";
+import ChatAssistant from "./ChatAssistant";
 
 function App() {
   const [page, setPage] = useState("home");
+  const [initialPrompt, setInitialPrompt] = useState("");
+
+  const openAssistant = (promptText = "") => {
+    setInitialPrompt(promptText);
+    setPage("assistant");
+  };
 
   return (
     <div className="app">
@@ -11,7 +18,6 @@ function App() {
       {page === "home" ? (
         <>
           <h1>Digital Buddy</h1>
-
           <p className="subtitle">
             Learn, stay safe, and understand technology.
           </p>
@@ -19,7 +25,6 @@ function App() {
           <h2>What would you like to do?</h2>
 
           <div className="cards">
-
             <button
               className="card"
               onClick={() => setPage("learn")}
@@ -29,18 +34,23 @@ function App() {
               <p>Learn how to use technology safely.</p>
             </button>
 
-            <button className="card">
+            <button 
+              className="card"
+              onClick={() => openAssistant("I have a suspicious text/message I'd like you to check for a potential scam.")}
+            >
               <div className="icon">🛡️</div>
               <h3>Check for Scams</h3>
               <p>Check suspicious messages.</p>
             </button>
 
-            <button className="card">
+            <button 
+              className="card"
+              onClick={() => openAssistant("")}
+            >
               <div className="icon">🤖</div>
               <h3>Ask Digital Assistant</h3>
               <p>Ask questions about technology.</p>
             </button>
-
           </div>
         </>
 
@@ -53,35 +63,24 @@ function App() {
           </button>
 
           <h1>📚 Learn Digital Skills</h1>
-
-          <p>
-            Choose a topic you would like to learn.
-          </p>
+          <p>Choose a topic you would like to learn.</p>
 
           <button
             className="lesson-button"
             onClick={() => setPage("cybersecurity")}
           >
             <h3>🔐 Cybersecurity</h3>
-            <p>
-              Learn how to protect your accounts and personal information.
-            </p>
+            <p>Learn how to protect your accounts and personal information.</p>
           </button>
 
           <h3>📧 Email</h3>
-
-          <p>
-            Learn how to create and use email.
-          </p>
+          <p>Learn how to create and use email.</p>
 
           <h3>🤖 Artificial Intelligence</h3>
-
-          <p>
-            Learn how to use AI safely and effectively.
-          </p>
+          <p>Learn how to use AI safely and effectively.</p>
         </>
 
-      ) : (
+      ) : page === "cybersecurity" ? (
 
         /* CYBERSECURITY PAGE */
         <>
@@ -90,47 +89,54 @@ function App() {
           </button>
 
           <h1>🔐 Cybersecurity</h1>
-
-          <p>
-            Learn how to protect yourself when using technology and the internet.
-          </p>
+          <p>Learn how to protect yourself when using technology and the internet.</p>
 
           <h2>How to Stay Safe Online</h2>
 
           <h3>🔑 Use Strong Passwords</h3>
-
           <p>
             Create passwords that are difficult for other people to guess.
             Avoid using simple information such as your name or birthday.
           </p>
 
           <h3>🚫 Don't Share Your PIN</h3>
-
-          <p>
-            Never share your mobile money PIN, bank PIN, or password with anyone.
-          </p>
+          <p>Never share your mobile money PIN, bank PIN, or password with anyone.</p>
 
           <h3>🔗 Be Careful With Links</h3>
-
-          <p>
-            Don't click suspicious links sent through SMS, WhatsApp, or email.
-          </p>
+          <p>Don't click suspicious links sent through SMS, WhatsApp, or email.</p>
 
           <h3>👤 Verify People</h3>
-
           <p>
             Before sending money or personal information, make sure you know
             who you are dealing with.
           </p>
 
           <h2>🎯 Ready to Test Yourself?</h2>
-
           <button className="primary-button">
             Take Quiz
           </button>
         </>
+
+      ) : (
+
+        /* DEDICATED ASSISTANT / SCAM CHECKER PAGE */
+        <>
+          <button onClick={() => setPage("home")}>
+            ← Back
+          </button>
+
+          <h1>🤖 Digital Safety Assistant</h1>
+          <p>Ask any tech question or paste a suspicious message to check for scams.</p>
+
+          <div style={{ marginTop: "20px", display: "flex", justifyContent: "center" }}>
+            {/* Embedded Inline Mode */}
+            <ChatAssistant initialPrompt={initialPrompt} isEmbedded={true} />
+          </div>
+        </>
       )}
 
+      {/* Persistent Floating Widget (Hidden when on dedicated assistant page) */}
+      {page !== "assistant" && <ChatAssistant />}
     </div>
   );
 }
