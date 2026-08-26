@@ -1,8 +1,15 @@
 import { useState } from "react";
 import "./App.css";
+import ChatAssistant from "./ChatAssistant";
 
 function App() {
   const [page, setPage] = useState("home");
+  const [initialPrompt, setInitialPrompt] = useState("");
+
+  const openAssistant = (promptText = "") => {
+    setInitialPrompt(promptText);
+    setPage("assistant");
+  };
 
   // Quiz state
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -544,7 +551,6 @@ function App() {
       {page === "home" ? (
         <>
           <h1>Digital Buddy</h1>
-
           <p className="subtitle">
             Learn, stay safe, and understand technology.
           </p>
@@ -552,6 +558,10 @@ function App() {
           <h2>What would you like to do?</h2>
 
           <div className="cards">
+            <button
+              className="card"
+              onClick={() => setPage("learn")}
+            >
             <button className="card" onClick={() => setPage("learn")}>
               <div className="icon">📚</div>
 
@@ -560,6 +570,10 @@ function App() {
               <p>Learn how to use technology safely.</p>
             </button>
 
+            <button 
+              className="card"
+              onClick={() => openAssistant("I have a suspicious text/message I'd like you to check for a potential scam.")}
+            >
             <button className="card" onClick={() => setPage("scamCheck")}>
               <div className="icon">🛡️</div>
 
@@ -568,7 +582,10 @@ function App() {
               <p>Check suspicious messages.</p>
             </button>
 
-            <button className="card">
+            <button 
+              className="card"
+              onClick={() => openAssistant("")}
+            >
               <div className="icon">🤖</div>
 
               <h3>Ask Digital Assistant</h3>
@@ -1104,7 +1121,6 @@ function App() {
           <h2>How to Stay Safe Online</h2>
 
           <h3>🔑 Use Strong Passwords</h3>
-
           <p>
             Create passwords that are difficult for other people to guess. Avoid
             using simple information such as your name or birthday.
@@ -1118,13 +1134,9 @@ function App() {
           </p>
 
           <h3>🔗 Be Careful With Links</h3>
-
-          <p>
-            Don't click suspicious links sent through SMS, WhatsApp, or email.
-          </p>
+          <p>Don't click suspicious links sent through SMS, WhatsApp, or email.</p>
 
           <h3>👤 Verify People</h3>
-
           <p>
             Before sending money or personal information, make sure you know who
             you are dealing with.
