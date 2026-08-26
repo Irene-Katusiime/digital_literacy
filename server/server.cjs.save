@@ -1,0 +1,658 @@
+const express = require("express");
+
+const app = express();
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+const PORT = 3000;
+
+/*
+|--------------------------------------------------------------------------
+| Scam Analyzer
+|--------------------------------------------------------------------------
+*/
+
+function analyzeScamMessage(message) {
+  const text = message.toLowerCase();
+
+  let score = 0;
+  const warningSigns = [];
+
+  // URGENCY
+  if (
+    text.includes("urgent") ||
+    text.includes("immediately") ||
+    text.includes("within") ||
+    text.includes("now") ||
+    text.includes("hurry") ||
+    text.includes("minutes")
+  ) {
+    score += 20;
+
+    warningSigns.push(
+      "Creates urgency"
+    );
+  }
+
+  // SENSITIVE INFORMATION
+  if (
+    text.includes("pin") ||
+    text.includes("otp") ||
+    text.includes("password") ||
+    text.includes("passcode") ||
+    text.includes("verification code")
+  ) {
+    score += 35;
+
+    warningSigns.push(
+      "Requests sensitive information"
+    );
+  }
+
+  // MONEY
+  if (
+    text.includes("send money") ||
+    text.includes("pay") ||
+    text.includes("payment") ||
+    text.includes("transfer") ||
+    text.includes("fee") ||
+    text.includes("deposit")
+  ) {
+    score += 25;
+
+    warningSigns.push(
+      "Requests money"
+    );
+  }
+
+  // PRIZES
+  if (
+    text.includes("won") ||
+    text.includes("winner") ||
+    text.includes("prize") ||
+    text.includes("reward") ||
+    text.includes("congratulations") ||
+    text.includes("lottery")
+  ) {
+    score += 20;
+
+    warningSigns.push(
+      "Unexpected reward"
+    );
+  }
+
+  // LINKS
+  if (
+    text.includes("http://") ||
+    text.includes("https://") ||
+    text.includes("www.") ||
+    text.includes(".com/")
+  ) {
+    score += 15;
+
+    warningSigns.push(
+      "Contains a suspicious link"
+    );
+  }
+
+  // THREATS
+  if (
+    text.includes("account will be closed") ||
+    text.includes("account will be blocked") ||
+    text.includes("arrest") ||
+    text.includes("police") ||
+    text.includes("legal action")
+  ) {
+    score += 20;
+
+    warningSigns.push(
+      "Uses fear or threats"
+    );
+  }
+
+  score = Math.min(score, 100);
+
+  let riskLevel = "LOW";
+
+  if (score >= 70) {
+    riskLevel = "HIGH";
+  } else if (score >= 40) {
+    riskLevel = "SUSPICIOUS";
+  } else if (score >= 20) {
+    riskLevel = "CAUTION";
+  }
+
+  /*
+  |--------------------------------------------------------------------------
+  | Scam Category
+  |--------------------------------------------------------------------------
+  */
+
+  let scamCategory = "No obvious scam detected";
+
+  if (
+    text.includes("mobile money") ||
+    text.includes("momo") ||
+    text.includes("airtel money") ||
+    text.includes("mtn") ||
+    text.includes("withdraw") ||
+    text.includes("deposit")
+  ) {
+    scamCategory = "Mobile Money Scam";
+
+  } else if (
+    text.includes("job") ||
+    text.includes("employment") ||
+    text.includes("vacancy") ||
+    text.includes("salary") ||
+    text.includes("work from home") ||
+    text.includes("interview")
+  ) {
+    scamCategory = "Job Scam";
+
+  } else if (
+    text.includes("scholarship") ||
+    text.includes("university") ||
+    text.includes("school") ||
+    text.includes("admission") ||
+    text.includes("tuition") ||
+    text.includes("education")
+  ) {
+    scamCategory = "Education Scam";
+
+  } else if (
+    text.includes("love") ||
+    text.includes("relationship") ||
+    text.includes("girlfriend") ||
+    text.includes("boyfriend") ||
+    text.includes("romance") ||
+    text.includes("marriage")
+  ) {
+    scamCategory = "Romance Scam";
+
+  } else if (
+    text.includes("prize") ||
+    text.includes("winner") ||
+    text.includes("won") ||
+    text.includes("lottery") ||
+    text.includes("reward") ||
+    text.includes("congratulations")
+  ) {
+    scamCategory = "Prize Scam";
+
+  } else if (
+    text.includes("account") ||
+    text.includes("bank") ||
+    text.includes("password") ||
+    text.includes("otp") ||
+    text.includes("verification code") ||
+    text.includes("login")
+  ) {
+    scamCategory = "Account / Identity Scam";
+
+  } else if (
+    text.includes("police") ||
+    text.includes("arrest") ||
+    text.includes("court") ||
+    text.includes("government") ||
+    text.includes("tax")
+  ) {
+    scamCategory = "Impersonation Scam";
+  }
+
+  return {
+    score,
+    riskLevel,
+    scamCategory,
+    warningSigns
+  };
+
+}
+
+function analyzeScamMessage(message) {
+  const text = message.toLowerCase().trim();
+
+  let score = 0;
+  const warningSigns = [];
+  let scamCategory = "No obvious scam detected";
+
+  function addScore(points, warning) {
+    score += points;
+
+    if (!warningSigns.includes(warning)) {
+      warningSigns.push(warning);
+    }
+  }
+
+  // URGENCY
+  if (
+    /\b(urgent|immediately|now|hurry|quickly|asap|minutes|today|deadline)\b/.test(text)
+  ) {
+    addScore(20, "Creates urgency");
+  }
+
+  // SENSITIVE INFORMATION
+  if (
+    /\b(pin|otp|password|passcode|verification code|security code|secret code)\b/.test(text)
+  ) {
+    addScore(35, "Requests sensitive information");
+  }
+
+  // MONEY
+  if (
+    /\b(send money|send cash|pay|payment|transfer|fee|deposit|registration fee|processing fee|activation fee|withdrawal fee)\b/.test(text)
+  ) {
+    addScore(25, "Requests money");
+  }
+
+  // PRIZE / PROMOTION
+  if (
+    /\b(won|winner|prize|reward|lottery|jackpot|promotion|promotional|congratulations|selected|claim your|you have won)\b/.test(text)
+  ) {
+    addScore(20, "Promises an unexpected reward");
+    scamCategory = "Prize / Promotion Scam";
+  }
+
+  // MOBILE MONEY
+  if (
+    /\b(mobile money|mobilemoney|momo|airtel money|airtelmoney|mtn|mtn momo|cashout|withdraw|deposit)\b/.test(text)
+  ) {
+    scamCategory = "Mobile Money Scam";
+  }
+
+  // JOB SCAMS
+  if (
+    /\b(job|employment|vacancy|salary|work from home|interview|recruitment|hiring|job opportunity|employment opportunity)\b/.test(text)
+  ) {
+    scamCategory = "Job Scam";
+
+    if (
+      /\b(fee|pay|payment|registration|deposit|processing)\b/.test(text)
+    ) {
+      addScore(30, "Requests payment for a job opportunity");
+    }
+  }
+
+  // EDUCATION / SCHOLARSHIP
+  if (
+    /\b(scholarship|university|school|admission|tuition|education|student|bursary|study abroad|academic)\b/.test(text)
+  ) {
+    scamCategory = "Education Scam";
+
+    if (
+      /\b(fee|pay|payment|deposit|registration)\b/.test(text)
+    ) {
+      addScore(25, "Requests payment for an education opportunity");
+    }
+  }
+
+  // ROMANCE
+  if (
+    /\b(love|relationship|girlfriend|boyfriend|romance|marriage|husband|wife|lover|dating)\b/.test(text)
+  ) {
+    scamCategory = "Romance Scam";
+
+    if (
+      /\b(send money|money|transfer|fee|hospital|emergency|travel)\b/.test(text)
+    ) {
+      addScore(30, "Uses a relationship to request money");
+    }
+  }
+
+  // LOAN / INVESTMENT
+  if (
+    /\b(loan|quick loan|instant loan|investment|invest|forex|crypto|cryptocurrency|profit|returns|double your money|guaranteed returns|funding|capital)\b/.test(text)
+  ) {
+    scamCategory = "Loan / Investment Scam";
+
+    if (
+      /\b(fee|deposit|registration|activation|processing|send money|pay)\b/.test(text)
+    ) {
+      addScore(30, "Requests upfront payment for a financial service");
+    }
+
+    if (
+      /\b(guaranteed|double|triple|risk free|no risk|easy money)\b/.test(text)
+    ) {
+      addScore(20, "Promises unrealistic financial returns");
+    }
+  }
+
+  // ACCOUNT / IDENTITY
+  if (
+    /\b(account|bank|password|otp|verification code|login|sign in|security|wallet)\b/.test(text)
+  ) {
+    if (scamCategory === "No obvious scam detected") {
+      scamCategory = "Account / Identity Scam";
+    }
+  }
+
+  // SUSPICIOUS LINKS
+  if (
+    /(https?:\/\/|www\.|bit\.ly|tinyurl\.com|t\.co\/|\.com\/|\.net\/|\.org\/)/.test(text)
+  ) {
+    addScore(20, "Contains a suspicious link");
+
+    if (scamCategory === "No obvious scam detected") {
+      scamCategory = "Phishing Scam";
+    }
+  }
+
+  // IMPERSONATION / THREATS
+  if (
+    /\b(police|arrest|court|government|tax|uganda revenue authority|ura|airtel|mtn|bank manager|official|authority)\b/.test(text)
+  ) {
+    if (
+      /\b(send money|pay|otp|pin|password|account|immediately|arrest|blocked|closed)\b/.test(text)
+    ) {
+      scamCategory = "Impersonation Scam";
+      addScore(25, "May be impersonating an authority or organization");
+    }
+  }
+
+  // THREATS
+  if (
+    /\b(account will be closed|account will be blocked|account has been blocked|arrest|police|legal action|court action|you will be arrested|your account will be suspended)\b/.test(text)
+  ) {
+    addScore(20, "Uses fear or threats");
+  }
+
+  // FAKE CUSTOMER CARE
+  if (
+    /\b(customer care|support agent|help desk|technical support|customer service)\b/.test(text) &&
+    /\b(pin|otp|password|send money|pay|verification)\b/.test(text)
+  ) {
+    scamCategory = "Customer Care Scam";
+    addScore(
+      30,
+      "Requests sensitive information while posing as customer support"
+    );
+  }
+
+  // FINAL SCORE
+  score = Math.min(score, 100);
+
+  let riskLevel = "LOW";
+
+  if (score >= 70) {
+    riskLevel = "HIGH";
+  } else if (score >= 40) {
+    riskLevel = "SUSPICIOUS";
+  } else if (score >= 20) {
+    riskLevel = "CAUTION";
+  }
+
+  // ADVICE
+  let advice =
+    "Do not share PINs, OTPs, passwords or money.";
+
+  switch (scamCategory) {
+    case "Mobile Money Scam":
+      advice =
+        "Never share your mobile-money PIN or OTP.";
+      break;
+
+    case "Job Scam":
+      advice =
+        "Never pay money to receive a job. Verify the employer independently.";
+      break;
+
+    case "Education Scam":
+      advice =
+        "Verify the school, scholarship or university using official contacts.";
+      break;
+
+    case "Romance Scam":
+      advice =
+        "Do not send money to someone you only know online.";
+      break;
+
+    case "Prize / Promotion Scam":
+      advice =
+        "Do not pay to claim an unexpected prize or promotion.";
+      break;
+
+    case "Loan / Investment Scam":
+      advice =
+        "Verify the financial provider and be suspicious of upfront fees or guaranteed profits.";
+      break;
+
+    case "Account / Identity Scam":
+      advice =
+        "Never share passwords, PINs or OTPs.";
+      break;
+
+    case "Phishing Scam":
+      advice =
+        "Do not click suspicious links. Visit the official website directly.";
+      break;
+
+    case "Impersonation Scam":
+      advice =
+        "Contact the organization through an official channel before taking action.";
+      break;
+
+    case "Customer Care Scam":
+      advice =
+        "Real customer-care agents should not ask for your PIN or OTP.";
+      break;
+  }
+
+  return {
+    score,
+    riskLevel,
+    scamCategory,
+    warningSigns,
+    advice
+  };
+}
+
+/*
+|--------------------------------------------------------------------------
+| USSD Endpoint
+|--------------------------------------------------------------------------
+*/
+
+app.post("/ussd", (req, res) => {
+
+  const {
+    sessionId,
+    phoneNumber,
+    serviceCode,
+    text
+  } = req.body;
+
+  console.log("USSD request:");
+  console.log({
+    sessionId,
+    phoneNumber,
+    serviceCode,
+    text
+  });
+
+  const input = text || "";
+
+  /*
+  |--------------------------------------------------------------------------
+  | MAIN MENU
+  |--------------------------------------------------------------------------
+  */
+
+  if (input === "") {
+
+    return res.send(
+`CON DIGITAL BUDDY
+Welcome to Safety Check.
+
+1. Check a message
+2. Safety tips
+3. Exit`
+    );
+
+  }
+
+  /*
+  |--------------------------------------------------------------------------
+  | SAFETY TIPS
+  |--------------------------------------------------------------------------
+  */
+
+  if (input === "2") {
+
+    return res.send(
+`END SAFETY TIPS
+
+- Never share your PIN or OTP.
+- Do not send money to strangers.
+- Verify suspicious messages.
+- Avoid unknown links.
+- Contact organizations using official channels.`
+    );
+
+  }
+
+  /*
+  |--------------------------------------------------------------------------
+  | EXIT
+  |--------------------------------------------------------------------------
+  */
+
+  if (input === "3") {
+
+    return res.send(
+`END Thank you for using Digital Buddy.
+
+Stay safe online.`
+    );
+
+  }
+
+  /*
+  |--------------------------------------------------------------------------
+  | CHECK MESSAGE
+  |--------------------------------------------------------------------------
+  */
+
+  if (input === "1") {
+
+    return res.send(
+`CON CHECK MESSAGE
+
+Enter the suspicious message:`
+    );
+
+  }
+
+  /*
+  |--------------------------------------------------------------------------
+  | MESSAGE ANALYSIS
+  |-----------------------------------------------------------------------
+    const message = input.substring(2);
+
+    if (!message.trim()) {
+
+      return res.send(
+`END No message was provided.
+
+Please try again.`
+      );
+
+    }
+
+    const result = analyzeScamMessage(message);
+
+   let advice =
+      "Do not share PINs, OTPs, passwords or money.";
+
+    if (result.scamCategory === "Mobile Money Scam") {
+
+      advice =
+        "Never share your mobile-money PIN or OTP.";
+
+    } else if (result.scamCategory === "Job Scam") {
+
+      advice =
+        "Never pay money to receive a job.";
+
+    } else if (result.scamCategory === "Education Scam") {
+
+      advice =
+        "Verify the school or university directly.";
+
+    } else if (result.scamCategory === "Romance Scam") {
+
+      advice =
+        "Do not send money to someone you only know online.";
+
+   
+
+    const warnings =
+      result.warningSigns.length > 0
+        ? result.warningSigns
+            .slice(0, 3)
+            .map((warning) => `- ${warning}`)
+            .join("\n")
+        : "- No obvious warning signs detected.";
+
+    return res.send(
+`END DIGITAL BUDDY RESULT
+
+Risk: ${result.riskLevel}
+Score: ${result.score}/100
+
+Type:
+${result.scamCategory}
+
+Warning signs:
+${warnings}
+
+Advice:
+${advice}`
+    );
+
+  }
+
+  /*
+  |--------------------------------------------------------------------------
+  | INVALID OPTION
+  |--------------------------------------------------------------------------
+  */
+
+  return res.send(
+`END Invalid option.
+
+Please dial the service again.`
+  );
+
+});
+
+
+/*
+|--------------------------------------------------------------------------
+| Test Route
+|--------------------------------------------------------------------------
+*/
+
+app.get("/", (req, res) => {
+
+  res.send(
+    "Digital Buddy USSD server is running."
+  );
+
+});
+
+
+/*
+|--------------------------------------------------------------------------
+| Start Server
+|--------------------------------------------------------------------------
+*/
+
+app.listen(PORT, () => {
+
+  console.log(
+    `Digital Buddy USSD server running on http://localhost:${PORT}`
+  );
+
+});
