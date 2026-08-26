@@ -866,18 +866,56 @@ function App() {
             className="back-button"
             onClick={() => {
               resetUSSD();
-              setPage("scamCheck");
+              setPage("home");
             }}
           >
-            ← Back to Safety Check
+            ← Back to Home
           </button>
 
+          {/* <div className="ussd-header">
+            <div className="ussd-large-icon">📱</div> */}
+
+            {/* <h1>Offline Safety Check</h1>
+
+            <p>Check suspicious messages without using internet data.</p> */}
+
+            {/* {ussdStep === "learnMenu" ? (
+            <>
+              <h1>📚 Offline Learning</h1>
+              <p>Learn digital skills without using internet data.</p>
+            </>
+          ) : (
+            <>
+              <h1>📱 Offline Safety Check</h1>
+              <p>Check suspicious messages without using internet data.</p>
+            </>
+          )}
+          </div> */}
+
           <div className="ussd-header">
-            <div className="ussd-large-icon">📱</div>
+            <div className="ussd-large-icon">
+              {["learnMenu", "ussdCybersecurity", "ussdEmail", "ussdAI"].includes(
+                ussdStep
+              )
+                ? "📚"
+                : "📱"}
+            </div>
 
-            <h1>Offline Safety Check</h1>
+            {["learnMenu", "ussdCybersecurity", "ussdEmail", "ussdAI"].includes(
+              ussdStep
+            ) ? (
+              <>
+                <h1>Offline Learning</h1>
 
-            <p>Check suspicious messages without using internet data.</p>
+                <p>Learn digital skills without using internet data.</p>
+              </>
+            ) : (
+              <>
+                <h1>Offline Safety Check</h1>
+
+                <p>Check suspicious messages without using internet data.</p>
+              </>
+            )}
           </div>
 
           <div className="phone-container">
@@ -933,6 +971,125 @@ function App() {
                   </button>
                 </>
               )}
+
+              {/* LEARNING MENU */}
+
+{ussdStep === "learnMenu" && (
+  <>
+    <div className="ussd-title">LEARN DIGITAL SKILLS</div>
+
+    <p>Choose a topic:</p>
+
+    <div className="ussd-menu">
+      <p>1. Cybersecurity</p>
+      <p>2. Email</p>
+      <p>3. Artificial Intelligence</p>
+      {/* <p>4. Back</p> */}
+    </div>
+
+    <input
+      type="text"
+      inputMode="numeric"
+      maxLength="1"
+      value={ussdInput}
+      onChange={(event) => setUssdInput(event.target.value)}
+      placeholder="Enter option"
+    />
+
+    <button
+      onClick={() => {
+        if (ussdInput === "1") {
+          setUssdStep("ussdCybersecurity");
+          setUssdInput("");
+        } else if (ussdInput === "2") {
+          setUssdStep("ussdEmail");
+          setUssdInput("");
+        } else if (ussdInput === "3") {
+          setUssdStep("ussdAI");
+          setUssdInput("");
+        } else if (ussdInput === "4") {
+          setUssdStep("menu");
+          setUssdInput("");
+        }
+      }}
+    >
+      Send
+    </button>
+  </>
+)}
+
+{/* USSD CYBERSECURITY LESSON */}
+
+{ussdStep === "ussdCybersecurity" && (
+  <>
+    <div className="ussd-title">CYBERSECURITY</div>
+
+    <p>🔐 Use strong passwords.</p>
+
+    <p>🚫 Never share your PIN or password.</p>
+
+    <p>🔗 Don't click suspicious links.</p>
+
+    <p>👤 Verify people before sending money.</p>
+
+    <button onClick={() => setUssdStep("learnMenu")}>
+      Back
+    </button>
+  </>
+)}
+
+
+{/* USSD EMAIL LESSON */}
+
+{ussdStep === "ussdEmail" && (
+  <>
+    <div className="ussd-title">EMAIL</div>
+
+    <p>📧 Use Compose to write a new email.</p>
+
+    <p>📩 Check the recipient's email address before sending.</p>
+
+    <p>📎 Be careful with attachments from unknown senders.</p>
+
+    <p>🔒 Never share your email password.</p>
+
+    <button
+      onClick={() => {
+        setUssdStep("learnMenu");
+        setUssdInput("");
+      }}
+    >
+      Back
+    </button>
+  </>
+)}
+
+{/* USSD ARTIFICIAL INTELLIGENCE LESSON */}
+
+{ussdStep === "ussdAI" && (
+  <>
+    <div className="ussd-title">ARTIFICIAL INTELLIGENCE</div>
+
+    <p>🤖 AI helps computers perform intelligent tasks.</p>
+
+    <p>💬 AI can answer questions and help people learn.</p>
+
+    <p>✍️ AI can help with writing and generating ideas.</p>
+
+    <p>🔍 Always verify important information from AI.</p>
+
+    <p>🔒 Never share passwords, PINs, or private information with AI.</p>
+
+    <button
+      onClick={() => {
+        setUssdStep("learnMenu");
+        setUssdInput("");
+      }}
+    >
+      Back
+    </button>
+  </>
+)}
 
               {/* MESSAGE */}
 
@@ -1081,6 +1238,17 @@ function App() {
           <h1>📚 Learn Digital Skills</h1>
 
           <p>Choose a topic you would like to learn.</p>
+
+          <button
+            className="ussd-button"
+            onClick={() => {
+              resetUSSD();
+              setPage("ussd");
+              setUssdStep("learnMenu");
+            }}
+          >
+            📱 Use USSD to Learn Offline
+          </button>
 
           <button
             className="lesson-button"
