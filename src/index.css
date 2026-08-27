@@ -1,5 +1,14 @@
+/* ==========================================
+   GLOBAL RESET
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+}
+
 html,
-body {
+body,
+#root {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -7,5 +16,12 @@ body {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family:
+    "Plus Jakarta Sans",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #f8fafc;
 }

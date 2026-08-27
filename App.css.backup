@@ -1,0 +1,433 @@
+/* body {
+  background-color: #f4f7fb;
+}
+
+.app {
+  min-height: 100vh;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  color: #2563eb;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 18px;
+}
+
+h2 {
+  margin-top: 40px;
+  color: #222;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  width: 220px;
+  min-height: 180px;
+  padding: 25px;
+  border: none;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.card h3 {
+  color: #222;
+  font-size: 20px;
+}
+
+.card p {
+  color: #666;
+  font-size: 15px;
+}
+
+.ussd-box {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #1e293b;
+  color: white;
+  border-radius: 15px;
+  text-align: left;
+  font-family: monospace;
+}
+
+.ussd-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ussd-box p {
+  margin: 12px 0;
+}
+
+.ussd-box {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+}
+
+.ussd-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  margin: 15px 0;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.assistant-box {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.app {
+  color: #1f2937;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: #1f2937;
+}
+
+.lesson-button {
+  color: #1f2937;
+  background-color: white;
+}
+
+.lesson-button h3 {
+  color: #1f2937;
+}
+
+.lesson-button p {
+  color: #4b5563;
+}
+
+.app p {
+  color: #374151;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================
+   Design Tokens & Modern Variables
+   ========================================== */
+:root {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-light: #e0e7ff;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --radius-card: 20px;
+  --radius-btn: 12px;
+  --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+  --shadow-hover: 0 20px 25px -5px rgba(79, 70, 229, 0.08), 0 8px 10px -6px rgba(79, 70, 229, 0.04);
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   Global Headers & Navigation
+   ========================================== */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin: 1rem 0 0.5rem 0;
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 2rem 0 1rem 0;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 1.25rem 0 0.35rem 0;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+/* Back Button */
+button:not(.card):not(.lesson-button):not(.quiz-option):not(.primary-button) {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:not(.card):not(.lesson-button):not(.quiz-option):not(.primary-button):hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* Global Primary Button */
+.primary-button {
+  width: 100%;
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-btn);
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.primary-button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(79, 70, 229, 0.35);
+}
+
+/* ==========================================
+   Home Screen Cards
+   ========================================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  padding: 1.75rem 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-hover);
+}
+
+.card .icon {
+  font-size: 2rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+}
+
+.card:hover .icon {
+  background: var(--primary-light);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.card p {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================
+   Lesson & List Buttons
+   ========================================== */
+.lesson-button {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  padding: 1.5rem 1.75rem;
+  text-align: left;
+  margin-bottom: 1.25rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-soft);
+}
+
+.lesson-button:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-hover);
+}
+
+.lesson-button h3 {
+  margin: 0 0 0.35rem 0;
+  color: var(--primary);
+}
+
+.lesson-button p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ==========================================
+   Quiz Section Styling
+   ========================================== */
+.quiz-option {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-btn);
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: left;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-soft);
+}
+
+.quiz-option:hover {
+  border-color: var(--primary);
+  background: #f8fafc;
+  transform: translateX(4px);
+}
+
+/* ==========================================
+   USSD Interactive Simulator
+   ========================================== */
+.ussd-box {
+  max-width: 420px;
+  margin: 2rem auto;
+  background: #0f172a;
+  color: #f8fafc;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.ussd-box h2 {
+  color: #f8fafc;
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.25rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.75rem;
+}
+
+.ussd-box p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.ussd-input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: var(--radius-btn);
+  padding: 0.875rem;
+  font-size: 1.125rem;
+  color: #ffffff;
+  font-family: monospace;
+  text-align: center;
+  outline: none;
+  margin: 1.25rem 0;
+  transition: border-color 0.2s;
+}
+
+.ussd-input:focus {
+  border-color: var(--primary);
+}
+
+/* ==========================================
+   Assistant & Scam Containers
+   ========================================== */
+.assistant-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--primary);
+  border-radius: var(--radius-card);
+  padding: 1.75rem;
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.assistant-box p {
+  margin: 0.75rem 0;
+  color: var(--text-dark);
+  font-weight: 500;
+}
