@@ -6,11 +6,6 @@ function App() {
   const [page, setPage] = useState("home");
   const [initialPrompt, setInitialPrompt] = useState("");
 
-  const openAssistant = (promptText = "") => {
-    setInitialPrompt(promptText);
-    setPage("assistant");
-  };
-
   // Quiz state
   const [questionNumber, setQuestionNumber] = useState(0);
   const [score, setScore] = useState(0);
@@ -24,8 +19,13 @@ function App() {
   const [ussdStep, setUssdStep] = useState("menu");
   const [ussdInput, setUssdInput] = useState("");
 
+  const openAssistant = (prompt = "") => {
+    setInitialPrompt(prompt);
+    setPage("assistant");
+  };
+
   // ==============================
-  // CYBERSECURITY QUIZ
+  // QUIZZES
   // ==============================
 
   const questions = [
@@ -49,10 +49,6 @@ function App() {
       correct: "MyP@ssw0rd!2026",
     },
   ];
-
-  // ==============================
-  // EMAIL QUIZ
-  // ==============================
 
   const emailQuestions = [
     {
@@ -82,10 +78,6 @@ function App() {
       correct: "Be careful and avoid opening it",
     },
   ];
-
-  // ==============================
-  // AI QUIZ
-  // ==============================
 
   const aiQuestions = [
     {
@@ -127,29 +119,23 @@ function App() {
   // ==============================
 
   const analyzeScamMessage = (messageToAnalyze = scamMessage) => {
-    if (!messageToAnalyze.trim()) {
-      return null;
-    }
+    if (!messageToAnalyze.trim()) return;
 
     setIsCheckingScam(true);
     setScamResult(null);
 
     const message = messageToAnalyze.toLowerCase();
-
     let scamScore = 0;
     const warningSigns = [];
 
-    // Urgency
     if (
       message.includes("urgent") ||
       message.includes("immediately") ||
-      message.includes("within") ||
       message.includes("now") ||
       message.includes("hurry") ||
       message.includes("minutes")
     ) {
       scamScore += 20;
-
       warningSigns.push({
         icon: "⏰",
         title: "Creates urgency",
@@ -158,7 +144,6 @@ function App() {
       });
     }
 
-    // PIN / OTP / Password
     if (
       message.includes("pin") ||
       message.includes("otp") ||
@@ -167,7 +152,6 @@ function App() {
       message.includes("verification code")
     ) {
       scamScore += 35;
-
       warningSigns.push({
         icon: "🔐",
         title: "Requests sensitive information",
@@ -176,7 +160,6 @@ function App() {
       });
     }
 
-    // Money
     if (
       message.includes("send money") ||
       message.includes("pay") ||
@@ -186,7 +169,6 @@ function App() {
       message.includes("deposit")
     ) {
       scamScore += 25;
-
       warningSigns.push({
         icon: "💰",
         title: "Requests money",
@@ -194,7 +176,6 @@ function App() {
       });
     }
 
-    // Prize
     if (
       message.includes("won") ||
       message.includes("winner") ||
@@ -204,24 +185,20 @@ function App() {
       message.includes("lottery")
     ) {
       scamScore += 20;
-
       warningSigns.push({
         icon: "🎁",
         title: "Unexpected reward",
         description:
-          "The message promises a prize, reward, or money that you may not have expected.",
+          "The message promises a prize or reward that you may not have expected.",
       });
     }
 
-    // Links
     if (
       message.includes("http://") ||
       message.includes("https://") ||
-      message.includes("www.") ||
-      message.includes(".com/")
+      message.includes("www.")
     ) {
       scamScore += 15;
-
       warningSigns.push({
         icon: "🔗",
         title: "Contains a link",
@@ -230,7 +207,6 @@ function App() {
       });
     }
 
-    // Threats
     if (
       message.includes("account will be closed") ||
       message.includes("account will be blocked") ||
@@ -239,7 +215,6 @@ function App() {
       message.includes("legal action")
     ) {
       scamScore += 20;
-
       warningSigns.push({
         icon: "⚠️",
         title: "Uses fear or threats",
@@ -251,93 +226,57 @@ function App() {
     scamScore = Math.min(scamScore, 100);
 
     let riskLevel = "LOW";
-
     let riskDescription =
       "We found few obvious warning signs, but always verify unexpected messages.";
 
     if (scamScore >= 70) {
       riskLevel = "HIGH";
-
       riskDescription =
         "This message contains several common warning signs associated with scams.";
     } else if (scamScore >= 40) {
       riskLevel = "SUSPICIOUS";
-
       riskDescription =
         "This message contains warning signs that you should investigate before taking action.";
     } else if (scamScore >= 20) {
       riskLevel = "CAUTION";
-
       riskDescription =
         "There are some warning signs. Be careful and verify the sender.";
     }
 
-    // Scam category
     let scamCategory = "General Scam";
 
     if (
       message.includes("mobile money") ||
       message.includes("momo") ||
       message.includes("airtel money") ||
-      message.includes("mtn") ||
-      message.includes("withdraw") ||
-      message.includes("deposit") ||
-      message.includes("mobile money pin")
+      message.includes("mtn")
     ) {
       scamCategory = "Mobile Money Scam";
     } else if (
       message.includes("job") ||
       message.includes("employment") ||
       message.includes("vacancy") ||
-      message.includes("salary") ||
-      message.includes("work from home") ||
-      message.includes("interview")
+      message.includes("salary")
     ) {
       scamCategory = "Job Scam";
     } else if (
       message.includes("scholarship") ||
       message.includes("university") ||
-      message.includes("school") ||
-      message.includes("admission") ||
-      message.includes("tuition") ||
-      message.includes("education")
+      message.includes("school")
     ) {
       scamCategory = "Education Scam";
     } else if (
-      message.includes("love") ||
-      message.includes("relationship") ||
-      message.includes("girlfriend") ||
-      message.includes("boyfriend") ||
-      message.includes("romance") ||
-      message.includes("marriage")
-    ) {
-      scamCategory = "Romance Scam";
-    } else if (
       message.includes("prize") ||
       message.includes("winner") ||
-      message.includes("won") ||
-      message.includes("lottery") ||
-      message.includes("reward") ||
-      message.includes("congratulations")
+      message.includes("lottery")
     ) {
       scamCategory = "Prize Scam";
     } else if (
-      message.includes("account") ||
       message.includes("bank") ||
       message.includes("password") ||
-      message.includes("otp") ||
-      message.includes("verification code") ||
-      message.includes("login")
+      message.includes("otp")
     ) {
       scamCategory = "Account / Identity Scam";
-    } else if (
-      message.includes("police") ||
-      message.includes("arrest") ||
-      message.includes("court") ||
-      message.includes("government") ||
-      message.includes("tax")
-    ) {
-      scamCategory = "Impersonation Scam";
     }
 
     const result = {
@@ -348,169 +287,14 @@ function App() {
       scamCategory,
     };
 
-    setScamMessage(messageToAnalyze);
-
     setTimeout(() => {
       setScamResult(result);
       setIsCheckingScam(false);
     }, 900);
-
-    return result;
   };
 
   // ==============================
-  // HIGHLIGHT SUSPICIOUS WORDS
-  // ==============================
-
-  const highlightScamWords = (text) => {
-    const suspiciousWords = [
-      "urgent",
-      "immediately",
-      "now",
-      "hurry",
-      "minutes",
-      "pin",
-      "otp",
-      "password",
-      "passcode",
-      "verification code",
-      "send money",
-      "pay",
-      "payment",
-      "transfer",
-      "fee",
-      "deposit",
-      "won",
-      "winner",
-      "prize",
-      "reward",
-      "congratulations",
-      "lottery",
-      "http://",
-      "https://",
-      "www.",
-      "account will be closed",
-      "account will be blocked",
-      "arrest",
-      "police",
-      "legal action",
-    ];
-
-    const escapedWords = suspiciousWords.map((word) =>
-      word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-    );
-
-    const pattern = new RegExp(`(${escapedWords.join("|")})`, "gi");
-
-    return text.split(pattern).map((part, index) => {
-      const isSuspicious = suspiciousWords.some(
-        (word) => word.toLowerCase() === part.toLowerCase(),
-      );
-
-      if (isSuspicious) {
-        return (
-          <mark className="suspicious-highlight" key={index}>
-            {part}
-          </mark>
-        );
-      }
-
-      return part;
-    });
-  };
-
-  // ==============================
-  // SCAM ADVICE
-  // ==============================
-
-  const getScamAdvice = (category) => {
-    const advice = {
-      "Mobile Money Scam": {
-        icon: "📱",
-        title: "Protect your mobile money",
-        points: [
-          "Never share your mobile-money PIN or OTP.",
-          "Don't send money because of an unexpected message.",
-          "Contact your mobile-money provider using an official number or app.",
-        ],
-      },
-
-      "Job Scam": {
-        icon: "💼",
-        title: "Verify the job opportunity",
-        points: [
-          "Don't pay money just to apply for or receive a job.",
-          "Research the company using its official website.",
-          "Verify the vacancy with the company's official contact information.",
-        ],
-      },
-
-      "Education Scam": {
-        icon: "🎓",
-        title: "Verify the education offer",
-        points: [
-          "Contact the school or university directly.",
-          "Don't pay fees through an unverified link or personal number.",
-          "Check the institution's official website for scholarship information.",
-        ],
-      },
-
-      "Romance Scam": {
-        icon: "❤️",
-        title: "Protect yourself from romance scams",
-        points: [
-          "Don't send money to someone you only know online.",
-          "Be cautious if someone creates an emotional emergency.",
-          "Verify the person's identity before sharing personal or financial information.",
-        ],
-      },
-
-      "Prize Scam": {
-        icon: "🎁",
-        title: "Be careful with unexpected prizes",
-        points: [
-          "Don't pay a fee to claim a prize you didn't enter.",
-          "Don't share your PIN, password, or OTP.",
-          "Verify the promotion through the organization's official website or contact.",
-        ],
-      },
-
-      "Account / Identity Scam": {
-        icon: "🔐",
-        title: "Protect your account",
-        points: [
-          "Never share your password, PIN, or OTP.",
-          "Don't log in through links sent in unexpected messages.",
-          "Contact the organization directly if you think your account has a problem.",
-        ],
-      },
-
-      "Impersonation Scam": {
-        icon: "🎭",
-        title: "Verify who contacted you",
-        points: [
-          "Don't trust a message simply because it uses an official name or logo.",
-          "Contact the organization through an official channel.",
-          "Don't send money or personal information until the request is verified.",
-        ],
-      },
-
-      "General Scam": {
-        icon: "🛡️",
-        title: "Stay safe",
-        points: [
-          "Don't rush into taking action.",
-          "Verify the sender independently.",
-          "Never share passwords, PINs, or OTPs.",
-        ],
-      },
-    };
-
-    return advice[category] || advice["General Scam"];
-  };
-
-  // ==============================
-  // RESET USSD
+  // USSD FUNCTIONS
   // ==============================
 
   const resetUSSD = () => {
@@ -518,23 +302,10 @@ function App() {
     setUssdInput("");
   };
 
-  // ==============================
-  // HANDLE USSD MESSAGE CHECK
-  // ==============================
-
   const handleUSSDMessageCheck = () => {
-    if (!ussdInput.trim()) {
-      return;
-    }
+    if (!ussdInput.trim()) return;
 
-    const message = ussdInput;
-
-    setScamMessage(message);
-    setIsCheckingScam(true);
-
-    // We temporarily switch to result after the same analysis delay.
-    analyzeScamMessage(message);
-
+    analyzeScamMessage(ussdInput);
     setUssdInput("");
 
     setTimeout(() => {
@@ -542,1124 +313,664 @@ function App() {
     }, 950);
   };
 
-  return (
-    <div className="app">
-      {/* ========================================= */}
-      {/* HOME PAGE */}
-      {/* ========================================= */}
+  // ==============================
+  // QUIZ FUNCTIONS
+  // ==============================
 
-      {page === "home" ? (
-        <>
-          <h1>Digital Buddy</h1>
-          <p className="subtitle">
-            Learn, stay safe, and understand technology.
-          </p>
+  const startQuiz = (quizPage) => {
+    setQuestionNumber(0);
+    setScore(0);
+    setPage(quizPage);
+  };
 
-          <h2>What would you like to do?</h2>
+  const answerQuestion = (option, quiz, resultPage) => {
+    if (option === quiz[questionNumber].correct) {
+      setScore((currentScore) => currentScore + 1);
+    }
 
-          <div className="cards">
-            <button
-              className="card"
-              onClick={() => setPage("learn")}
-            >
-            <button className="card" onClick={() => setPage("learn")}>
-              <div className="icon">📚</div>
+    if (questionNumber < quiz.length - 1) {
+      setQuestionNumber((currentQuestion) => currentQuestion + 1);
+    } else {
+      setPage(resultPage);
+    }
+  };
 
-              <h3>Learn Digital Skills</h3>
+  // ==============================
+  // HOME
+  // ==============================
 
-              <p>Learn how to use technology safely.</p>
-            </button>
+  if (page === "home") {
+    return (
+      <div className="app">
+        <h1>Digital Buddy</h1>
 
-            <button 
-              className="card"
-              onClick={() => openAssistant("I have a suspicious text/message I'd like you to check for a potential scam.")}
-            >
-            <button className="card" onClick={() => setPage("scamCheck")}>
-              <div className="icon">🛡️</div>
+        <p className="subtitle">
+          Learn, stay safe, and understand technology.
+        </p>
 
-              <h3>Check For Scams</h3>
+        <h2>What would you like to do?</h2>
 
-              <p>Check suspicious messages.</p>
-            </button>
-
-            <button 
-              className="card"
-              onClick={() => openAssistant("")}
-            >
-              <div className="icon">🤖</div>
-
-              <h3>Ask Digital Assistant</h3>
-
-              <p>Ask questions about technology.</p>
-            </button>
-          </div>
-        </>
-      ) : page === "scamCheck" ? (
-        /* ========================================= */
-        /* SCAM CHECK PAGE */
-        /* ========================================= */
-
-        <>
-          <button
-            className="back-button"
-            onClick={() => {
-              setPage("home");
-              setScamResult(null);
-            }}
-          >
-            ← Back
+        <div className="cards">
+          <button className="card" onClick={() => setPage("learn")}>
+            <div className="icon">📚</div>
+            <h3>Learn Digital Skills</h3>
+            <p>Learn how to use technology safely.</p>
           </button>
 
-          {/* OFFLINE OPTION */}
-
-          <div className="offline-option">
-            <div className="offline-icon">📱</div>
-
-            <div className="offline-content">
-              <h3>No internet?</h3>
-
-              <p>
-                You can also check suspicious messages using our USSD service.
-              </p>
-            </div>
-
-            <button
-              className="ussd-button"
-              onClick={() => {
-                resetUSSD();
-                setPage("ussd");
-              }}
-            >
-              Use USSD
-            </button>
-          </div>
-
-          <div className="scam-header">
-            <div className="scam-icon">🛡️</div>
-
-            <h1>Safety Check</h1>
-
-            <p className="subtitle">
-              Not sure about a message? Let's look for warning signs.
-            </p>
-          </div>
-
-          <div className="scam-card">
-            <label htmlFor="scam-message">Paste the suspicious message</label>
-
-            <textarea
-              id="scam-message"
-              value={scamMessage}
-              onChange={(event) => setScamMessage(event.target.value)}
-              placeholder="Example: Congratulations! You have won..."
-              rows="7"
-            />
-
-            <p className="privacy-note">
-              🔒 Don't include passwords, PINs, OTPs, or other sensitive
-              information.
-            </p>
-
-            <div className="scam-actions">
-              <button
-                className="example-button"
-                onClick={() =>
-                  setScamMessage(
-                    "Congratulations! You have won UGX 500,000. Send your mobile money PIN within 10 minutes to claim your prize: https://example.com/claim",
-                  )
-                }
-              >
-                Try an example
-              </button>
-
-              <button
-                className="primary-button"
-                onClick={() => analyzeScamMessage()}
-                disabled={!scamMessage.trim() || isCheckingScam}
-              >
-                {isCheckingScam ? "Checking..." : "Check Message"}
-              </button>
-            </div>
-          </div>
-
-          {/* CHECKING */}
-
-          {isCheckingScam && (
-            <div className="checking-card">
-              <div className="loading-icon">🔎</div>
-
-              <h2>Checking for warning signs...</h2>
-
-              <p>We're looking for common scam patterns.</p>
-            </div>
-          )}
-
-          {/* RESULT */}
-
-          {scamResult && !isCheckingScam && (
-            <div className="scam-result">
-              {/* RISK CARD */}
-
-              <div
-                className={`risk-card risk-${scamResult.riskLevel.toLowerCase()}`}
-              >
-                <div className="risk-top">
-                  <div className="risk-icon">
-                    {scamResult.riskLevel === "HIGH"
-                      ? "🚨"
-                      : scamResult.riskLevel === "SUSPICIOUS"
-                        ? "⚠️"
-                        : scamResult.riskLevel === "CAUTION"
-                          ? "🟡"
-                          : "🟢"}
-                  </div>
-
-                  <div className="risk-heading">
-                    <span className="risk-label">Risk Assessment</span>
-
-                    <h2>
-                      {scamResult.riskLevel === "HIGH"
-                        ? "Potential Scam"
-                        : scamResult.riskLevel === "SUSPICIOUS"
-                          ? "Suspicious Message"
-                          : scamResult.riskLevel === "CAUTION"
-                            ? "Proceed With Caution"
-                            : "Low Risk"}
-                    </h2>
-
-                    <span className="scam-category">
-                      🏷️ {scamResult.scamCategory}
-                    </span>
-                  </div>
-
-                  <div className="risk-score">
-                    <strong>{scamResult.score}</strong>
-
-                    <span>/100</span>
-                  </div>
-                </div>
-
-                <p className="risk-description">{scamResult.riskDescription}</p>
-
-                <div className="risk-meter">
-                  <div
-                    className="risk-meter-fill"
-                    style={{
-                      width: `${scamResult.score}%`,
-                    }}
-                  />
-                </div>
-
-                <div className="risk-meter-labels">
-                  <span>Low Risk</span>
-
-                  <span>High Risk</span>
-                </div>
-              </div>
-
-              {/* MESSAGE ANALYSIS */}
-
-              <div className="message-preview">
-                <div className="message-preview-header">
-                  <h2>🔎 Message Analysis</h2>
-
-                  <span>Highlighted warning signs</span>
-                </div>
-
-                <div className="message-content">
-                  {highlightScamWords(scamMessage)}
-                </div>
-
-                <div className="highlight-legend">
-                  <span>
-                    <mark className="legend-highlight">Warning sign</mark>
-                  </span>
-
-                  <span>Words or phrases that deserve extra attention</span>
-                </div>
-              </div>
-
-              {/* WARNING SIGNS */}
-
-              <div className="warning-section">
-                <h2>Why we're concerned</h2>
-
-                {scamResult.warningSigns.length === 0 ? (
-                  <div className="no-warning">
-                    <span>✓</span>
-
-                    <p>
-                      We didn't detect obvious scam warning signs. However,
-                      always verify unexpected messages.
-                    </p>
-                  </div>
-                ) : (
-                  scamResult.warningSigns.map((warning, index) => (
-                    <div
-                      className="warning-item"
-                      key={`${warning.title}-${index}`}
-                    >
-                      <div className="warning-icon">{warning.icon}</div>
-
-                      <div>
-                        <h3>{warning.title}</h3>
-
-                        <p>{warning.description}</p>
-                      </div>
-                    </div>
-                  ))
-                )}
-              </div>
-
-              {/* SAFETY ADVICE */}
-
-              <div className="safety-actions-card">
-                <div className="advice-header">
-                  <div className="advice-icon">
-                    {getScamAdvice(scamResult.scamCategory).icon}
-                  </div>
-
-                  <div>
-                    <span className="advice-label">Safety Advice</span>
-
-                    <h2>{getScamAdvice(scamResult.scamCategory).title}</h2>
-                  </div>
-                </div>
-
-                <div className="advice-list">
-                  {getScamAdvice(scamResult.scamCategory).points.map(
-                    (point, index) => (
-                      <div className="advice-item" key={index}>
-                        <div className="advice-number">{index + 1}</div>
-
-                        <p>{point}</p>
-                      </div>
-                    ),
-                  )}
-                </div>
-              </div>
-
-              <button
-                className="secondary-button"
-                onClick={() => {
-                  setScamMessage("");
-                  setScamResult(null);
-                }}
-              >
-                Check Another Message
-              </button>
-
-              <p className="disclaimer">
-                DigitalBridge provides educational guidance. A risk assessment
-                does not guarantee that a message is fraudulent or safe.
-              </p>
-            </div>
-          )}
-        </>
-      ) : page === "ussd" ? (
-        /* ========================================= */
-        /* USSD PAGE */
-        /* ========================================= */
-
-        <div className="ussd-page">
-          <button
-            className="back-button"
-            onClick={() => {
-              resetUSSD();
-              setPage("home");
-            }}
-          >
-            ← Back to Home
+          <button className="card" onClick={() => setPage("scamCheck")}>
+            <div className="icon">🛡️</div>
+            <h3>Check For Scams</h3>
+            <p>Check suspicious messages.</p>
           </button>
 
-          {/* <div className="ussd-header">
-            <div className="ussd-large-icon">📱</div> */}
+          <button className="card" onClick={() => openAssistant("")}>
+            <div className="icon">🤖</div>
+            <h3>Ask Digital Assistant</h3>
+            <p>Ask questions about technology.</p>
+          </button>
+        </div>
+      </div>
+    );
+  }
 
-            {/* <h1>Offline Safety Check</h1>
+  // ==============================
+  // AI ASSISTANT
+  // ==============================
 
-            <p>Check suspicious messages without using internet data.</p> */}
+  if (page === "assistant") {
+    return (
+      <div className="app">
+        <button className="back-button" onClick={() => setPage("home")}>
+          ← Back
+        </button>
 
-            {/* {ussdStep === "learnMenu" ? (
+        <ChatAssistant
+          initialPrompt={initialPrompt}
+          onBack={() => setPage("home")}
+        />
+      </div>
+    );
+  }
+
+  // ==============================
+  // LEARNING PAGE
+  // ==============================
+
+  if (page === "learn") {
+    return (
+      <div className="app">
+        <button onClick={() => setPage("home")}>← Back</button>
+
+        <h1>📚 Learn Digital Skills</h1>
+        <p>Choose a topic you would like to learn.</p>
+
+        <button
+          className="ussd-button"
+          onClick={() => {
+            setUssdInput("");
+            setUssdStep("learnMenu");
+            setPage("ussd");
+          }}
+        >
+          📱 Use USSD to Learn Offline
+        </button>
+
+        <button
+          className="lesson-button"
+          onClick={() => setPage("cybersecurity")}
+        >
+          <h3>🔐 Cybersecurity</h3>
+          <p>Learn how to protect your accounts and personal information.</p>
+        </button>
+
+        <button className="lesson-button" onClick={() => setPage("email")}>
+          <h3>📧 Email</h3>
+          <p>Learn how to create and use email safely.</p>
+        </button>
+
+        <button className="lesson-button" onClick={() => setPage("ai")}>
+          <h3>🤖 Artificial Intelligence</h3>
+          <p>Learn how to use AI safely and effectively.</p>
+        </button>
+      </div>
+    );
+  }
+
+  // ==============================
+  // USSD PAGE
+  // ==============================
+
+  if (page === "ussd") {
+    return (
+      <div className="app ussd-page">
+        <button
+          className="back-button"
+          onClick={() => {
+            setPage("learn");
+            setUssdInput("");
+          }}
+        >
+          ← Back
+        </button>
+
+        <div className="ussd-header">
+          <div className="ussd-large-icon">
+            {["learnMenu", "ussdCybersecurity", "ussdEmail", "ussdAI"].includes(
+              ussdStep,
+            )
+              ? "📚"
+              : "📱"}
+          </div>
+
+          {["learnMenu", "ussdCybersecurity", "ussdEmail", "ussdAI"].includes(
+            ussdStep,
+          ) ? (
             <>
-              <h1>📚 Offline Learning</h1>
+              <h1>Offline Learning</h1>
               <p>Learn digital skills without using internet data.</p>
             </>
           ) : (
             <>
-              <h1>📱 Offline Safety Check</h1>
+              <h1>Offline Safety Check</h1>
               <p>Check suspicious messages without using internet data.</p>
             </>
           )}
-          </div> */}
+        </div>
 
-          <div className="ussd-header">
-            <div className="ussd-large-icon">
-              {["learnMenu", "ussdCybersecurity", "ussdEmail", "ussdAI"].includes(
-                ussdStep
-              )
-                ? "📚"
-                : "📱"}
+        <div className="phone-container">
+          <div className="phone-screen">
+            <div className="network-bar">
+              <span>MTN</span>
+              <span>▮▮▮▮</span>
             </div>
 
-            {["learnMenu", "ussdCybersecurity", "ussdEmail", "ussdAI"].includes(
-              ussdStep
-            ) ? (
+            {ussdStep === "learnMenu" && (
               <>
-                <h1>Offline Learning</h1>
+                <div className="ussd-title">LEARN DIGITAL SKILLS</div>
 
-                <p>Learn digital skills without using internet data.</p>
+                <p>Choose a topic:</p>
+
+                <div className="ussd-menu">
+                  <p>1. Cybersecurity</p>
+                  <p>2. Email</p>
+                  <p>3. Artificial Intelligence</p>
+                  <p>4. Back</p>
+                </div>
+
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  maxLength="1"
+                  value={ussdInput}
+                  onChange={(e) => setUssdInput(e.target.value)}
+                  placeholder="Enter option"
+                />
+
+                <button
+                  onClick={() => {
+                    if (ussdInput === "1") {
+                      setUssdStep("ussdCybersecurity");
+                    } else if (ussdInput === "2") {
+                      setUssdStep("ussdEmail");
+                    } else if (ussdInput === "3") {
+                      setUssdStep("ussdAI");
+                    } else if (ussdInput === "4") {
+                      setPage("learn");
+                    }
+
+                    setUssdInput("");
+                  }}
+                >
+                  Send
+                </button>
               </>
-            ) : (
-              <>
-                <h1>Offline Safety Check</h1>
+            )}
 
-                <p>Check suspicious messages without using internet data.</p>
+            {ussdStep === "ussdCybersecurity" && (
+              <>
+                <div className="ussd-title">CYBERSECURITY</div>
+                <p>🔐 Use strong passwords.</p>
+                <p>🚫 Never share your PIN or password.</p>
+                <p>🔗 Don't click suspicious links.</p>
+                <p>👤 Verify people before sending money.</p>
+
+                <button onClick={() => setUssdStep("learnMenu")}>
+                  Back
+                </button>
+              </>
+            )}
+
+            {ussdStep === "ussdEmail" && (
+              <>
+                <div className="ussd-title">EMAIL</div>
+                <p>📧 Use Compose to write a new email.</p>
+                <p>📩 Check the recipient before sending.</p>
+                <p>📎 Be careful with unknown attachments.</p>
+                <p>🔒 Never share your email password.</p>
+
+                <button onClick={() => setUssdStep("learnMenu")}>
+                  Back
+                </button>
+              </>
+            )}
+
+            {ussdStep === "ussdAI" && (
+              <>
+                <div className="ussd-title">ARTIFICIAL INTELLIGENCE</div>
+                <p>🤖 AI helps computers perform intelligent tasks.</p>
+                <p>💬 AI can answer questions and help people learn.</p>
+                <p>✍️ AI can help with writing and generating ideas.</p>
+                <p>🔍 Always verify important AI information.</p>
+                <p>🔒 Never share private information with AI.</p>
+
+                <button onClick={() => setUssdStep("learnMenu")}>
+                  Back
+                </button>
+              </>
+            )}
+
+            {ussdStep === "menu" && (
+              <>
+                <div className="ussd-title">DIGITAL BUDDY</div>
+                <p>Welcome to Safety Check.</p>
+                <p>Choose an option:</p>
+
+                <div className="ussd-menu">
+                  <p>1. Check a message</p>
+                  <p>2. Safety tips</p>
+                  <p>3. Exit</p>
+                </div>
+
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  maxLength="1"
+                  value={ussdInput}
+                  onChange={(e) => setUssdInput(e.target.value)}
+                  placeholder="Enter option"
+                />
+
+                <button
+                  onClick={() => {
+                    if (ussdInput === "1") setUssdStep("message");
+                    if (ussdInput === "2") setUssdStep("tips");
+                    if (ussdInput === "3") setUssdStep("exit");
+
+                    setUssdInput("");
+                  }}
+                >
+                  Send
+                </button>
+              </>
+            )}
+
+            {ussdStep === "message" && (
+              <>
+                <div className="ussd-title">CHECK MESSAGE</div>
+                <p>Enter the suspicious message:</p>
+
+                <textarea
+                  value={ussdInput}
+                  onChange={(e) => setUssdInput(e.target.value)}
+                  placeholder="Type message here..."
+                  rows="5"
+                />
+
+                <button onClick={handleUSSDMessageCheck}>Check</button>
+
+                <button
+                  className="ussd-secondary"
+                  onClick={() => {
+                    setUssdStep("menu");
+                    setUssdInput("");
+                  }}
+                >
+                  Back
+                </button>
+              </>
+            )}
+
+            {ussdStep === "tips" && (
+              <>
+                <div className="ussd-title">SAFETY TIPS</div>
+                <p>• Never share your PIN or OTP.</p>
+                <p>• Don't send money to strangers.</p>
+                <p>• Verify suspicious messages.</p>
+                <p>• Don't click unknown links.</p>
+
+                <button onClick={() => setUssdStep("menu")}>Back</button>
+              </>
+            )}
+
+            {ussdStep === "result" && (
+              <>
+                <div className="ussd-title">RESULT</div>
+
+                {scamResult ? (
+                  <>
+                    <p>
+                      Risk: <strong>{scamResult.riskLevel}</strong>
+                    </p>
+                    <p>Score: {scamResult.score}/100</p>
+                    <p>Type: {scamResult.scamCategory}</p>
+                  </>
+                ) : (
+                  <p>Checking message...</p>
+                )}
+
+                <button
+                  onClick={() => {
+                    resetUSSD();
+                    setPage("scamCheck");
+                  }}
+                >
+                  Finish
+                </button>
+              </>
+            )}
+
+            {ussdStep === "exit" && (
+              <>
+                <div className="ussd-title">DIGITAL BUDDY</div>
+                <p>Thank you for using Safety Check.</p>
+                <p>Stay safe online.</p>
+
+                <button
+                  onClick={() => {
+                    resetUSSD();
+                    setPage("home");
+                  }}
+                >
+                  Close
+                </button>
               </>
             )}
           </div>
-
-          <div className="phone-container">
-            <div className="phone-screen">
-              <div className="network-bar">
-                <span>MTN</span>
-
-                <span>▮▮▮▮</span>
-              </div>
-
-              {/* MENU */}
-
-              {ussdStep === "menu" && (
-                <>
-                  <div className="ussd-title">DIGITALBRIDGE</div>
-
-                  <p>Welcome to Safety Check.</p>
-
-                  <p>Choose an option:</p>
-
-                  <div className="ussd-menu">
-                    <p>1. Check a message</p>
-
-                    <p>2. Safety tips</p>
-
-                    <p>3. Exit</p>
-                  </div>
-
-                  <input
-                    type="text"
-                    inputMode="numeric"
-                    maxLength="1"
-                    value={ussdInput}
-                    onChange={(event) => setUssdInput(event.target.value)}
-                    placeholder="Enter option"
-                  />
-
-                  <button
-                    onClick={() => {
-                      if (ussdInput === "1") {
-                        setUssdStep("message");
-                        setUssdInput("");
-                      } else if (ussdInput === "2") {
-                        setUssdStep("tips");
-                        setUssdInput("");
-                      } else if (ussdInput === "3") {
-                        setUssdStep("exit");
-                        setUssdInput("");
-                      }
-                    }}
-                  >
-                    Send
-                  </button>
-                </>
-              )}
-
-              {/* LEARNING MENU */}
-
-{ussdStep === "learnMenu" && (
-  <>
-    <div className="ussd-title">LEARN DIGITAL SKILLS</div>
-
-    <p>Choose a topic:</p>
-
-    <div className="ussd-menu">
-      <p>1. Cybersecurity</p>
-      <p>2. Email</p>
-      <p>3. Artificial Intelligence</p>
-      {/* <p>4. Back</p> */}
-    </div>
-
-    <input
-      type="text"
-      inputMode="numeric"
-      maxLength="1"
-      value={ussdInput}
-      onChange={(event) => setUssdInput(event.target.value)}
-      placeholder="Enter option"
-    />
-
-    <button
-      onClick={() => {
-        if (ussdInput === "1") {
-          setUssdStep("ussdCybersecurity");
-          setUssdInput("");
-        } else if (ussdInput === "2") {
-          setUssdStep("ussdEmail");
-          setUssdInput("");
-        } else if (ussdInput === "3") {
-          setUssdStep("ussdAI");
-          setUssdInput("");
-        } else if (ussdInput === "4") {
-          setUssdStep("menu");
-          setUssdInput("");
-        }
-      }}
-    >
-      Send
-    </button>
-  </>
-)}
-
-{/* USSD CYBERSECURITY LESSON */}
-
-{ussdStep === "ussdCybersecurity" && (
-  <>
-    <div className="ussd-title">CYBERSECURITY</div>
-
-    <p>🔐 Use strong passwords.</p>
-
-    <p>🚫 Never share your PIN or password.</p>
-
-    <p>🔗 Don't click suspicious links.</p>
-
-    <p>👤 Verify people before sending money.</p>
-
-    <button onClick={() => setUssdStep("learnMenu")}>
-      Back
-    </button>
-  </>
-)}
-
-
-{/* USSD EMAIL LESSON */}
-
-{ussdStep === "ussdEmail" && (
-  <>
-    <div className="ussd-title">EMAIL</div>
-
-    <p>📧 Use Compose to write a new email.</p>
-
-    <p>📩 Check the recipient's email address before sending.</p>
-
-    <p>📎 Be careful with attachments from unknown senders.</p>
-
-    <p>🔒 Never share your email password.</p>
-
-    <button
-      onClick={() => {
-        setUssdStep("learnMenu");
-        setUssdInput("");
-      }}
-    >
-      Back
-    </button>
-  </>
-)}
-
-{/* USSD ARTIFICIAL INTELLIGENCE LESSON */}
-
-{ussdStep === "ussdAI" && (
-  <>
-    <div className="ussd-title">ARTIFICIAL INTELLIGENCE</div>
-
-    <p>🤖 AI helps computers perform intelligent tasks.</p>
-
-    <p>💬 AI can answer questions and help people learn.</p>
-
-    <p>✍️ AI can help with writing and generating ideas.</p>
-
-    <p>🔍 Always verify important information from AI.</p>
-
-    <p>🔒 Never share passwords, PINs, or private information with AI.</p>
-
-    <button
-      onClick={() => {
-        setUssdStep("learnMenu");
-        setUssdInput("");
-      }}
-    >
-      Back
-    </button>
-  </>
-)}
-
-              {/* MESSAGE */}
-
-              {ussdStep === "message" && (
-                <>
-                  <div className="ussd-title">CHECK MESSAGE</div>
-
-                  <p>Enter the suspicious message:</p>
-
-                  <textarea
-                    value={ussdInput}
-                    onChange={(event) => setUssdInput(event.target.value)}
-                    placeholder="Type message here..."
-                    rows="5"
-                  />
-
-                  <button onClick={handleUSSDMessageCheck}>Check</button>
-
-                  <button
-                    className="ussd-secondary"
-                    onClick={() => {
-                      setUssdStep("menu");
-                      setUssdInput("");
-                    }}
-                  >
-                    Back
-                  </button>
-                </>
-              )}
-
-              {/* TIPS */}
-
-              {ussdStep === "tips" && (
-                <>
-                  <div className="ussd-title">SAFETY TIPS</div>
-
-                  <p>• Never share your PIN or OTP.</p>
-
-                  <p>• Don't send money to strangers.</p>
-
-                  <p>• Verify suspicious messages.</p>
-
-                  <p>• Don't click unknown links.</p>
-
-                  <button
-                    onClick={() => {
-                      setUssdStep("menu");
-                      setUssdInput("");
-                    }}
-                  >
-                    Back
-                  </button>
-                </>
-              )}
-
-              {/* RESULT */}
-
-              {ussdStep === "result" && (
-                <>
-                  <div className="ussd-title">RESULT</div>
-
-                  {scamResult ? (
-                    <>
-                      <p>
-                        Risk: <strong>{scamResult.riskLevel}</strong>
-                      </p>
-
-                      <p>Score: {scamResult.score}/100</p>
-
-                      <p>
-                        Type:
-                        <br />
-                        {scamResult.scamCategory}
-                      </p>
-
-                      <p>Warning signs:</p>
-
-                      {scamResult.warningSigns
-                        .slice(0, 3)
-                        .map((warning, index) => (
-                          <p key={index}>
- {warning.icon} {warning.title}
-</p>
-                        ))}
-
-                      <p>
-                        🛡️ Never share your PIN, OTP, passwords, or send money
-                        because of an unexpected message.
-                      </p>
-                    </>
-                  ) : (
-                    <p>Unable to analyze the message.</p>
-                  )}
-
-                  <button
-                    onClick={() => {
-                      resetUSSD();
-                      setPage("scamCheck");
-                    }}
-                  >
-                    Finish
-                  </button>
-                </>
-              )}
-
-              {/* EXIT */}
-
-              {ussdStep === "exit" && (
-                <>
-                  <div className="ussd-title">DIGITALBRIDGE</div>
-
-                  <p>Thank you for using Safety Check.</p>
-
-                  <p>Stay safe online.</p>
-
-                  <button
-                    onClick={() => {
-                      resetUSSD();
-                      setPage("scamCheck");
-                    }}
-                  >
-                    Close
-                  </button>
-                </>
-              )}
-            </div>
-          </div>
-
-          <div className="ussd-demo-note">
-            <strong>Development Demo</strong>
-
-            <p>
-              This is a simulation of the USSD experience. The real service will
-              work through a telecom USSD gateway.
-            </p>
-          </div>
         </div>
-      ) : page === "learn" ? (
-        /* ========================================= */
-        /* LEARN DIGITAL SKILLS */
-        /* ========================================= */
+      </div>
+    );
+  }
 
-        <>
-          <button onClick={() => setPage("home")}>← Back</button>
+  // ==============================
+  // CYBERSECURITY
+  // ==============================
 
-          <h1>📚 Learn Digital Skills</h1>
+  if (page === "cybersecurity") {
+    return (
+      <div className="app">
+        <button onClick={() => setPage("learn")}>← Back</button>
 
-          <p>Choose a topic you would like to learn.</p>
+        <h1>🔐 Cybersecurity</h1>
+        <p>Learn how to protect yourself when using technology.</p>
 
-          <button
-            className="ussd-button"
-            onClick={() => {
-              resetUSSD();
-              setPage("ussd");
-              setUssdStep("learnMenu");
-            }}
-          >
-            📱 Use USSD to Learn Offline
-          </button>
+        <h3>🔑 Use Strong Passwords</h3>
+        <p>Use passwords that are difficult for other people to guess.</p>
 
-          <button
-            className="lesson-button"
-            onClick={() => setPage("cybersecurity")}
-          >
-            <h3>🔐 Cybersecurity</h3>
+        <h3>🚫 Don't Share Your PIN</h3>
+        <p>Never share your mobile money PIN or password.</p>
 
-            <p>Learn how to protect your accounts and personal information.</p>
-          </button>
+        <h3>🔗 Be Careful With Links</h3>
+        <p>Don't click suspicious links sent through SMS or email.</p>
 
-          <button className="lesson-button" onClick={() => setPage("email")}>
-            <h3>📧 Email</h3>
+        <h2>🎯 Ready to Test Yourself?</h2>
 
-            <p>Learn how to create and use email safely.</p>
-          </button>
+        <button
+          className="primary-button"
+          onClick={() => startQuiz("quiz")}
+        >
+          Take Quiz
+        </button>
+      </div>
+    );
+  }
 
-          <button className="lesson-button" onClick={() => setPage("ai")}>
-            <h3>🤖 Artificial Intelligence</h3>
+  // ==============================
+  // EMAIL
+  // ==============================
 
-            <p>Learn how to use AI safely and effectively.</p>
-          </button>
-        </>
-      ) : page === "cybersecurity" ? (
-        /* ========================================= */
-        /* CYBERSECURITY */
-        /* ========================================= */
+  if (page === "email") {
+    return (
+      <div className="app">
+        <button onClick={() => setPage("learn")}>← Back</button>
 
-        <>
-          <button onClick={() => setPage("learn")}>← Back</button>
+        <h1>📧 Email</h1>
+        <p>Learn how to use email to communicate safely.</p>
 
-          <h1>🔐 Cybersecurity</h1>
+        <h3>📩 Sending an Email</h3>
+        <p>Click Compose, enter the recipient, write your message and send.</p>
 
-          <p>
-            Learn how to protect yourself when using technology and the
-            internet.
-          </p>
+        <h3>📎 Attachments</h3>
+        <p>Be careful when opening attachments from unknown senders.</p>
 
-          <h2>How to Stay Safe Online</h2>
+        <h3>🔒 Keep Your Email Safe</h3>
+        <p>Never share your email password.</p>
 
-          <h3>🔑 Use Strong Passwords</h3>
-          <p>
-            Create passwords that are difficult for other people to guess. Avoid
-            using simple information such as your name or birthday.
-          </p>
+        <button
+          className="primary-button"
+          onClick={() => startQuiz("emailQuiz")}
+        >
+          Take Email Quiz
+        </button>
+      </div>
+    );
+  }
 
-          <h3>🚫 Don't Share Your PIN</h3>
+  // ==============================
+  // AI LESSON
+  // ==============================
 
-          <p>
-            Never share your mobile money PIN, bank PIN, or password with
-            anyone.
-          </p>
+  if (page === "ai") {
+    return (
+      <div className="app">
+        <button onClick={() => setPage("learn")}>← Back</button>
 
-          <h3>🔗 Be Careful With Links</h3>
-          <p>Don't click suspicious links sent through SMS, WhatsApp, or email.</p>
+        <h1>🤖 Artificial Intelligence</h1>
 
-          <h3>👤 Verify People</h3>
-          <p>
-            Before sending money or personal information, make sure you know who
-            you are dealing with.
-          </p>
+        <p>
+          Artificial Intelligence is technology that allows computers to perform
+          tasks that normally require human intelligence.
+        </p>
 
-          <h2>🎯 Ready to Test Yourself?</h2>
+        <h3>💬 AI Can Answer Questions</h3>
+        <p>AI tools can help explain topics and answer questions.</p>
 
-          <button
-            className="primary-button"
-            onClick={() => {
-              setQuestionNumber(0);
-              setScore(0);
-              setPage("quiz");
-            }}
-          >
-            Take Quiz
-          </button>
-        </>
-      ) : page === "email" ? (
-        /* ========================================= */
-        /* EMAIL */
-        /* ========================================= */
+        <h3>✍️ AI Can Help With Work</h3>
+        <p>AI can help with writing, ideas and learning.</p>
 
-        <>
-          <button onClick={() => setPage("learn")}>← Back</button>
+        <h3>⚠️ AI Can Make Mistakes</h3>
+        <p>Always verify important information provided by AI.</p>
 
-          <h1>📧 Email</h1>
+        <h3>🔒 Protect Your Information</h3>
+        <p>Never share passwords, PINs or sensitive information.</p>
 
-          <p>
-            Learn how to use email to communicate and share information online.
-          </p>
+        <button
+          className="primary-button"
+          onClick={() => startQuiz("aiQuiz")}
+        >
+          Take AI Quiz
+        </button>
+      </div>
+    );
+  }
 
-          <h2>How to Use Email</h2>
+  // ==============================
+  // SCAM CHECK
+  // ==============================
 
-          <h3>📩 Sending an Email</h3>
+  if (page === "scamCheck") {
+    return (
+      <div className="app">
+        <button className="back-button" onClick={() => setPage("home")}>
+          ← Back
+        </button>
 
-          <p>
-            Open your email app, click Compose, enter the recipient's email
-            address, write your message, and click Send.
-          </p>
+        <h1>🛡️ Safety Check</h1>
+        <p>Not sure about a message? Let's look for warning signs.</p>
 
-          <h3>📎 Attaching a File</h3>
+        <button
+          className="ussd-button"
+          onClick={() => {
+            resetUSSD();
+            setPage("ussd");
+          }}
+        >
+          📱 Use USSD
+        </button>
 
-          <p>
-            You can attach photos, documents, and other files to an email. Click
-            the attachment icon and choose the file you want to send.
-          </p>
-
-          <h3>👤 Check the Recipient</h3>
-
-          <p>
-            Always check that you have entered the correct email address before
-            sending your message.
-          </p>
-
-          <h3>🔒 Keep Your Email Safe</h3>
-
-          <p>
-            Never share your email password with other people. Be careful when
-            opening links or attachments from unknown senders.
-          </p>
-
-          <h2>🎯 Ready to Test Yourself?</h2>
+        <div className="scam-card">
+          <textarea
+            value={scamMessage}
+            onChange={(e) => setScamMessage(e.target.value)}
+            placeholder="Paste a suspicious message here..."
+            rows="7"
+          />
 
           <button
             className="primary-button"
-            onClick={() => {
-              setQuestionNumber(0);
-              setScore(0);
-              setPage("emailQuiz");
-            }}
+            onClick={() => analyzeScamMessage()}
+            disabled={!scamMessage.trim() || isCheckingScam}
           >
-            Take Email Quiz
+            {isCheckingScam ? "Checking..." : "Check Message"}
           </button>
-        </>
-      ) : page === "ai" ? (
-        /* ========================================= */
-        /* ARTIFICIAL INTELLIGENCE */
-        /* ========================================= */
+        </div>
 
-        <>
-          <button onClick={() => setPage("learn")}>← Back</button>
+        {scamResult && (
+          <div className="scam-result">
+            <h2>{scamResult.riskLevel} RISK</h2>
+            <h3>Score: {scamResult.score}/100</h3>
+            <p>{scamResult.riskDescription}</p>
+            <p>
+              <strong>Category:</strong> {scamResult.scamCategory}
+            </p>
 
-          <h1>🤖 Artificial Intelligence</h1>
+            <h3>Warning Signs</h3>
 
-          <p>
-            Learn what Artificial Intelligence is and how to use it safely and
-            effectively.
-          </p>
+            {scamResult.warningSigns.map((warning, index) => (
+              <div key={index}>
+                <strong>
+                  {warning.icon} {warning.title}
+                </strong>
+                <p>{warning.description}</p>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
 
-          <h2>🧠 What is Artificial Intelligence?</h2>
+  // ==============================
+  // QUIZZES
+  // ==============================
 
-          <p>
-            Artificial Intelligence, commonly called AI, is technology that
-            allows computers to perform tasks that normally require human
-            intelligence.
-          </p>
+  if (page === "quiz") {
+    return (
+      <div className="app">
+        <button onClick={() => setPage("cybersecurity")}>← Back</button>
 
-          <h3>💬 AI Can Answer Questions</h3>
+        <h1>🎯 Cybersecurity Quiz</h1>
+        <h2>
+          Question {questionNumber + 1} of {questions.length}
+        </h2>
 
-          <p>
-            AI tools can answer questions, explain difficult topics, translate
-            languages, and help users find information.
-          </p>
+        <h3>{questions[questionNumber].question}</h3>
 
-          <h3>✍️ AI Can Help With Work</h3>
-
-          <p>
-            AI can help people write messages, summarize information, generate
-            ideas, and learn new skills.
-          </p>
-
-          <h3>📱 Examples of AI</h3>
-
-          <p>
-            AI is used in voice assistants, recommendation systems, chatbots,
-            translation tools, facial recognition, and some smartphone
-            applications.
-          </p>
-
-          <h3>✅ Benefits of AI</h3>
-
-          <p>
-            AI can help people save time, learn faster, automate repetitive
-            tasks, and access information more easily.
-          </p>
-
-          <h3>⚠️ AI Can Make Mistakes</h3>
-
-          <p>
-            AI does not always provide correct information. It can sometimes
-            give inaccurate or incomplete answers.
-          </p>
-
-          <h3>🔍 Verify AI Information</h3>
-
-          <p>
-            Always check important information provided by AI using trusted and
-            reliable sources.
-          </p>
-
-          <h3>🔒 Protect Your Personal Information</h3>
-
-          <p>
-            Avoid sharing passwords, PINs, private documents, financial
-            information, or other sensitive information with AI tools.
-          </p>
-
-          <h3>🤝 Use AI Responsibly</h3>
-
-          <p>
-            Use AI as a helpful tool, but remember that you are responsible for
-            how you use the information it provides.
-          </p>
-
-          <h2>🎯 Ready to Test Yourself?</h2>
-
+        {questions[questionNumber].options.map((option) => (
           <button
-            className="primary-button"
-            onClick={() => {
-              setQuestionNumber(0);
-              setScore(0);
-              setPage("aiQuiz");
-            }}
+            key={option}
+            className="quiz-option"
+            onClick={() => answerQuestion(option, questions, "result")}
           >
-            Take AI Quiz
+            {option}
           </button>
-        </>
-      ) : page === "quiz" ? (
-        /* ========================================= */
-        /* CYBERSECURITY QUIZ */
-        /* ========================================= */
+        ))}
+      </div>
+    );
+  }
 
-        <>
-          <button onClick={() => setPage("cybersecurity")}>← Back</button>
+  if (page === "emailQuiz") {
+    return (
+      <div className="app">
+        <button onClick={() => setPage("email")}>← Back</button>
 
-          <h1>🎯 Cybersecurity Quiz</h1>
+        <h1>🎯 Email Quiz</h1>
+        <h2>
+          Question {questionNumber + 1} of {emailQuestions.length}
+        </h2>
 
-          <h2>
-            Question {questionNumber + 1} of {questions.length}
-          </h2>
+        <h3>{emailQuestions[questionNumber].question}</h3>
 
-          <h3>{questions[questionNumber].question}</h3>
-
-          {questions[questionNumber].options.map((option) => (
-            <button
-              key={option}
-              className="quiz-option"
-              onClick={() => {
-                if (option === questions[questionNumber].correct) {
-                  setScore(score + 1);
-                }
-
-                if (questionNumber < questions.length - 1) {
-                  setQuestionNumber(questionNumber + 1);
-                } else {
-                  setPage("result");
-                }
-              }}
-            >
-              {option}
-            </button>
-          ))}
-        </>
-      ) : page === "emailQuiz" ? (
-        /* ========================================= */
-        /* EMAIL QUIZ */
-        /* ========================================= */
-
-        <>
-          <button onClick={() => setPage("email")}>← Back</button>
-
-          <h1>🎯 Email Quiz</h1>
-
-          <h2>
-            Question {questionNumber + 1} of {emailQuestions.length}
-          </h2>
-
-          <h3>{emailQuestions[questionNumber].question}</h3>
-
-          {emailQuestions[questionNumber].options.map((option) => (
-            <button
-              key={option}
-              className="quiz-option"
-              onClick={() => {
-                if (option === emailQuestions[questionNumber].correct) {
-                  setScore(score + 1);
-                }
-
-                if (questionNumber < emailQuestions.length - 1) {
-                  setQuestionNumber(questionNumber + 1);
-                } else {
-                  setPage("emailResult");
-                }
-              }}
-            >
-              {option}
-            </button>
-          ))}
-        </>
-      ) : page === "emailResult" ? (
-        /* ========================================= */
-        /* EMAIL RESULT */
-        /* ========================================= */
-
-        <>
-          <h1>🏆 Email Quiz Complete!</h1>
-
-          <h2>
-            Your Score: {score} / {emailQuestions.length}
-          </h2>
-
-          <p>Great job! Keep learning how to use email safely.</p>
-
+        {emailQuestions[questionNumber].options.map((option) => (
           <button
-            className="primary-button"
-            onClick={() => {
-              setQuestionNumber(0);
-              setScore(0);
-              setPage("learn");
-            }}
+            key={option}
+            className="quiz-option"
+            onClick={() =>
+              answerQuestion(option, emailQuestions, "emailResult")
+            }
           >
-            Back to Digital Skills
+            {option}
           </button>
-        </>
-      ) : page === "aiQuiz" ? (
-        /* ========================================= */
-        /* AI QUIZ */
-        /* ========================================= */
+        ))}
+      </div>
+    );
+  }
 
-        <>
-          <button onClick={() => setPage("ai")}>← Back</button>
+  if (page === "aiQuiz") {
+    return (
+      <div className="app">
+        <button onClick={() => setPage("ai")}>← Back</button>
 
-          <h1>🎯 Artificial Intelligence Quiz</h1>
+        <h1>🎯 Artificial Intelligence Quiz</h1>
+        <h2>
+          Question {questionNumber + 1} of {aiQuestions.length}
+        </h2>
 
-          <h2>
-            Question {questionNumber + 1} of {aiQuestions.length}
-          </h2>
+        <h3>{aiQuestions[questionNumber].question}</h3>
 
-          <h3>{aiQuestions[questionNumber].question}</h3>
-
-          {aiQuestions[questionNumber].options.map((option) => (
-            <button
-              key={option}
-              className="quiz-option"
-              onClick={() => {
-                if (option === aiQuestions[questionNumber].correct) {
-                  setScore(score + 1);
-                }
-
-                if (questionNumber < aiQuestions.length - 1) {
-                  setQuestionNumber(questionNumber + 1);
-                } else {
-                  setPage("aiResult");
-                }
-              }}
-            >
-              {option}
-            </button>
-          ))}
-        </>
-      ) : page === "aiResult" ? (
-        /* ========================================= */
-        /* AI RESULT */
-        /* ========================================= */
-
-        <>
-          <h1>🏆 AI Quiz Complete!</h1>
-
-          <h2>
-            Your Score: {score} / {aiQuestions.length}
-          </h2>
-
-          <p>
-            Great job! Keep learning how to use Artificial Intelligence safely
-            and effectively.
-          </p>
-
+        {aiQuestions[questionNumber].options.map((option) => (
           <button
-            className="primary-button"
-            onClick={() => {
-              setQuestionNumber(0);
-              setScore(0);
-              setPage("learn");
-            }}
+            key={option}
+            className="quiz-option"
+            onClick={() => answerQuestion(option, aiQuestions, "aiResult")}
           >
-            Back to Digital Skills
+            {option}
           </button>
-        </>
-      ) : (
-        /* ========================================= */
-        /* CYBERSECURITY RESULT */
-        /* ========================================= */
+        ))}
+      </div>
+    );
+  }
 
-        <>
-          <h1>🏆 Quiz Complete!</h1>
+  // ==============================
+  // RESULTS
+  // ==============================
 
-          <h2>
-            Your Score: {score} / {questions.length}
-          </h2>
+  const resultData =
+    page === "emailResult"
+      ? { title: "🏆 Email Quiz Complete!", total: emailQuestions.length }
+      : page === "aiResult"
+        ? { title: "🏆 AI Quiz Complete!", total: aiQuestions.length }
+        : { title: "🏆 Quiz Complete!", total: questions.length };
 
-          <p>Great job! Keep learning how to stay safe online.</p>
+  return (
+    <div className="app">
+      <h1>{resultData.title}</h1>
 
-          <button
-            className="primary-button"
-            onClick={() => {
-              setQuestionNumber(0);
-              setScore(0);
-              setPage("home");
-            }}
-          >
-            Back to Home
-          </button>
-        </>
-      )}
+      <h2>
+        Your Score: {score} / {resultData.total}
+      </h2>
+
+      <p>Great job! Keep learning and staying safe online.</p>
+
+      <button
+        className="primary-button"
+        onClick={() => {
+          setQuestionNumber(0);
+          setScore(0);
+          setPage("learn");
+        }}
+      >
+        Back to Digital Skills
+      </button>
     </div>
   );
 }
