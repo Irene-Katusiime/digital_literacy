@@ -431,3 +431,37 @@ button:not(.card):not(.lesson-button):not(.quiz-option):not(.primary-button):hov
   color: var(--text-dark);
   font-weight: 500;
 }
+
+
+/* ==========================================
+   LANGUAGE SELECTOR
+   ========================================== */
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 25px;
+  padding: 10px 0;
+}
+
+.language-selector label {
+  font-weight: 600;
+  color: #333;
+}
+
+.language-selector select {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+}
+
+.language-selector select:focus {
+  border-color: #2563eb;
+}
+
