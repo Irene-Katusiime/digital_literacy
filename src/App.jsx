@@ -16,7 +16,6 @@ import ChatAssistant from "./ChatAssistant";
 // The selected language is saved in localStorage.
 // ==========================================================
 
-
 // ==========================================================
 // TRANSLATIONS
 // ==========================================================
@@ -56,8 +55,7 @@ const TRANSLATIONS = {
       "Learn about Artificial Intelligence and how to use it responsibly.",
 
     noInternet: "No internet?",
-    learnWithUSSD:
-      "You can also learn digital skills using our USSD service.",
+    learnWithUSSD: "You can also learn digital skills using our USSD service.",
     scamWithUSSD:
       "You can also check suspicious messages using our USSD service.",
     useUSSD: "Use USSD",
@@ -70,8 +68,7 @@ const TRANSLATIONS = {
     retakeQuiz: "Retake Quiz",
 
     safetyCheck: "Safety Check",
-    safetySubtitle:
-      "Not sure about a message? Let's look for warning signs.",
+    safetySubtitle: "Not sure about a message? Let's look for warning signs.",
 
     pasteMessage: "Paste the suspicious message",
     example: "Example: Congratulations! You have won...",
@@ -95,8 +92,7 @@ const TRANSLATIONS = {
     messageAnalysis: "Message Analysis",
     highlightedWarning: "Highlighted warning signs",
     warningSign: "Warning sign",
-    warningExplanation:
-      "Words or phrases that deserve extra attention",
+    warningExplanation: "Words or phrases that deserve extra attention",
 
     whyConcerned: "Why we're concerned",
     noWarning:
@@ -112,8 +108,7 @@ const TRANSLATIONS = {
       "Ask any tech question or paste a suspicious message to check for scams.",
 
     offlineDigitalSkills: "Offline Digital Skills",
-    offlineDigitalSkillsDesc:
-      "Learn digital skills without internet data.",
+    offlineDigitalSkillsDesc: "Learn digital skills without internet data.",
 
     offlineScamCheck: "Offline Scam Check",
     offlineScamCheckDesc:
@@ -162,16 +157,13 @@ const TRANSLATIONS = {
     strongPasswords: "Use strong passwords with letters, numbers and symbols.",
     neverSharePin: "Never share your Mobile Money PIN or OTP.",
     suspiciousLinks: "Don't click suspicious links.",
-    verifyPeople:
-      "Verify people before sending money or personal information.",
+    verifyPeople: "Verify people before sending money or personal information.",
 
-    emailDescription:
-      "Email allows you to send and receive digital messages.",
+    emailDescription: "Email allows you to send and receive digital messages.",
     composeEmail: "Use Compose to write a new email.",
     attachFiles: "You can attach documents and photos.",
     neverShareEmailPassword: "Never share your email password.",
-    unknownAttachments:
-      "Be careful with unknown attachments and links.",
+    unknownAttachments: "Be careful with unknown attachments and links.",
 
     aiDescription:
       "AI allows computers to perform tasks that normally require human intelligence.",
@@ -204,8 +196,7 @@ const TRANSLATIONS = {
       "Legitimate organizations should not ask you to reveal your PIN, password, or OTP.",
 
     moneyTitle: "Requests money",
-    moneyDescription:
-      "The message asks you to send money or make a payment.",
+    moneyDescription: "The message asks you to send money or make a payment.",
 
     rewardTitle: "Unexpected reward",
     rewardDescription:
@@ -228,55 +219,45 @@ const TRANSLATIONS = {
     verifyContact: "Verify who contacted you",
     staySafe: "Stay safe",
 
-    neverShareMobilePIN:
-      "Never share your mobile-money PIN or OTP.",
-    dontSendUnexpected:
-      "Don't send money because of an unexpected message.",
+    neverShareMobilePIN: "Never share your mobile-money PIN or OTP.",
+    dontSendUnexpected: "Don't send money because of an unexpected message.",
     contactProvider:
       "Contact your mobile-money provider using an official number or app.",
 
-    dontPayJob:
-      "Don't pay money just to apply for or receive a job.",
-    researchCompany:
-      "Research the company using its official website.",
+    dontPayJob: "Don't pay money just to apply for or receive a job.",
+    researchCompany: "Research the company using its official website.",
     verifyVacancy:
       "Verify the vacancy with the company's official contact information.",
 
-    contactSchool:
-      "Contact the school or university directly.",
+    contactSchool: "Contact the school or university directly.",
     dontPayUnverified:
       "Don't pay fees through an unverified link or personal number.",
     checkInstitution:
       "Check the institution's official website for scholarship information.",
 
-    dontSendRomanceMoney:
-      "Don't send money to someone you only know online.",
+    dontSendRomanceMoney: "Don't send money to someone you only know online.",
     emotionalEmergency:
       "Be cautious if someone creates an emotional emergency.",
     verifyIdentity:
       "Verify the person's identity before sharing personal or financial information.",
 
-    dontPayPrize:
-      "Don't pay a fee to claim a prize you didn't enter.",
+    dontPayPrize: "Don't pay a fee to claim a prize you didn't enter.",
     verifyPromotion:
       "Verify the promotion through the organization's official website or contact.",
 
-    dontLoginLinks:
-      "Don't log in through links sent in unexpected messages.",
+    dontLoginLinks: "Don't log in through links sent in unexpected messages.",
     contactOrganization:
       "Contact the organization directly if you think your account has a problem.",
 
     officialName:
       "Don't trust a message simply because it uses an official name or logo.",
-    officialChannel:
-      "Contact the organization through an official channel.",
+    officialChannel: "Contact the organization through an official channel.",
     dontSendPersonal:
       "Don't send money or personal information until the request is verified.",
 
     dontRush: "Don't rush into taking action.",
     verifySender: "Verify the sender independently.",
-    neverShareSensitive:
-      "Never share passwords, PINs, or OTPs."
+    neverShareSensitive: "Never share passwords, PINs, or OTPs.",
   },
 
   Luganda: {
@@ -288,15 +269,13 @@ const TRANSLATIONS = {
     whatWouldYouLike: "Oyagala kukola ki?",
 
     learnSkills: "Yiga Obukugu bwa Tekinologiya",
-    learnSkillsDesc:
-      "Yiga engeri y'okukozesa tekinologiya mu bukuumi.",
+    learnSkillsDesc: "Yiga engeri y'okukozesa tekinologiya mu bukuumi.",
 
     scamCheck: "Kebera Obubaka Obw'Obulimba",
     scamCheckDesc: "Kebera obubaka obuteesigika.",
 
     assistant: "Buuza Digital Assistant",
-    assistantDesc:
-      "Buuza ebibuuzo ebikwata ku tekinologiya.",
+    assistantDesc: "Buuza ebibuuzo ebikwata ku tekinologiya.",
 
     back: "← Emabega",
     chooseTopic: "Londa omutwe gw'oyagala okuyiga.",
@@ -306,8 +285,7 @@ const TRANSLATIONS = {
       "Yiga engeri y'okwekuumamu ng'okozesa tekinologiya ne yintaneeti.",
 
     email: "Email",
-    emailDesc:
-      "Yiga engeri y'okukozesa email mu bukuumi n'obukugu.",
+    emailDesc: "Yiga engeri y'okukozesa email mu bukuumi n'obukugu.",
 
     artificialIntelligence: "Artificial Intelligence",
     artificialIntelligenceDesc:
@@ -316,8 +294,7 @@ const TRANSLATIONS = {
     noInternet: "Tolina internet?",
     learnWithUSSD:
       "Osobola okuyiga obukugu bwa tekinologiya ng'okozesa empeereza ya USSD.",
-    scamWithUSSD:
-      "Osobola okukebera obubaka obuteesigika ng'okozesa USSD.",
+    scamWithUSSD: "Osobola okukebera obubaka obuteesigika ng'okozesa USSD.",
     useUSSD: "Kozesa USSD",
 
     lessonQuiz: "Ekigezo ky'Omutwe",
@@ -338,8 +315,7 @@ const TRANSLATIONS = {
     checkMessage: "Kebera Obubaka",
     checking: "Ekeberebwa...",
     checkingSigns: "Tukebereza obubonero obw'obulimba...",
-    scamPatterns:
-      "Tukebereza enkola ezitera okukozesebwa mu bulimba.",
+    scamPatterns: "Tukebereza enkola ezitera okukozesebwa mu bulimba.",
 
     privacyNote:
       "Tokuteekamu password, PIN, OTP oba amawulire amalala ag'ekyama.",
@@ -354,8 +330,7 @@ const TRANSLATIONS = {
     messageAnalysis: "Okwekenenya Obubaka",
     highlightedWarning: "Obubonero obw'obulabe obulaga",
     warningSign: "Obubonero bw'obulabe",
-    warningExplanation:
-      "Ebigambo oba emboozi ezetaaga okwegendereza",
+    warningExplanation: "Ebigambo oba emboozi ezetaaga okwegendereza",
 
     whyConcerned: "Lwaki tweeraliikiridde",
     noWarning:
@@ -422,16 +397,14 @@ const TRANSLATIONS = {
       "Kozesa password ennywevu erimu ennukuta, ennamba n'obubonero.",
     neverSharePin: "Togabana PIN oba OTP yo ey'ekitabo kya ssente.",
     suspiciousLinks: "Tokuba ku links eziteesigika.",
-    verifyPeople:
-      "Kebera omuntu nga tonnamuwe ssente oba amawulire go.",
+    verifyPeople: "Kebera omuntu nga tonnamuwe ssente oba amawulire go.",
 
     emailDescription:
       "Email ekusobozesa okusindika n'okufuna obubaka obwa digito.",
     composeEmail: "Kozesa Compose okuwandiika email empya.",
     attachFiles: "Osobola okugattako documents n'ebifaananyi.",
     neverShareEmailPassword: "Togabana password ya email yo.",
-    unknownAttachments:
-      "Wegendereze attachments ne links z'otomanyi.",
+    unknownAttachments: "Wegendereze attachments ne links z'otomanyi.",
 
     aiDescription:
       "AI esobozesa kompyuta okukola emirimu egitera okwetaagisa obwongo bw'omuntu.",
@@ -464,8 +437,7 @@ const TRANSLATIONS = {
       "Ebibiina ebituufu tebirina kukusaba PIN, password oba OTP yo.",
 
     moneyTitle: "Busaba ssente",
-    moneyDescription:
-      "Obubaka busaba osindike ssente oba okole payment.",
+    moneyDescription: "Obubaka busaba osindike ssente oba okole payment.",
 
     rewardTitle: "Empeera etasuubirwa",
     rewardDescription:
@@ -476,8 +448,7 @@ const TRANSLATIONS = {
       "Wegendereze links mu bubaka obutasuubirwa. Kebera gy'ekussa nga tonnaggulawo.",
 
     threatTitle: "Bukozesa okutya oba okukanga",
-    threatDescription:
-      "Omusindika ayinza okukozesa okutya okukukaka okukola.",
+    threatDescription: "Omusindika ayinza okukozesa okutya okukukaka okukola.",
 
     protectMobileMoney: "Kuuma Mobile Money yo",
     verifyJob: "Kebera omulimu",
@@ -488,38 +459,28 @@ const TRANSLATIONS = {
     verifyContact: "Kebera eyakutuukirira",
     staySafe: "Weekuume",
 
-    neverShareMobilePIN:
-      "Togabana PIN oba OTP ya Mobile Money yo.",
-    dontSendUnexpected:
-      "Tosindika ssente olw'obubaka obutasuubirwa.",
+    neverShareMobilePIN: "Togabana PIN oba OTP ya Mobile Money yo.",
+    dontSendUnexpected: "Tosindika ssente olw'obubaka obutasuubirwa.",
     contactProvider:
       "Tuukirira omuwa empeereza ya Mobile Money ng'okozesa ennamba oba app entuufu.",
 
-    dontPayJob:
-      "Tosasa ssente okusaba oba okufuna omulimu.",
-    researchCompany:
-      "Noonyereza ku kampuni ng'okozesa website yaayo entuufu.",
-    verifyVacancy:
-      "Kebera omulimu ng'okozesa contact entuufu eya kampuni.",
+    dontPayJob: "Tosasa ssente okusaba oba okufuna omulimu.",
+    researchCompany: "Noonyereza ku kampuni ng'okozesa website yaayo entuufu.",
+    verifyVacancy: "Kebera omulimu ng'okozesa contact entuufu eya kampuni.",
 
-    contactSchool:
-      "Tuukirira essomero oba yunivasite butereevu.",
+    contactSchool: "Tuukirira essomero oba yunivasite butereevu.",
     dontPayUnverified:
       "Tosasa fees ng'okozesa link oba ennamba y'omuntu gy'otamanyi.",
-    checkInstitution:
-      "Kebera website entuufu y'ekitongole ku scholarship.",
+    checkInstitution: "Kebera website entuufu y'ekitongole ku scholarship.",
 
     dontSendRomanceMoney:
       "Tosindika ssente eri omuntu gw'omanyi ku yintaneeti yekka.",
-    emotionalEmergency:
-      "Wegendereze omuntu akuleetera emergency ey'ekitonde.",
+    emotionalEmergency: "Wegendereze omuntu akuleetera emergency ey'ekitonde.",
     verifyIdentity:
       "Kebera omuntu nga tonnamuwa mawulire ga ssente oba ag'obuntu.",
 
-    dontPayPrize:
-      "Tosasa fee kufuna prize gye w'otawandiikamu.",
-    verifyPromotion:
-      "Kebera promotion ng'okozesa website oba contact entuufu.",
+    dontPayPrize: "Tosasa fee kufuna prize gye w'otawandiikamu.",
+    verifyPromotion: "Kebera promotion ng'okozesa website oba contact entuufu.",
 
     dontLoginLinks:
       "Toyingira account ng'okozesa links ezisindikiddwa mu bubaka obutasuubirwa.",
@@ -528,15 +489,13 @@ const TRANSLATIONS = {
 
     officialName:
       "Togeesiga bubaka olw'okuba bukozesa erinnya oba logo y'ekitongole.",
-    officialChannel:
-      "Tuukirira ekitongole ng'okozesa channel yaakyo entuufu.",
+    officialChannel: "Tuukirira ekitongole ng'okozesa channel yaakyo entuufu.",
     dontSendPersonal:
       "Tosindika ssente oba mawulire go nga tonnakakasa kusaba.",
 
     dontRush: "Tokola mangu nga tonnakebera.",
     verifySender: "Kebera eyasindika obubaka.",
-    neverShareSensitive:
-      "Togabana passwords, PIN oba OTP."
+    neverShareSensitive: "Togabana passwords, PIN oba OTP.",
   },
 
   Runyankole: {
@@ -548,15 +507,13 @@ const TRANSLATIONS = {
     whatWouldYouLike: "Niki ekiwakunda kukora?",
 
     learnSkills: "Yega Obukugu bwa Tekinologiya",
-    learnSkillsDesc:
-      "Yega okukoresa tekinologiya omu buryo bw'obwirinzi.",
+    learnSkillsDesc: "Yega okukoresa tekinologiya omu buryo bw'obwirinzi.",
 
     scamCheck: "Reeba Obubaka Obw'oburyarya",
     scamCheckDesc: "Reeba obubaka obutakwesigwa.",
 
     assistant: "Buuza Digital Assistant",
-    assistantDesc:
-      "Buuza ebibuuzo ebikwata ahari tekinologiya.",
+    assistantDesc: "Buuza ebibuuzo ebikwata ahari tekinologiya.",
 
     back: "← Garuka",
     chooseTopic: "Toorana omutwe ogwoyenda kwega.",
@@ -566,18 +523,15 @@ const TRANSLATIONS = {
       "Yega okuweerinda waaba nookoresa tekinologiya na internet.",
 
     email: "Email",
-    emailDesc:
-      "Yega okuhandika n'okukoresa email omu buryo oburungi.",
+    emailDesc: "Yega okuhandika n'okukoresa email omu buryo oburungi.",
 
     artificialIntelligence: "Artificial Intelligence",
     artificialIntelligenceDesc:
       "Yega ahari Artificial Intelligence n'oku ogikoresa gye.",
 
     noInternet: "No internet?",
-    learnWithUSSD:
-      "Noobaasa kwega obukugu bwa tekinologiya okozesa USSD.",
-    scamWithUSSD:
-      "Noobaasa kureeba obubaka obutakwesigwa okozesa USSD.",
+    learnWithUSSD: "Noobaasa kwega obukugu bwa tekinologiya okozesa USSD.",
+    scamWithUSSD: "Noobaasa kureeba obubaka obutakwesigwa okozesa USSD.",
     useUSSD: "Koresa USSD",
 
     lessonQuiz: "Ekigezo",
@@ -598,11 +552,9 @@ const TRANSLATIONS = {
     checkMessage: "Reeba Obubaka",
     checking: "Nitureeba...",
     checkingSigns: "Nitureeba obubonero bw'oburyarya...",
-    scamPatterns:
-      "Nitureeba enkora ezitera kukozesebwa omu bubi.",
+    scamPatterns: "Nitureeba enkora ezitera kukozesebwa omu bubi.",
 
-    privacyNote:
-      "Otashiremamu password, PIN, OTP nari amakuru ag'ekyama.",
+    privacyNote: "Otashiremamu password, PIN, OTP nari amakuru ag'ekyama.",
 
     riskAssessment: "Okureeba Obulabe",
     potentialScam: "Obubaka Obw'oburyarya",
@@ -614,8 +566,7 @@ const TRANSLATIONS = {
     messageAnalysis: "Okwekenena Obubaka",
     highlightedWarning: "Obubonero bw'obulabe",
     warningSign: "Obubonero",
-    warningExplanation:
-      "Amagambo agariirweho okwegyendesereza",
+    warningExplanation: "Amagambo agariirweho okwegyendesereza",
 
     whyConcerned: "Ahabw'enki twine obwerariikirwe",
     noWarning:
@@ -682,16 +633,14 @@ const TRANSLATIONS = {
       "Koresa passwords zikomeye ezirimu letters, numbers na symbols.",
     neverSharePin: "Otaga PIN nari OTP ya Mobile Money.",
     suspiciousLinks: "Otacwanga ahari links ezitakwesigwa.",
-    verifyPeople:
-      "Reeba abantu mbere y'okubaha sente nari amakuru gaawe.",
+    verifyPeople: "Reeba abantu mbere y'okubaha sente nari amakuru gaawe.",
 
     emailDescription:
       "Email neekwikiriza kutuma n'okutunga obubaka bwa digital.",
     composeEmail: "Koresa Compose kuhandika email empya.",
     attachFiles: "Noobaasa kuteeraho documents n'ebifaananyi.",
     neverShareEmailPassword: "Otaga password ya email yawe.",
-    unknownAttachments:
-      "Gyendesereza attachments na links ezitomaanye.",
+    unknownAttachments: "Gyendesereza attachments na links ezitomaanye.",
 
     aiDescription:
       "AI neekwikiriza computers kukora emirimo erikubaasa kwetaaga obwenge bw'omuntu.",
@@ -712,8 +661,7 @@ const TRANSLATIONS = {
       "Hariho obubonero bw'obulabe. Gyendesereza kandi reeba omutumi.",
     suspiciousDescription:
       "Obubaka obu burimu obubonero bw'obulabe. Reeba mbere y'okukora.",
-    highRiskDescription:
-      "Obubaka obu burimu obubonero bwingi obw'oburyarya.",
+    highRiskDescription: "Obubaka obu burimu obubonero bwingi obw'oburyarya.",
 
     urgencyTitle: "Bukuhutaza kukora bwangu",
     urgencyDescription:
@@ -724,20 +672,17 @@ const TRANSLATIONS = {
       "Ekitongore ekihikire tikirikwija kusaba PIN, password nari OTP.",
 
     moneyTitle: "Busaba sente",
-    moneyDescription:
-      "Obubaka nibusaba kutuma sente nari kukora payment.",
+    moneyDescription: "Obubaka nibusaba kutuma sente nari kukora payment.",
 
     rewardTitle: "Empeera etakutegwirwe",
     rewardDescription:
       "Obubaka nibukwemerera prize nari sente ezitakutegwirwe.",
 
     linkTitle: "Burimu link",
-    linkDescription:
-      "Gyendesereza links omu bubaka obutakutegwirwe.",
+    linkDescription: "Gyendesereza links omu bubaka obutakutegwirwe.",
 
     threatTitle: "Bukoresa kutiina",
-    threatDescription:
-      "Omuntu naabaasa kukoresa kutiina kukuhutaza.",
+    threatDescription: "Omuntu naabaasa kukoresa kutiina kukuhutaza.",
 
     protectMobileMoney: "Reinda Mobile Money yawe",
     verifyJob: "Reeba omurimo",
@@ -748,55 +693,38 @@ const TRANSLATIONS = {
     verifyContact: "Reeba owakuhamagara",
     staySafe: "Weerinde",
 
-    neverShareMobilePIN:
-      "Otaga PIN nari OTP ya Mobile Money yawe.",
-    dontSendUnexpected:
-      "Otuma sente ahabw'obubaka obutakutegwirwe.",
-    contactProvider:
-      "Hamagara omuwa Mobile Money ahakoresa ennamba entuufu.",
+    neverShareMobilePIN: "Otaga PIN nari OTP ya Mobile Money yawe.",
+    dontSendUnexpected: "Otuma sente ahabw'obubaka obutakutegwirwe.",
+    contactProvider: "Hamagara omuwa Mobile Money ahakoresa ennamba entuufu.",
 
-    dontPayJob:
-      "Otashashura sente kushaba nari kutunga omurimo.",
-    researchCompany:
-      "Shwijuma kampuni ahari website yaayo entuufu.",
-    verifyVacancy:
-      "Reeba omurimo ahari contact entuufu ya kampuni.",
+    dontPayJob: "Otashashura sente kushaba nari kutunga omurimo.",
+    researchCompany: "Shwijuma kampuni ahari website yaayo entuufu.",
+    verifyVacancy: "Reeba omurimo ahari contact entuufu ya kampuni.",
 
-    contactSchool:
-      "Hamagara shule nari university butereevu.",
-    dontPayUnverified:
-      "Otashashura fees ahari link etakwesigwa.",
-    checkInstitution:
-      "Reeba website entuufu y'ekitongore.",
+    contactSchool: "Hamagara shule nari university butereevu.",
+    dontPayUnverified: "Otashashura fees ahari link etakwesigwa.",
+    checkInstitution: "Reeba website entuufu y'ekitongore.",
 
     dontSendRomanceMoney:
       "Otuma sente ahari omuntu ouwamanya aha internet kwonka.",
     emotionalEmergency:
       "Gyendesereza omuntu orikureetera emergency y'amarangamutima.",
-    verifyIdentity:
-      "Reeba omuntu mbere y'okumugabira amakuru.",
+    verifyIdentity: "Reeba omuntu mbere y'okumugabira amakuru.",
 
-    dontPayPrize:
-      "Otashashura fee kutunga prize etawandikire.",
-    verifyPromotion:
-      "Reeba promotion ahari website entuufu.",
+    dontPayPrize: "Otashashura fee kutunga prize etawandikire.",
+    verifyPromotion: "Reeba promotion ahari website entuufu.",
 
-    dontLoginLinks:
-      "Otoyingira account ahari links ezitakutegwirwe.",
-    contactOrganization:
-      "Hamagara ekitongore butereevu.",
+    dontLoginLinks: "Otoyingira account ahari links ezitakutegwirwe.",
+    contactOrganization: "Hamagara ekitongore butereevu.",
 
     officialName:
       "Otakwesiga bubaka ahabw'okuba burimu erinnya nari logo y'ekitongore.",
-    officialChannel:
-      "Hamagara ekitongore ahakoresa channel entuufu.",
-    dontSendPersonal:
-      "Otuma sente nari amakuru gaawe otakareebire.",
+    officialChannel: "Hamagara ekitongore ahakoresa channel entuufu.",
+    dontSendPersonal: "Otuma sente nari amakuru gaawe otakareebire.",
 
     dontRush: "Otahuta kukora.",
     verifySender: "Reeba omutumi.",
-    neverShareSensitive:
-      "Otaga passwords, PIN nari OTP."
+    neverShareSensitive: "Otaga passwords, PIN nari OTP.",
   },
 
   Acholi: {
@@ -808,15 +736,13 @@ const TRANSLATIONS = {
     whatWouldYouLike: "Ngo ma imito timo?",
 
     learnSkills: "Pwony Lebe me Teknoloji",
-    learnSkillsDesc:
-      "Pwony kit me tic ki teknoloji i yo ma ber.",
+    learnSkillsDesc: "Pwony kit me tic ki teknoloji i yo ma ber.",
 
     scamCheck: "Nen Rek ma Gonyo",
     scamCheckDesc: "Nen rek ma pe geno.",
 
     assistant: "Pen Digital Assistant",
-    assistantDesc:
-      "Pen lapeny ma ikom teknoloji.",
+    assistantDesc: "Pen lapeny ma ikom teknoloji.",
 
     back: "← Dwog cen",
     chooseTopic: "Yer gin ma imito pwonyo.",
@@ -826,18 +752,15 @@ const TRANSLATIONS = {
       "Pwony kit me gwoko keni ka itiyo ki teknoloji ki internet.",
 
     email: "Email",
-    emailDesc:
-      "Pwony kit me tic ki email i yo ma ber ki ma gwoko keni.",
+    emailDesc: "Pwony kit me tic ki email i yo ma ber ki ma gwoko keni.",
 
     artificialIntelligence: "Artificial Intelligence",
     artificialIntelligenceDesc:
       "Pwony ikom Artificial Intelligence ki kit me tic kwede maber.",
 
     noInternet: "Pe i tye ki internet?",
-    learnWithUSSD:
-      "I twero pwonyo kit me tic ki teknoloji ki USSD.",
-    scamWithUSSD:
-      "I twero neno rek ma pe i geno ki USSD.",
+    learnWithUSSD: "I twero pwonyo kit me tic ki teknoloji ki USSD.",
+    scamWithUSSD: "I twero neno rek ma pe i geno ki USSD.",
     useUSSD: "Tic ki USSD",
 
     lessonQuiz: "Lapeny me Pwony",
@@ -848,8 +771,7 @@ const TRANSLATIONS = {
     retakeQuiz: "Dwol Lapeny",
 
     safetyCheck: "Nen Gwoko Keni",
-    safetySubtitle:
-      "Pe i ngeyo maber pi rek? Wa nen kit ma rek tye kwede.",
+    safetySubtitle: "Pe i ngeyo maber pi rek? Wa nen kit ma rek tye kwede.",
 
     pasteMessage: "Ket rek ma pe i geno",
     example: "Cal: I winyo...",
@@ -860,8 +782,7 @@ const TRANSLATIONS = {
     checkingSigns: "Wa neno kit rek ma gonyo.",
     scamPatterns: "Wa neno kit ma scam gi timo.",
 
-    privacyNote:
-      "Pe iket password, PIN, OTP onyo ngec ma pe mito ngat mukene.",
+    privacyNote: "Pe iket password, PIN, OTP onyo ngec ma pe mito ngat mukene.",
 
     riskAssessment: "Nen Bal",
     potentialScam: "Scam ma twero bedo",
@@ -873,8 +794,7 @@ const TRANSLATIONS = {
     messageAnalysis: "Nen Rek",
     highlightedWarning: "Kit rek ma wa neno",
     warningSign: "Kit rek",
-    warningExplanation:
-      "Lok ma mito genyo maber",
+    warningExplanation: "Lok ma mito genyo maber",
 
     whyConcerned: "Pi ngo wa parre",
     noWarning:
@@ -886,16 +806,13 @@ const TRANSLATIONS = {
     warningSigns: "Kit rek",
 
     digitalAssistant: "Digital Safety Assistant",
-    assistantSubtitle:
-      "Pen lapeny pi teknoloji onyo ket rek ma pe i geno.",
+    assistantSubtitle: "Pen lapeny pi teknoloji onyo ket rek ma pe i geno.",
 
     offlineDigitalSkills: "Pwony Teknoloji ma Pe ki Internet",
-    offlineDigitalSkillsDesc:
-      "Pwony teknoloji ma pe ki data me internet.",
+    offlineDigitalSkillsDesc: "Pwony teknoloji ma pe ki data me internet.",
 
     offlineScamCheck: "Nen Scam ma Pe ki Internet",
-    offlineScamCheckDesc:
-      "Nen rek ma pe i geno ki pwony tam me gwoko keni.",
+    offlineScamCheckDesc: "Nen rek ma pe i geno ki pwony tam me gwoko keni.",
 
     backToSkills: "← Dwog cen bot Digital Skills",
     backToSafety: "← Dwog cen bot Gwoko Keni",
@@ -941,19 +858,15 @@ const TRANSLATIONS = {
       "Tii ki password ma ber ma tye ki letere, namba ki kit ma.",
     neverSharePin: "Pe iket PIN onyo OTP mari bot ngat mukene.",
     suspiciousLinks: "Pe iket i link ma pe i geno.",
-    verifyPeople:
-      "Nen ngat acel ka i mito cwal money onyo ngec.",
+    verifyPeople: "Nen ngat acel ka i mito cwal money onyo ngec.",
 
-    emailDescription:
-      "Email miyo in twero cwalo ki gamo rek me digital.",
+    emailDescription: "Email miyo in twero cwalo ki gamo rek me digital.",
     composeEmail: "Tii ki Compose me coyo email manyen.",
     attachFiles: "I twero medo document ki cal.",
     neverShareEmailPassword: "Pe iket password me email mari.",
-    unknownAttachments:
-      "Gwokri ki attachment ki link ma pe i ngeyo.",
+    unknownAttachments: "Gwokri ki attachment ki link ma pe i ngeyo.",
 
-    aiDescription:
-      "AI miyo computer twero timo tic ma mito ngec me dano.",
+    aiDescription: "AI miyo computer twero timo tic ma mito ngec me dano.",
     aiQuestions: "AI twero gamo lapeny.",
     aiWriting: "AI twero konyo i coyo ki pwonyo.",
     aiMistakes: "AI twero timo bal.",
@@ -965,38 +878,29 @@ const TRANSLATIONS = {
     dontClickLinks: "Pe iket i link ma pe i ngeyo.",
     useStrongPasswords: "Tii ki password ma ber.",
 
-    lowRiskDescription:
-      "Wa neno rek matino, ento nen rek ma pe i bino.",
-    cautionDescription:
-      "Tye rek ma mito gwoko keni. Nen ngat ma ocwalo.",
-    suspiciousDescription:
-      "Rek man tye ki kit scam. Nen maber mapwod.",
-    highRiskDescription:
-      "Rek man tye ki kit scam mapol.",
+    lowRiskDescription: "Wa neno rek matino, ento nen rek ma pe i bino.",
+    cautionDescription: "Tye rek ma mito gwoko keni. Nen ngat ma ocwalo.",
+    suspiciousDescription: "Rek man tye ki kit scam. Nen maber mapwod.",
+    highRiskDescription: "Rek man tye ki kit scam mapol.",
 
     urgencyTitle: "Kakano me timo tic ma piyo",
-    urgencyDescription:
-      "Ngat ma ocwalo rek tye ka kulo in me timo tic piyo.",
+    urgencyDescription: "Ngat ma ocwalo rek tye ka kulo in me timo tic piyo.",
 
     sensitiveTitle: "Mito ngec ma pe mito",
     sensitiveDescription:
       "Organization ma ber pe mito PIN, password onyo OTP mari.",
 
     moneyTitle: "Mito money",
-    moneyDescription:
-      "Rek mito money onyo payment.",
+    moneyDescription: "Rek mito money onyo payment.",
 
     rewardTitle: "Gift ma pe i bino",
-    rewardDescription:
-      "Rek mito cako gift, prize onyo money.",
+    rewardDescription: "Rek mito cako gift, prize onyo money.",
 
     linkTitle: "Tye ki link",
-    linkDescription:
-      "Gwokri ki link ma pe i bino.",
+    linkDescription: "Gwokri ki link ma pe i bino.",
 
     threatTitle: "Tic ki lworo",
-    threatDescription:
-      "Ngat ma ocwalo rek twero lworo in me timo gin.",
+    threatDescription: "Ngat ma ocwalo rek twero lworo in me timo gin.",
 
     protectMobileMoney: "Gwok Mobile Money",
     verifyJob: "Nen tic ma kelo money",
@@ -1007,55 +911,35 @@ const TRANSLATIONS = {
     verifyContact: "Nen ngat ma ocwalo",
     staySafe: "Gwokri",
 
-    neverShareMobilePIN:
-      "Pe iket PIN onyo OTP me Mobile Money.",
-    dontSendUnexpected:
-      "Pe icwal money pi rek ma pe i bino.",
-    contactProvider:
-      "Kob ki Mobile Money provider ki namba ma tye.",
+    neverShareMobilePIN: "Pe iket PIN onyo OTP me Mobile Money.",
+    dontSendUnexpected: "Pe icwal money pi rek ma pe i bino.",
+    contactProvider: "Kob ki Mobile Money provider ki namba ma tye.",
 
-    dontPayJob:
-      "Pe ipay money pi tic.",
-    researchCompany:
-      "Nen company ki website mamegi.",
-    verifyVacancy:
-      "Nen tic ki contact me company.",
+    dontPayJob: "Pe ipay money pi tic.",
+    researchCompany: "Nen company ki website mamegi.",
+    verifyVacancy: "Nen tic ki contact me company.",
 
-    contactSchool:
-      "Kob ki school onyo university.",
-    dontPayUnverified:
-      "Pe ipay fee ki link ma pe i geno.",
-    checkInstitution:
-      "Nen website me school.",
+    contactSchool: "Kob ki school onyo university.",
+    dontPayUnverified: "Pe ipay fee ki link ma pe i geno.",
+    checkInstitution: "Nen website me school.",
 
-    dontSendRomanceMoney:
-      "Pe icwal money bot ngat ma ineno online keken.",
-    emotionalEmergency:
-      "Gwokri ka ngat tye ka kelo lworo me cwiny.",
-    verifyIdentity:
-      "Nen ngat acel mapwod.",
+    dontSendRomanceMoney: "Pe icwal money bot ngat ma ineno online keken.",
+    emotionalEmergency: "Gwokri ka ngat tye ka kelo lworo me cwiny.",
+    verifyIdentity: "Nen ngat acel mapwod.",
 
-    dontPayPrize:
-      "Pe ipay fee pi prize.",
-    verifyPromotion:
-      "Nen promotion ki website mamegi.",
+    dontPayPrize: "Pe ipay fee pi prize.",
+    verifyPromotion: "Nen promotion ki website mamegi.",
 
-    dontLoginLinks:
-      "Pe i login ki link ma pe i geno.",
-    contactOrganization:
-      "Kob ki organization.",
+    dontLoginLinks: "Pe i login ki link ma pe i geno.",
+    contactOrganization: "Kob ki organization.",
 
-    officialName:
-      "Pe iyie rek pi nying onyo logo.",
-    officialChannel:
-      "Kob ki channel ma tye.",
-    dontSendPersonal:
-      "Pe icwal money onyo ngec mapwod.",
+    officialName: "Pe iyie rek pi nying onyo logo.",
+    officialChannel: "Kob ki channel ma tye.",
+    dontSendPersonal: "Pe icwal money onyo ngec mapwod.",
 
     dontRush: "Pe icwal tic piyo.",
     verifySender: "Nen ngat ma ocwalo.",
-    neverShareSensitive:
-      "Pe iket password, PIN onyo OTP."
+    neverShareSensitive: "Pe iket password, PIN onyo OTP.",
   },
 
   Ateso: {
@@ -1067,36 +951,30 @@ const TRANSLATIONS = {
     whatWouldYouLike: "Arai itwanar aponi?",
 
     learnSkills: "Losi Ikameta Teknoloji",
-    learnSkillsDesc:
-      "Losi itwanar aponi teknolojia akiro.",
+    learnSkillsDesc: "Losi itwanar aponi teknolojia akiro.",
 
     scamCheck: "Keberai Obukaba",
     scamCheckDesc: "Keberai obukaba ngesik.",
 
     assistant: "Pesi Digital Assistant",
-    assistantDesc:
-      "Pesi aiyal kede teknoloji.",
+    assistantDesc: "Pesi aiyal kede teknoloji.",
 
     back: "← Kogar",
     chooseTopic: "Arai itwanar alosi.",
 
     cybersecurity: "Ebu Teknoloji",
-    cybersecurityDesc:
-      "Losi itwanar kolil kede teknoloji ka internet.",
+    cybersecurityDesc: "Losi itwanar kolil kede teknoloji ka internet.",
 
     email: "Email",
-    emailDesc:
-      "Losi itwanar aponi email akiro ngesik.",
+    emailDesc: "Losi itwanar aponi email akiro ngesik.",
 
     artificialIntelligence: "Artificial Intelligence",
     artificialIntelligenceDesc:
       "Losi ikameta Artificial Intelligence kede ebu.",
 
     noInternet: "Internet mam?",
-    learnWithUSSD:
-      "Itenar alosi teknolojia kede USSD.",
-    scamWithUSSD:
-      "Itenar keberai obukaba kede USSD.",
+    learnWithUSSD: "Itenar alosi teknolojia kede USSD.",
+    scamWithUSSD: "Itenar keberai obukaba kede USSD.",
     useUSSD: "Kozesa USSD",
 
     lessonQuiz: "Aiyal",
@@ -1107,8 +985,7 @@ const TRANSLATIONS = {
     retakeQuiz: "Aiyal adol",
 
     safetyCheck: "Keberai Ebu",
-    safetySubtitle:
-      "Arai obukaba ngesik? Keberai akiro ngesik.",
+    safetySubtitle: "Arai obukaba ngesik? Keberai akiro ngesik.",
 
     pasteMessage: "Tebe obukaba ngesik",
     example: "Akiro: Owon akiro...",
@@ -1119,8 +996,7 @@ const TRANSLATIONS = {
     checkingSigns: "Nikeberai akiro ngesik.",
     scamPatterns: "Nikeberai akiro ngesik.",
 
-    privacyNote:
-      "Mam iikete password, PIN, OTP kede akiro ngesik.",
+    privacyNote: "Mam iikete password, PIN, OTP kede akiro ngesik.",
 
     riskAssessment: "Keberai Ebu",
     potentialScam: "Obukaba ngesik",
@@ -1132,12 +1008,10 @@ const TRANSLATIONS = {
     messageAnalysis: "Keberai Obukaba",
     highlightedWarning: "Akiro ngesik",
     warningSign: "Akiro ngesik",
-    warningExplanation:
-      "Akiro itwanar keberai",
+    warningExplanation: "Akiro itwanar keberai",
 
     whyConcerned: "Arai aponi",
-    noWarning:
-      "Mam wa keberai akiro scam. Kora keberai obukaba ngesik.",
+    noWarning: "Mam wa keberai akiro scam. Kora keberai obukaba ngesik.",
 
     safetyAdvice: "Akiro me Ebu",
     score: "Score",
@@ -1145,16 +1019,13 @@ const TRANSLATIONS = {
     warningSigns: "Akiro ngesik",
 
     digitalAssistant: "Digital Safety Assistant",
-    assistantSubtitle:
-      "Pesi aiyal kede teknoloji.",
+    assistantSubtitle: "Pesi aiyal kede teknoloji.",
 
     offlineDigitalSkills: "Teknoloji kede mam internet",
-    offlineDigitalSkillsDesc:
-      "Losi teknologi kede mam data.",
+    offlineDigitalSkillsDesc: "Losi teknologi kede mam data.",
 
     offlineScamCheck: "Keberai Scam kede mam internet",
-    offlineScamCheckDesc:
-      "Keberai obukaba ngesik kede losi ebu.",
+    offlineScamCheckDesc: "Keberai obukaba ngesik kede losi ebu.",
 
     backToSkills: "← Kogar Digital Skills",
     backToSafety: "← Kogar Ebu",
@@ -1193,26 +1064,20 @@ const TRANSLATIONS = {
     close: "Kwar",
 
     developmentDemo: "Development Demo",
-    simulation:
-      "Kanu USSD demo. Empeereza etosik aponi telecom USSD gateway.",
+    simulation: "Kanu USSD demo. Empeereza etosik aponi telecom USSD gateway.",
 
-    strongPasswords:
-      "Kozesa password ngesik kede akiro, numbers kede symbols.",
+    strongPasswords: "Kozesa password ngesik kede akiro, numbers kede symbols.",
     neverSharePin: "Mam iikete PIN kede OTP.",
     suspiciousLinks: "Mam iikete links ngesik.",
-    verifyPeople:
-      "Keberai ngesi mapol aponi kede ssente.",
+    verifyPeople: "Keberai ngesi mapol aponi kede ssente.",
 
-    emailDescription:
-      "Email etaranar cwal kede iyal obukaba.",
+    emailDescription: "Email etaranar cwal kede iyal obukaba.",
     composeEmail: "Kozesa Compose aponi email.",
     attachFiles: "Itenar mede documents kede photos.",
     neverShareEmailPassword: "Mam iikete password me email.",
-    unknownAttachments:
-      "Kolil kede attachments kede links.",
+    unknownAttachments: "Kolil kede attachments kede links.",
 
-    aiDescription:
-      "AI etaranar computer aponi akiro ngesik.",
+    aiDescription: "AI etaranar computer aponi akiro ngesik.",
     aiQuestions: "AI aponi iyal aiyal.",
     aiWriting: "AI aponi losi kede aponi.",
     aiMistakes: "AI aponi akiro ngesik.",
@@ -1224,38 +1089,28 @@ const TRANSLATIONS = {
     dontClickLinks: "Mam ikwar links ngesik.",
     useStrongPasswords: "Kozesa passwords ngesik.",
 
-    lowRiskDescription:
-      "Mam wa keberai akiro madit, kwap kora keberai.",
-    cautionDescription:
-      "Tye akiro ngesik. Kolil kede keberai.",
-    suspiciousDescription:
-      "Obukaba tye ki akiro ngesik. Keberai mapol.",
-    highRiskDescription:
-      "Obukaba tye ki akiro scam mapol.",
+    lowRiskDescription: "Mam wa keberai akiro madit, kwap kora keberai.",
+    cautionDescription: "Tye akiro ngesik. Kolil kede keberai.",
+    suspiciousDescription: "Obukaba tye ki akiro ngesik. Keberai mapol.",
+    highRiskDescription: "Obukaba tye ki akiro scam mapol.",
 
     urgencyTitle: "Bukusindika okukora mangu",
-    urgencyDescription:
-      "Obukaba bukukaka okukora mangu.",
+    urgencyDescription: "Obukaba bukukaka okukora mangu.",
 
     sensitiveTitle: "Busaba amawulire ag'ekyama",
-    sensitiveDescription:
-      "Ekitongole eituufu tebusaba PIN, password oba OTP.",
+    sensitiveDescription: "Ekitongole eituufu tebusaba PIN, password oba OTP.",
 
     moneyTitle: "Busaba ssente",
-    moneyDescription:
-      "Obukaba busaba ssente oba payment.",
+    moneyDescription: "Obukaba busaba ssente oba payment.",
 
     rewardTitle: "Empeera etasuubirwa",
-    rewardDescription:
-      "Obukaba bukusuubiza prize oba ssente.",
+    rewardDescription: "Obukaba bukusuubiza prize oba ssente.",
 
     linkTitle: "Bulina link",
-    linkDescription:
-      "Wegendereze links eziteesigika.",
+    linkDescription: "Wegendereze links eziteesigika.",
 
     threatTitle: "Bukozesa okutya",
-    threatDescription:
-      "Omusindika ayinza okukozesa okutya okukukaka.",
+    threatDescription: "Omusindika ayinza okukozesa okutya okukukaka.",
 
     protectMobileMoney: "Kuuma Mobile Money",
     verifyJob: "Kebera omulimu",
@@ -1266,58 +1121,37 @@ const TRANSLATIONS = {
     verifyContact: "Kebera eyakutuukirira",
     staySafe: "Weekuume",
 
-    neverShareMobilePIN:
-      "Togabana PIN oba OTP.",
-    dontSendUnexpected:
-      "Tosindika ssente olw'obubaka obutasuubirwa.",
-    contactProvider:
-      "Tuukirira omuwa empeereza ng'okozesa ennamba entuufu.",
+    neverShareMobilePIN: "Togabana PIN oba OTP.",
+    dontSendUnexpected: "Tosindika ssente olw'obubaka obutasuubirwa.",
+    contactProvider: "Tuukirira omuwa empeereza ng'okozesa ennamba entuufu.",
 
-    dontPayJob:
-      "Tosasa ssente okusaba omulimu.",
-    researchCompany:
-      "Noonyereza kampuni.",
-    verifyVacancy:
-      "Kebera vacancy.",
+    dontPayJob: "Tosasa ssente okusaba omulimu.",
+    researchCompany: "Noonyereza kampuni.",
+    verifyVacancy: "Kebera vacancy.",
 
-    contactSchool:
-      "Tuukirira essomero.",
-    dontPayUnverified:
-      "Tosasa ssente ng'okozesa link eteesigika.",
-    checkInstitution:
-      "Kebera ekitongole.",
+    contactSchool: "Tuukirira essomero.",
+    dontPayUnverified: "Tosasa ssente ng'okozesa link eteesigika.",
+    checkInstitution: "Kebera ekitongole.",
 
-    dontSendRomanceMoney:
-      "Tosindika ssente eri omuntu gw'omanyi online yekka.",
-    emotionalEmergency:
-      "Wegendereze okukakibwa mu by'ekitonde.",
-    verifyIdentity:
-      "Kebera omuntu.",
+    dontSendRomanceMoney: "Tosindika ssente eri omuntu gw'omanyi online yekka.",
+    emotionalEmergency: "Wegendereze okukakibwa mu by'ekitonde.",
+    verifyIdentity: "Kebera omuntu.",
 
-    dontPayPrize:
-      "Tosasa fee kufuna prize.",
-    verifyPromotion:
-      "Kebera promotion.",
+    dontPayPrize: "Tosasa fee kufuna prize.",
+    verifyPromotion: "Kebera promotion.",
 
-    dontLoginLinks:
-      "Toyingira account ng'okozesa links eziteesigika.",
-    contactOrganization:
-      "Tuukirira ekitongole.",
+    dontLoginLinks: "Toyingira account ng'okozesa links eziteesigika.",
+    contactOrganization: "Tuukirira ekitongole.",
 
-    officialName:
-      "Togeesiga bubaka olw'erinnya oba logo.",
-    officialChannel:
-      "Kozesa channel entuufu.",
-    dontSendPersonal:
-      "Tosindika ssente oba mawulire go.",
+    officialName: "Togeesiga bubaka olw'erinnya oba logo.",
+    officialChannel: "Kozesa channel entuufu.",
+    dontSendPersonal: "Tosindika ssente oba mawulire go.",
 
     dontRush: "Tokola mangu.",
     verifySender: "Kebera eyasindika.",
-    neverShareSensitive:
-      "Togabana password, PIN oba OTP."
-  }
+    neverShareSensitive: "Togabana password, PIN oba OTP.",
+  },
 };
-
 
 // ==========================================================
 // GET TRANSLATION
@@ -1326,7 +1160,6 @@ const TRANSLATIONS = {
 const getTranslations = (language) => {
   return TRANSLATIONS[language] || TRANSLATIONS.English;
 };
-
 
 // ==========================================================
 // SUSPICIOUS WORDS
@@ -1362,9 +1195,8 @@ const SUSPICIOUS_WORDS = [
   "account will be blocked",
   "arrest",
   "police",
-  "legal action"
+  "legal action",
 ];
-
 
 // ==========================================================
 // LESSON CONTENT
@@ -1381,47 +1213,38 @@ const LESSONS = {
       sections: [
         {
           heading: "🔑 Use Strong Passwords",
-          text:
-            "Create passwords that are hard to guess. Use a mix of letters, numbers, and symbols. Never share your password with anyone."
+          text: "Create passwords that are hard to guess. Use a mix of letters, numbers, and symbols. Never share your password with anyone.",
         },
         {
           heading: "📱 Keep Your Mobile Money Safe",
-          text:
-            "Never share your Mobile Money PIN or One-Time Passwords (OTPs) with anyone, including people claiming to work for your network provider."
+          text: "Never share your Mobile Money PIN or One-Time Passwords (OTPs) with anyone, including people claiming to work for your network provider.",
         },
         {
           heading: "🔗 Be Careful with Links",
-          text:
-            "Do not click on links in unexpected messages or emails. Always double-check the website address before entering personal details."
-        }
+          text: "Do not click on links in unexpected messages or emails. Always double-check the website address before entering personal details.",
+        },
       ],
       questions: [
         {
-          question:
-            "Should you share your mobile money PIN with someone?",
+          question: "Should you share your mobile money PIN with someone?",
           options: ["Yes", "No"],
-          correct: "No"
+          correct: "No",
         },
         {
-          question:
-            "What should you do before clicking a suspicious link?",
+          question: "What should you do before clicking a suspicious link?",
           options: [
             "Click it immediately",
             "Check and verify the link",
-            "Share it with everyone"
+            "Share it with everyone",
           ],
-          correct: "Check and verify the link"
+          correct: "Check and verify the link",
         },
         {
           question: "Which password is stronger?",
-          options: [
-            "123456",
-            "password",
-            "MyP@ssw0rd!2026"
-          ],
-          correct: "MyP@ssw0rd!2026"
-        }
-      ]
+          options: ["123456", "password", "MyP@ssw0rd!2026"],
+          correct: "MyP@ssw0rd!2026",
+        },
+      ],
     },
 
     Luganda: {
@@ -1431,26 +1254,22 @@ const LESSONS = {
       sections: [
         {
           heading: "🔑 Kozesa Password Ennywevu",
-          text:
-            "Kola password ezizibu okuteebereza. Kozesa ennukuta, ennamba n'obubonero. Togabana password yo."
+          text: "Kola password ezizibu okuteebereza. Kozesa ennukuta, ennamba n'obubonero. Togabana password yo.",
         },
         {
           heading: "📱 Kuuma Mobile Money",
-          text:
-            "Togabana PIN oba OTP ya Mobile Money yo n'omuntu yenna."
+          text: "Togabana PIN oba OTP ya Mobile Money yo n'omuntu yenna.",
         },
         {
           heading: "🔗 Wegendereze Links",
-          text:
-            "Tokuba ku links mu bubaka obutasuubirwa. Kebera website nga tonnateekamu mawulire go."
-        }
+          text: "Tokuba ku links mu bubaka obutasuubirwa. Kebera website nga tonnateekamu mawulire go.",
+        },
       ],
       questions: [
         {
-          question:
-            "Osaanidde okugabana PIN ya Mobile Money yo?",
+          question: "Osaanidde okugabana PIN ya Mobile Money yo?",
           options: ["Yee", "Nedda"],
-          correct: "Nedda"
+          correct: "Nedda",
         },
         {
           question:
@@ -1458,169 +1277,129 @@ const LESSONS = {
           options: [
             "Gikube amangu",
             "Gikebere era ogikakase",
-            "Gigabane n'abantu bonna"
+            "Gigabane n'abantu bonna",
           ],
-          correct: "Gikebere era ogikakase"
+          correct: "Gikebere era ogikakase",
         },
         {
           question: "Password ki ey'amaanyi?",
-          options: [
-            "123456",
-            "password",
-            "MyP@ssw0rd!2026"
-          ],
-          correct: "MyP@ssw0rd!2026"
-        }
-      ]
+          options: ["123456", "password", "MyP@ssw0rd!2026"],
+          correct: "MyP@ssw0rd!2026",
+        },
+      ],
     },
 
     Runyankole: {
       title: "🔐 Obwirinzi bwa Kompyuta",
-      description:
-        "Yega okuweerinda waaba nookoresa tekinologiya na internet.",
+      description: "Yega okuweerinda waaba nookoresa tekinologiya na internet.",
       sections: [
         {
           heading: "🔑 Koresa Password Zikomeye",
-          text:
-            "Koresa password ezigumire. Kozesa letters, numbers na symbols. Otaga password yawe."
+          text: "Koresa password ezigumire. Kozesa letters, numbers na symbols. Otaga password yawe.",
         },
         {
           heading: "📱 Reinda Mobile Money",
-          text:
-            "Otaga PIN nari OTP ya Mobile Money yawe."
+          text: "Otaga PIN nari OTP ya Mobile Money yawe.",
         },
         {
           heading: "🔗 Gyendesereza Links",
-          text:
-            "Otacwanga ahari links ezitakwesigwa. Reeba website mbere y'okushiramwo amakuru."
-        }
+          text: "Otacwanga ahari links ezitakwesigwa. Reeba website mbere y'okushiramwo amakuru.",
+        },
       ],
       questions: [
         {
-          question:
-            "Noobaasa kutaga PIN ya Mobile Money yawe?",
+          question: "Noobaasa kutaga PIN ya Mobile Money yawe?",
           options: ["Eego", "Ngaaha"],
-          correct: "Ngaaha"
+          correct: "Ngaaha",
         },
         {
-          question:
-            "Niki ekiwakora mbere y'okucwanga ahari link?",
+          question: "Niki ekiwakora mbere y'okucwanga ahari link?",
           options: [
             "Gicwenge bwangu",
             "Gireebe kandi ogihakase",
-            "Gishangire buri muntu"
+            "Gishangire buri muntu",
           ],
-          correct: "Gireebe kandi ogihakase"
+          correct: "Gireebe kandi ogihakase",
         },
         {
           question: "Password ki erikukomera?",
-          options: [
-            "123456",
-            "password",
-            "MyP@ssw0rd!2026"
-          ],
-          correct: "MyP@ssw0rd!2026"
-        }
-      ]
+          options: ["123456", "password", "MyP@ssw0rd!2026"],
+          correct: "MyP@ssw0rd!2026",
+        },
+      ],
     },
 
     Acholi: {
       title: "🔐 Gwoko Teknoloji",
-      description:
-        "Pwony kit me gwoko keni ka itiyo ki teknoloji ki internet.",
+      description: "Pwony kit me gwoko keni ka itiyo ki teknoloji ki internet.",
       sections: [
         {
           heading: "🔑 Tii ki Password ma Ber",
-          text:
-            "Keti password ma yot pe me ngeyo. Tii ki letere, namba ki kit ma."
+          text: "Keti password ma yot pe me ngeyo. Tii ki letere, namba ki kit ma.",
         },
         {
           heading: "📱 Gwok Mobile Money",
-          text:
-            "Pe iket PIN onyo OTP mari bot ngat mukene."
+          text: "Pe iket PIN onyo OTP mari bot ngat mukene.",
         },
         {
           heading: "🔗 Gwokri ki Links",
-          text:
-            "Pe iket i link ma pe i geno."
-        }
+          text: "Pe iket i link ma pe i geno.",
+        },
       ],
       questions: [
         {
-          question:
-            "I twero ket PIN mari bot ngat mukene?",
+          question: "I twero ket PIN mari bot ngat mukene?",
           options: ["Eyo", "Pe"],
-          correct: "Pe"
+          correct: "Pe",
         },
         {
-          question:
-            "Ngo ma i timo mapwod i ket i link?",
-          options: [
-            "Ket i iye piyo",
-            "Nen ki verify link",
-            "Cwal bot jo weng"
-          ],
-          correct: "Nen ki verify link"
+          question: "Ngo ma i timo mapwod i ket i link?",
+          options: ["Ket i iye piyo", "Nen ki verify link", "Cwal bot jo weng"],
+          correct: "Nen ki verify link",
         },
         {
           question: "Password mene ma ber?",
-          options: [
-            "123456",
-            "password",
-            "MyP@ssw0rd!2026"
-          ],
-          correct: "MyP@ssw0rd!2026"
-        }
-      ]
+          options: ["123456", "password", "MyP@ssw0rd!2026"],
+          correct: "MyP@ssw0rd!2026",
+        },
+      ],
     },
 
     Ateso: {
       title: "🔐 Ebu Teknoloji",
-      description:
-        "Losi itwanar kolil kede teknoloji ka internet.",
+      description: "Losi itwanar kolil kede teknoloji ka internet.",
       sections: [
         {
           heading: "🔑 Koresa Password Ngesik",
-          text:
-            "Koresa password ma ngesik kede akiro, numbers kede symbols."
+          text: "Koresa password ma ngesik kede akiro, numbers kede symbols.",
         },
         {
           heading: "📱 Kolil Mobile Money",
-          text:
-            "Mam iikete PIN kede OTP."
+          text: "Mam iikete PIN kede OTP.",
         },
         {
           heading: "🔗 Kolil Links",
-          text:
-            "Mam ikwar links ngesik."
-        }
+          text: "Mam ikwar links ngesik.",
+        },
       ],
       questions: [
         {
           question: "Itenar iikete PIN?",
           options: ["Eyo", "Mam"],
-          correct: "Mam"
+          correct: "Mam",
         },
         {
           question: "Arai aponi mapol i link?",
-          options: [
-            "Kwar piyo",
-            "Keberai link",
-            "Cwal bot jo weng"
-          ],
-          correct: "Keberai link"
+          options: ["Kwar piyo", "Keberai link", "Cwal bot jo weng"],
+          correct: "Keberai link",
         },
         {
           question: "Password arai ngesik?",
-          options: [
-            "123456",
-            "password",
-            "MyP@ssw0rd!2026"
-          ],
-          correct: "MyP@ssw0rd!2026"
-        }
-      ]
-    }
+          options: ["123456", "password", "MyP@ssw0rd!2026"],
+          correct: "MyP@ssw0rd!2026",
+        },
+      ],
+    },
   },
 
   email: {
@@ -1633,19 +1412,16 @@ const LESSONS = {
       sections: [
         {
           heading: "📬 What is Email?",
-          text:
-            "Email (Electronic Mail) is a method of exchanging digital messages across the internet between two or more people."
+          text: "Email (Electronic Mail) is a method of exchanging digital messages across the internet between two or more people.",
         },
         {
           heading: "✍️ Key Actions",
-          text:
-            "Compose: Write a new message.\nInbox: Where incoming emails arrive.\nAttachments: Files attached to a message."
+          text: "Compose: Write a new message.\nInbox: Where incoming emails arrive.\nAttachments: Files attached to a message.",
         },
         {
           heading: "🔒 Keep Your Email Safe",
-          text:
-            "Never share your email password. Be careful when opening links and attachments from unknown senders."
-        }
+          text: "Never share your email password. Be careful when opening links and attachments from unknown senders.",
+        },
       ],
       questions: [
         {
@@ -1654,20 +1430,15 @@ const LESSONS = {
             "Sending and receiving messages",
             "Cooking food",
             "Taking photos",
-            "Charging a phone"
+            "Charging a phone",
           ],
-          correct: "Sending and receiving messages"
+          correct: "Sending and receiving messages",
         },
         {
           question:
             "Which button is commonly used to start writing a new email?",
-          options: [
-            "Delete",
-            "Compose",
-            "Refresh",
-            "Download"
-          ],
-          correct: "Compose"
+          options: ["Delete", "Compose", "Refresh", "Download"],
+          correct: "Compose",
         },
         {
           question:
@@ -1676,33 +1447,29 @@ const LESSONS = {
             "Open it immediately",
             "Forward it to everyone",
             "Be careful and avoid opening it",
-            "Reply with your password"
+            "Reply with your password",
           ],
-          correct: "Be careful and avoid opening it"
-        }
-      ]
+          correct: "Be careful and avoid opening it",
+        },
+      ],
     },
 
     Luganda: {
       title: "📧 Email",
-      description:
-        "Yiga engeri y'okukozesa email mu bukuumi n'obukugu.",
+      description: "Yiga engeri y'okukozesa email mu bukuumi n'obukugu.",
       sections: [
         {
           heading: "📬 Email kye ki?",
-          text:
-            "Email y'engeri y'okusindika n'okufuna obubaka obwa digito okuyita ku yintaneeti."
+          text: "Email y'engeri y'okusindika n'okufuna obubaka obwa digito okuyita ku yintaneeti.",
         },
         {
           heading: "✍️ Ebikolwa Ebikulu",
-          text:
-            "Compose: Wandiika email empya.\nInbox: Awajja email ezikuyingira.\nAttachments: Files ezigattibwa ku email."
+          text: "Compose: Wandiika email empya.\nInbox: Awajja email ezikuyingira.\nAttachments: Files ezigattibwa ku email.",
         },
         {
           heading: "🔒 Kuuma Email Yo",
-          text:
-            "Togabana password ya email yo. Wegendereze links ne attachments okuva eri abantu b'otomanyi."
-        }
+          text: "Togabana password ya email yo. Wegendereze links ne attachments okuva eri abantu b'otomanyi.",
+        },
       ],
       questions: [
         {
@@ -1711,55 +1478,44 @@ const LESSONS = {
             "Okusindika n'okufuna obubaka",
             "Okufumba",
             "Okukuba ebifaananyi",
-            "Okusajja essimu"
+            "Okusajja essimu",
           ],
-          correct: "Okusindika n'okufuna obubaka"
+          correct: "Okusindika n'okufuna obubaka",
         },
         {
-          question:
-            "Button ki ekola email empya?",
-          options: [
-            "Delete",
-            "Compose",
-            "Refresh",
-            "Download"
-          ],
-          correct: "Compose"
+          question: "Button ki ekola email empya?",
+          options: ["Delete", "Compose", "Refresh", "Download"],
+          correct: "Compose",
         },
         {
-          question:
-            "Kiki ky'olina okukola nga ofunye attachment eteesigika?",
+          question: "Kiki ky'olina okukola nga ofunye attachment eteesigika?",
           options: [
             "Giggule amangu",
             "Gisindike eri bonna",
             "Wegendereze era togiggulawo",
-            "Ddamu password yo"
+            "Ddamu password yo",
           ],
-          correct: "Wegendereze era togiggulawo"
-        }
-      ]
+          correct: "Wegendereze era togiggulawo",
+        },
+      ],
     },
 
     Runyankole: {
       title: "📧 Email",
-      description:
-        "Yega okukoresa email omu buryo oburungi n'obwirinzi.",
+      description: "Yega okukoresa email omu buryo oburungi n'obwirinzi.",
       sections: [
         {
           heading: "📬 Email niki?",
-          text:
-            "Email n'omuringo gw'okutuma n'okutunga obubaka bwa digital."
+          text: "Email n'omuringo gw'okutuma n'okutunga obubaka bwa digital.",
         },
         {
           heading: "✍️ Ebikorwa",
-          text:
-            "Compose: Handika email empya.\nInbox: Aho email zirikutuka.\nAttachments: Documents eziri kwongerwa kuri email."
+          text: "Compose: Handika email empya.\nInbox: Aho email zirikutuka.\nAttachments: Documents eziri kwongerwa kuri email.",
         },
         {
           heading: "🔒 Reinda Email",
-          text:
-            "Otaga password ya email. Gyendesereza links na attachments."
-        }
+          text: "Otaga password ya email. Gyendesereza links na attachments.",
+        },
       ],
       questions: [
         {
@@ -1768,75 +1524,55 @@ const LESSONS = {
             "Kutuma n'okutunga obubaka",
             "Kushamba",
             "Kukora photos",
-            "Kushashura esimu"
+            "Kushashura esimu",
           ],
-          correct: "Kutuma n'okutunga obubaka"
+          correct: "Kutuma n'okutunga obubaka",
         },
         {
           question: "Button ki erikukora email empya?",
-          options: [
-            "Delete",
-            "Compose",
-            "Refresh",
-            "Download"
-          ],
-          correct: "Compose"
+          options: ["Delete", "Compose", "Refresh", "Download"],
+          correct: "Compose",
         },
         {
-          question:
-            "Niki ekiwakora waatungire attachment etakwesigwa?",
+          question: "Niki ekiwakora waatungire attachment etakwesigwa?",
           options: [
             "Gikwataho bwangu",
             "Gitumire ahari boona",
             "Gyendesereza kandi otagigulaho",
-            "Gumwe password"
+            "Gumwe password",
           ],
-          correct: "Gyendesereza kandi otagigulaho"
-        }
-      ]
+          correct: "Gyendesereza kandi otagigulaho",
+        },
+      ],
     },
 
     Acholi: {
       title: "📧 Email",
-      description:
-        "Pwony kit me tic ki email i yo ma ber ki ma gwoko keni.",
+      description: "Pwony kit me tic ki email i yo ma ber ki ma gwoko keni.",
       sections: [
         {
           heading: "📬 Email ngo?",
-          text:
-            "Email en yo me cwal ki gamo rek me digital i internet."
+          text: "Email en yo me cwal ki gamo rek me digital i internet.",
         },
         {
           heading: "✍️ Tic ma Dit",
-          text:
-            "Compose: Coyi email manyen.\nInbox: Ka email bino.\nAttachments: Gin ma iketo i email."
+          text: "Compose: Coyi email manyen.\nInbox: Ka email bino.\nAttachments: Gin ma iketo i email.",
         },
         {
           heading: "🔒 Gwok Email",
-          text:
-            "Pe iket password me email mari."
-        }
+          text: "Pe iket password me email mari.",
+        },
       ],
       questions: [
         {
           question: "Email tiyo kwede ngo?",
-          options: [
-            "Cwalo ki gamo rek",
-            "Tedo cam",
-            "Miyo cal",
-            "Pongo phone"
-          ],
-          correct: "Cwalo ki gamo rek"
+          options: ["Cwalo ki gamo rek", "Tedo cam", "Miyo cal", "Pongo phone"],
+          correct: "Cwalo ki gamo rek",
         },
         {
           question: "Button mene me coyo email manyen?",
-          options: [
-            "Delete",
-            "Compose",
-            "Refresh",
-            "Download"
-          ],
-          correct: "Compose"
+          options: ["Delete", "Compose", "Refresh", "Download"],
+          correct: "Compose",
         },
         {
           question: "Ngo ma i timo ki attachment ma pe i ngeyo?",
@@ -1844,33 +1580,29 @@ const LESSONS = {
             "Yab piyo",
             "Cwal bot jo weng",
             "Gwokri pe i yab",
-            "Cwal password"
+            "Cwal password",
           ],
-          correct: "Gwokri pe i yab"
-        }
-      ]
+          correct: "Gwokri pe i yab",
+        },
+      ],
     },
 
     Ateso: {
       title: "📧 Email",
-      description:
-        "Losi itwanar aponi email kede ebu.",
+      description: "Losi itwanar aponi email kede ebu.",
       sections: [
         {
           heading: "📬 Email neni?",
-          text:
-            "Email etaranar cwal kede iyal obukaba."
+          text: "Email etaranar cwal kede iyal obukaba.",
         },
         {
           heading: "✍️ Akiro",
-          text:
-            "Compose: Aponi email.\nInbox: Ka email eyait.\nAttachments: Documents kede photos."
+          text: "Compose: Aponi email.\nInbox: Ka email eyait.\nAttachments: Documents kede photos.",
         },
         {
           heading: "🔒 Kolil Email",
-          text:
-            "Mam iikete password me email."
-        }
+          text: "Mam iikete password me email.",
+        },
       ],
       questions: [
         {
@@ -1879,19 +1611,14 @@ const LESSONS = {
             "Cwal kede iyal obukaba",
             "Aponi akito",
             "Aponi photo",
-            "Aponi phone"
+            "Aponi phone",
           ],
-          correct: "Cwal kede iyal obukaba"
+          correct: "Cwal kede iyal obukaba",
         },
         {
           question: "Button arai aponi email?",
-          options: [
-            "Delete",
-            "Compose",
-            "Refresh",
-            "Download"
-          ],
-          correct: "Compose"
+          options: ["Delete", "Compose", "Refresh", "Download"],
+          correct: "Compose",
         },
         {
           question: "Arai aponi attachment ngesik?",
@@ -1899,12 +1626,12 @@ const LESSONS = {
             "Kwar piyo",
             "Cwal",
             "Kolil kede mam ikwar",
-            "Cwal password"
+            "Cwal password",
           ],
-          correct: "Kolil kede mam ikwar"
-        }
-      ]
-    }
+          correct: "Kolil kede mam ikwar",
+        },
+      ],
+    },
   },
 
   ai: {
@@ -1917,19 +1644,16 @@ const LESSONS = {
       sections: [
         {
           heading: "💡 What is AI?",
-          text:
-            "Artificial Intelligence refers to computer systems designed to simulate human intelligence to perform tasks like answering questions, translating languages, or recognizing images."
+          text: "Artificial Intelligence refers to computer systems designed to simulate human intelligence to perform tasks like answering questions, translating languages, or recognizing images.",
         },
         {
           heading: "⚠️ Responsible Usage",
-          text:
-            "Always verify critical facts provided by AI systems, as they can sometimes make mistakes or present inaccurate information."
+          text: "Always verify critical facts provided by AI systems, as they can sometimes make mistakes or present inaccurate information.",
         },
         {
           heading: "🔒 Protect Your Information",
-          text:
-            "Avoid sharing passwords, PINs, financial information, or private documents with AI tools."
-        }
+          text: "Avoid sharing passwords, PINs, financial information, or private documents with AI tools.",
+        },
       ],
       questions: [
         {
@@ -1938,22 +1662,20 @@ const LESSONS = {
             "Technology that allows computers to perform tasks that normally require human intelligence",
             "A type of mobile phone",
             "A social media application",
-            "A computer cable"
+            "A computer cable",
           ],
           correct:
-            "Technology that allows computers to perform tasks that normally require human intelligence"
+            "Technology that allows computers to perform tasks that normally require human intelligence",
         },
         {
-          question:
-            "Which of these is an example of Artificial Intelligence?",
+          question: "Which of these is an example of Artificial Intelligence?",
           options: [
             "A voice assistant answering questions",
             "A notebook",
             "A USB cable",
-            "A normal light bulb"
+            "A normal light bulb",
           ],
-          correct:
-            "A voice assistant answering questions"
+          correct: "A voice assistant answering questions",
         },
         {
           question:
@@ -1962,11 +1684,11 @@ const LESSONS = {
             "Share it immediately",
             "Verify the information",
             "Ignore it completely",
-            "Send it to everyone"
+            "Send it to everyone",
           ],
-          correct: "Verify the information"
-        }
-      ]
+          correct: "Verify the information",
+        },
+      ],
     },
 
     Luganda: {
@@ -1976,19 +1698,16 @@ const LESSONS = {
       sections: [
         {
           heading: "💡 AI kye ki?",
-          text:
-            "AI ye tekinologiya esobozesa kompyuta okukola emirimu egitera okwetaagisa obwongo bw'omuntu."
+          text: "AI ye tekinologiya esobozesa kompyuta okukola emirimu egitera okwetaagisa obwongo bw'omuntu.",
         },
         {
           heading: "⚠️ Kozesa AI mu Bukuumi",
-          text:
-            "Bulijjo kebera amawulire amakulu aga AI kubanga eyinza okukola ensobi."
+          text: "Bulijjo kebera amawulire amakulu aga AI kubanga eyinza okukola ensobi.",
         },
         {
           heading: "🔒 Kuuma Amawulire Go",
-          text:
-            "Tokozesa AI okugabana passwords, PIN, mawulire ga ssente oba documents ez'ekyama."
-        }
+          text: "Tokozesa AI okugabana passwords, PIN, mawulire ga ssente oba documents ez'ekyama.",
+        },
       ],
       questions: [
         {
@@ -1997,10 +1716,10 @@ const LESSONS = {
             "Tekinologiya asobozesa kompyuta okukola emirimu egy'obwongo",
             "Ekika kya ssimu",
             "Social media",
-            "Cable ya kompyuta"
+            "Cable ya kompyuta",
           ],
           correct:
-            "Tekinologiya asobozesa kompyuta okukola emirimu egy'obwongo"
+            "Tekinologiya asobozesa kompyuta okukola emirimu egy'obwongo",
         },
         {
           question: "Kiki ekyokulabirako kya AI?",
@@ -2008,45 +1727,39 @@ const LESSONS = {
             "Voice assistant eddamu ebibuuzo",
             "Notebook",
             "USB cable",
-            "Bulb"
+            "Bulb",
           ],
-          correct:
-            "Voice assistant eddamu ebibuuzo"
+          correct: "Voice assistant eddamu ebibuuzo",
         },
         {
-          question:
-            "Kiki ky'olina okukola nga tonnakkiriza mawulire ga AI?",
+          question: "Kiki ky'olina okukola nga tonnakkiriza mawulire ga AI?",
           options: [
             "Gagabane amangu",
             "Gakakase",
             "Gagane ddala",
-            "Gasindike eri bonna"
+            "Gasindike eri bonna",
           ],
-          correct: "Gakakase"
-        }
-      ]
+          correct: "Gakakase",
+        },
+      ],
     },
 
     Runyankole: {
       title: "🤖 Artificial Intelligence",
-      description:
-        "Yega ahari Artificial Intelligence n'oku ogikoresa gye.",
+      description: "Yega ahari Artificial Intelligence n'oku ogikoresa gye.",
       sections: [
         {
           heading: "💡 AI niki?",
-          text:
-            "AI n'obuhangwa bwa kompyuta oburikwikiriza kukora emirimo erikwetaaga obwenge bw'omuntu."
+          text: "AI n'obuhangwa bwa kompyuta oburikwikiriza kukora emirimo erikwetaaga obwenge bw'omuntu.",
         },
         {
           heading: "⚠️ Koresa AI gye",
-          text:
-            "Buriijo reeba amakuru amakuru aga AI ahabwokuba neebaasa kukora ensobi."
+          text: "Buriijo reeba amakuru amakuru aga AI ahabwokuba neebaasa kukora ensobi.",
         },
         {
           heading: "🔒 Reinda Amakuru",
-          text:
-            "Otaga passwords, PIN, amakuru ga sente nari documents z'obuntu omu AI."
-        }
+          text: "Otaga passwords, PIN, amakuru ga sente nari documents z'obuntu omu AI.",
+        },
       ],
       questions: [
         {
@@ -2055,32 +1768,21 @@ const LESSONS = {
             "Tekinologiya erikureetera computer kukora emirimo y'omuntu",
             "Esimu",
             "Social media",
-            "Cable"
+            "Cable",
           ],
-          correct:
-            "Tekinologiya erikureetera computer kukora emirimo y'omuntu"
+          correct: "Tekinologiya erikureetera computer kukora emirimo y'omuntu",
         },
         {
           question: "Kiki ekiri eky'okureeberaho kya AI?",
-          options: [
-            "Voice assistant",
-            "Notebook",
-            "USB",
-            "Bulb"
-          ],
-          correct: "Voice assistant"
+          options: ["Voice assistant", "Notebook", "USB", "Bulb"],
+          correct: "Voice assistant",
         },
         {
           question: "Niki ekiwakora mbere y'okwesiga AI?",
-          options: [
-            "Gishangire",
-            "Gireebe",
-            "Gireke",
-            "Gitume"
-          ],
-          correct: "Gireebe"
-        }
-      ]
+          options: ["Gishangire", "Gireebe", "Gireke", "Gitume"],
+          correct: "Gireebe",
+        },
+      ],
     },
 
     Acholi: {
@@ -2090,19 +1792,16 @@ const LESSONS = {
       sections: [
         {
           heading: "💡 AI ngo?",
-          text:
-            "AI en teknoloji ma miyo computer timo tic ma dano tye ka timo ki ngec."
+          text: "AI en teknoloji ma miyo computer timo tic ma dano tye ka timo ki ngec.",
         },
         {
           heading: "⚠️ Tic ki AI Maber",
-          text:
-            "Nen ngec ma AI miyo pien AI twero timo bal."
+          text: "Nen ngec ma AI miyo pien AI twero timo bal.",
         },
         {
           heading: "🔒 Gwok Ngec Mari",
-          text:
-            "Pe iket password, PIN onyo ngec me money i AI."
-        }
+          text: "Pe iket password, PIN onyo ngec me money i AI.",
+        },
       ],
       questions: [
         {
@@ -2111,20 +1810,14 @@ const LESSONS = {
             "Teknoloji ma miyo computer timo tic ma dano timo",
             "Phone",
             "Social media",
-            "Cable"
+            "Cable",
           ],
-          correct:
-            "Teknoloji ma miyo computer timo tic ma dano timo"
+          correct: "Teknoloji ma miyo computer timo tic ma dano timo",
         },
         {
           question: "Mene en cal me AI?",
-          options: [
-            "Voice assistant",
-            "Notebook",
-            "USB",
-            "Bulb"
-          ],
-          correct: "Voice assistant"
+          options: ["Voice assistant", "Notebook", "USB", "Bulb"],
+          correct: "Voice assistant",
         },
         {
           question: "Ngo ma i timo mapwod iyie ki AI?",
@@ -2132,33 +1825,29 @@ const LESSONS = {
             "Cwal piyo",
             "Nen ngec",
             "Pe i ti kwede",
-            "Cwal bot jo weng"
+            "Cwal bot jo weng",
           ],
-          correct: "Nen ngec"
-        }
-      ]
+          correct: "Nen ngec",
+        },
+      ],
     },
 
     Ateso: {
       title: "🤖 Artificial Intelligence",
-      description:
-        "Losi ikameta Artificial Intelligence kede ebu.",
+      description: "Losi ikameta Artificial Intelligence kede ebu.",
       sections: [
         {
           heading: "💡 AI neni?",
-          text:
-            "AI etaranar computer aponi akiro ngesik kede obukaba.",
+          text: "AI etaranar computer aponi akiro ngesik kede obukaba.",
         },
         {
           heading: "⚠️ Ebu AI",
-          text:
-            "Keberai akiro ma AI eyai.",
+          text: "Keberai akiro ma AI eyai.",
         },
         {
           heading: "🔒 Kolil Akiro",
-          text:
-            "Mam iikete password, PIN, ssente kede documents i AI."
-        }
+          text: "Mam iikete password, PIN, ssente kede documents i AI.",
+        },
       ],
       questions: [
         {
@@ -2167,36 +1856,24 @@ const LESSONS = {
             "Teknoloji ma computer aponi akiro ngesik",
             "Phone",
             "Social media",
-            "Cable"
+            "Cable",
           ],
-          correct:
-            "Teknoloji ma computer aponi akiro ngesik"
+          correct: "Teknoloji ma computer aponi akiro ngesik",
         },
         {
           question: "Arai cal me AI?",
-          options: [
-            "Voice assistant",
-            "Notebook",
-            "USB",
-            "Bulb"
-          ],
-          correct: "Voice assistant"
+          options: ["Voice assistant", "Notebook", "USB", "Bulb"],
+          correct: "Voice assistant",
         },
         {
           question: "Arai aponi mapol mapwod AI?",
-          options: [
-            "Cwal piyo",
-            "Keberai akiro",
-            "Pe ikameta",
-            "Cwal bot jo"
-          ],
-          correct: "Keberai akiro"
-        }
-      ]
-    }
-  }
+          options: ["Cwal piyo", "Keberai akiro", "Pe ikameta", "Cwal bot jo"],
+          correct: "Keberai akiro",
+        },
+      ],
+    },
+  },
 };
-
 
 // ==========================================================
 // SCAM ANALYZER
@@ -2210,71 +1887,61 @@ const analyzeMessageContent = (messageToAnalyze) => {
   let scamScore = 0;
   const warningSigns = [];
 
-  if (
-    /(urgent|immediately|within|now|hurry|minutes)/.test(msg)
-  ) {
+  if (/(urgent|immediately|within|now|hurry|minutes)/.test(msg)) {
     scamScore += 20;
 
     warningSigns.push({
       type: "urgency",
-      icon: "⏰"
+      icon: "⏰",
     });
   }
 
-  if (
-    /(pin|otp|password|passcode|verification code)/.test(msg)
-  ) {
+  if (/(pin|otp|password|passcode|verification code)/.test(msg)) {
     scamScore += 35;
 
     warningSigns.push({
       type: "sensitive",
-      icon: "🔐"
+      icon: "🔐",
     });
   }
 
-  if (
-    /(send money|pay|payment|transfer|fee|deposit)/.test(msg)
-  ) {
+  if (/(send money|pay|payment|transfer|fee|deposit)/.test(msg)) {
     scamScore += 25;
 
     warningSigns.push({
       type: "money",
-      icon: "💰"
+      icon: "💰",
     });
   }
 
-  if (
-    /(won|winner|prize|reward|congratulations|lottery)/.test(msg)
-  ) {
+  if (/(won|winner|prize|reward|congratulations|lottery)/.test(msg)) {
     scamScore += 20;
 
     warningSigns.push({
       type: "reward",
-      icon: "🎁"
+      icon: "🎁",
     });
   }
 
-  if (
-    /(http:\/\/|https:\/\/|www\.|\.com\/)/.test(msg)
-  ) {
+  if (/(http:\/\/|https:\/\/|www\.|\.com\/)/.test(msg)) {
     scamScore += 15;
 
     warningSigns.push({
       type: "link",
-      icon: "🔗"
+      icon: "🔗",
     });
   }
 
   if (
     /(account will be closed|account will be blocked|arrest|police|legal action)/.test(
-      msg
+      msg,
     )
   ) {
     scamScore += 20;
 
     warningSigns.push({
       type: "threat",
-      icon: "⚠️"
+      icon: "⚠️",
     });
   }
 
@@ -2294,7 +1961,7 @@ const analyzeMessageContent = (messageToAnalyze) => {
 
   if (
     /(mobile money|momo|airtel money|mtn|withdraw|deposit|mobile money pin)/.test(
-      msg
+      msg,
     )
   ) {
     scamCategory = "Mobile Money Scam";
@@ -2310,17 +1977,11 @@ const analyzeMessageContent = (messageToAnalyze) => {
     /(love|relationship|girlfriend|boyfriend|romance|marriage)/.test(msg)
   ) {
     scamCategory = "Romance Scam";
-  } else if (
-    /(prize|winner|won|lottery|reward|congratulations)/.test(msg)
-  ) {
+  } else if (/(prize|winner|won|lottery|reward|congratulations)/.test(msg)) {
     scamCategory = "Prize Scam";
-  } else if (
-    /(account|bank|password|otp|verification code|login)/.test(msg)
-  ) {
+  } else if (/(account|bank|password|otp|verification code|login)/.test(msg)) {
     scamCategory = "Account / Identity Scam";
-  } else if (
-    /(police|arrest|court|government|tax)/.test(msg)
-  ) {
+  } else if (/(police|arrest|court|government|tax)/.test(msg)) {
     scamCategory = "Impersonation Scam";
   }
 
@@ -2328,10 +1989,9 @@ const analyzeMessageContent = (messageToAnalyze) => {
     score: scamScore,
     riskLevel,
     warningSigns,
-    scamCategory
+    scamCategory,
   };
 };
-
 
 // ==========================================================
 // TRANSLATED SCAM ADVICE
@@ -2342,87 +2002,54 @@ const getScamAdvice = (category, t) => {
     "Mobile Money Scam": {
       icon: "📱",
       title: t.protectMobileMoney,
-      points: [
-        t.neverShareMobilePIN,
-        t.dontSendUnexpected,
-        t.contactProvider
-      ]
+      points: [t.neverShareMobilePIN, t.dontSendUnexpected, t.contactProvider],
     },
 
     "Job Scam": {
       icon: "💼",
       title: t.verifyJob,
-      points: [
-        t.dontPayJob,
-        t.researchCompany,
-        t.verifyVacancy
-      ]
+      points: [t.dontPayJob, t.researchCompany, t.verifyVacancy],
     },
 
     "Education Scam": {
       icon: "🎓",
       title: t.verifyEducation,
-      points: [
-        t.contactSchool,
-        t.dontPayUnverified,
-        t.checkInstitution
-      ]
+      points: [t.contactSchool, t.dontPayUnverified, t.checkInstitution],
     },
 
     "Romance Scam": {
       icon: "❤️",
       title: t.protectRomance,
-      points: [
-        t.dontSendRomanceMoney,
-        t.emotionalEmergency,
-        t.verifyIdentity
-      ]
+      points: [t.dontSendRomanceMoney, t.emotionalEmergency, t.verifyIdentity],
     },
 
     "Prize Scam": {
       icon: "🎁",
       title: t.unexpectedPrize,
-      points: [
-        t.dontPayPrize,
-        t.neverShareSensitive,
-        t.verifyPromotion
-      ]
+      points: [t.dontPayPrize, t.neverShareSensitive, t.verifyPromotion],
     },
 
     "Account / Identity Scam": {
       icon: "🔐",
       title: t.protectAccount,
-      points: [
-        t.neverShareSensitive,
-        t.dontLoginLinks,
-        t.contactOrganization
-      ]
+      points: [t.neverShareSensitive, t.dontLoginLinks, t.contactOrganization],
     },
 
     "Impersonation Scam": {
       icon: "🎭",
       title: t.verifyContact,
-      points: [
-        t.officialName,
-        t.officialChannel,
-        t.dontSendPersonal
-      ]
+      points: [t.officialName, t.officialChannel, t.dontSendPersonal],
     },
 
     "General Scam": {
       icon: "🛡️",
       title: t.staySafe,
-      points: [
-        t.dontRush,
-        t.verifySender,
-        t.neverShareSensitive
-      ]
-    }
+      points: [t.dontRush, t.verifySender, t.neverShareSensitive],
+    },
   };
 
   return advice[category] || advice["General Scam"];
 };
-
 
 // ==========================================================
 // HIGHLIGHT SCAM WORDS
@@ -2432,25 +2059,18 @@ const highlightScamWords = (text) => {
   if (!text) return null;
 
   const escaped = SUSPICIOUS_WORDS.map((word) =>
-    word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
   );
 
-  const pattern = new RegExp(
-    `(${escaped.join("|")})`,
-    "gi"
-  );
+  const pattern = new RegExp(`(${escaped.join("|")})`, "gi");
 
   return text.split(pattern).map((part, index) => {
     const isSuspicious = SUSPICIOUS_WORDS.some(
-      (word) =>
-        word.toLowerCase() === part.toLowerCase()
+      (word) => word.toLowerCase() === part.toLowerCase(),
     );
 
     return isSuspicious ? (
-      <mark
-        className="suspicious-highlight"
-        key={index}
-      >
+      <mark className="suspicious-highlight" key={index}>
         {part}
       </mark>
     ) : (
@@ -2459,7 +2079,6 @@ const highlightScamWords = (text) => {
   });
 };
 
-
 // ==========================================================
 // QUIZ
 // ==========================================================
@@ -2467,15 +2086,12 @@ const highlightScamWords = (text) => {
 function Quiz({ questions, language }) {
   const t = getTranslations(language);
 
-  const [questionNumber, setQuestionNumber] =
-    useState(0);
+  const [questionNumber, setQuestionNumber] = useState(0);
 
   const [score, setScore] = useState(0);
 
   const handleAnswer = (option) => {
-    if (
-      option === questions[questionNumber].correct
-    ) {
+    if (option === questions[questionNumber].correct) {
       setScore((prev) => prev + 1);
     }
 
@@ -2491,55 +2107,39 @@ function Quiz({ questions, language }) {
     <div className="quiz-container">
       <hr />
 
-      <h2>
-        🧪 {t.lessonQuiz}
-      </h2>
+      <h2>🧪 {t.lessonQuiz}</h2>
 
       {questionNumber < questions.length ? (
         <div className="quiz-card">
           <p>
             <strong>
-              {t.question} {questionNumber + 1}{" "}
-              {t.of} {questions.length}:
+              {t.question} {questionNumber + 1} {t.of} {questions.length}:
             </strong>
           </p>
 
-          <p className="quiz-question">
-            {questions[questionNumber].question}
-          </p>
+          <p className="quiz-question">{questions[questionNumber].question}</p>
 
           <div className="quiz-options">
-            {questions[questionNumber].options.map(
-              (option, index) => (
-                <button
-                  key={index}
-                  className="quiz-option-button"
-                  onClick={() =>
-                    handleAnswer(option)
-                  }
-                >
-                  {option}
-                </button>
-              )
-            )}
+            {questions[questionNumber].options.map((option, index) => (
+              <button
+                key={index}
+                className="quiz-option-button"
+                onClick={() => handleAnswer(option)}
+              >
+                {option}
+              </button>
+            ))}
           </div>
         </div>
       ) : (
         <div className="quiz-results">
-          <h3>
-            {t.quizCompleted} 🎉
-          </h3>
+          <h3>{t.quizCompleted} 🎉</h3>
 
           <p>
-            {t.yourScore}:{" "}
-            <strong>{score}</strong> /{" "}
-            {questions.length}
+            {t.yourScore}: <strong>{score}</strong> / {questions.length}
           </p>
 
-          <button
-            className="primary-button"
-            onClick={resetQuiz}
-          >
+          <button className="primary-button" onClick={resetQuiz}>
             {t.retakeQuiz}
           </button>
         </div>
@@ -2548,214 +2148,120 @@ function Quiz({ questions, language }) {
   );
 }
 
-
 // ==========================================================
 // LANGUAGE SELECTOR
 // ==========================================================
 
-function LanguageSelector({
-  language,
-  setLanguage
-}) {
+function LanguageSelector({ language, setLanguage }) {
   const t = getTranslations(language);
 
   return (
     <div className="language-selector">
-      <label htmlFor="language-select">
-        🌐 {t.language}
-      </label>
+      <label htmlFor="language-select">🌐 {t.language}</label>
 
       <select
         id="language-select"
         value={language}
-        onChange={(e) =>
-          setLanguage(e.target.value)
-        }
+        onChange={(e) => setLanguage(e.target.value)}
         aria-label={t.chooseLanguage}
       >
-        <option value="English">
-          English
-        </option>
+        <option value="English">English</option>
 
-        <option value="Luganda">
-          Luganda
-        </option>
+        <option value="Luganda">Luganda</option>
 
-        <option value="Runyankole">
-          Runyankole
-        </option>
+        <option value="Runyankole">Runyankole</option>
 
-        <option value="Acholi">
-          Acholi
-        </option>
+        <option value="Acholi">Acholi</option>
 
-        <option value="Ateso">
-          Ateso
-        </option>
+        <option value="Ateso">Ateso</option>
       </select>
     </div>
   );
 }
 
-
 // ==========================================================
 // HOME VIEW
 // ==========================================================
 
-function HomeView({
-  onNavigate,
-  onOpenAssistant,
-  language,
-  setLanguage
-}) {
+function HomeView({ onNavigate, onOpenAssistant, language, setLanguage }) {
   const t = getTranslations(language);
 
   return (
     <>
-      <LanguageSelector
-        language={language}
-        setLanguage={setLanguage}
-      />
+      <LanguageSelector language={language} setLanguage={setLanguage} />
 
       <h1>{t.homeTitle}</h1>
 
-      <p className="subtitle">
-        {t.subtitle}
-      </p>
+      <p className="subtitle">{t.subtitle}</p>
 
-      <h2>
-        {t.whatWouldYouLike}
-      </h2>
+      <h2>{t.whatWouldYouLike}</h2>
 
       <div className="cards">
+        <button className="card" onClick={() => onNavigate("learn")}>
+          <div className="icon">📚</div>
 
-        <button
-          className="card"
-          onClick={() =>
-            onNavigate("learn")
-          }
-        >
-          <div className="icon">
-            📚
-          </div>
+          <h3>{t.learnSkills}</h3>
 
-          <h3>
-            {t.learnSkills}
-          </h3>
-
-          <p>
-            {t.learnSkillsDesc}
-          </p>
+          <p>{t.learnSkillsDesc}</p>
         </button>
 
+        <button className="card" onClick={() => onNavigate("scamCheck")}>
+          <div className="icon">🛡️</div>
 
-        <button
-          className="card"
-          onClick={() =>
-            onNavigate("scamCheck")
-          }
-        >
-          <div className="icon">
-            🛡️
-          </div>
+          <h3>{t.scamCheck}</h3>
 
-          <h3>
-            {t.scamCheck}
-          </h3>
-
-          <p>
-            {t.scamCheckDesc}
-          </p>
+          <p>{t.scamCheckDesc}</p>
         </button>
 
+        <button className="card" onClick={() => onOpenAssistant("")}>
+          <div className="icon">🤖</div>
 
-        <button
-          className="card"
-          onClick={() =>
-            onOpenAssistant("")
-          }
-        >
-          <div className="icon">
-            🤖
-          </div>
+          <h3>{t.assistant}</h3>
 
-          <h3>
-            {t.assistant}
-          </h3>
-
-          <p>
-            {t.assistantDesc}
-          </p>
+          <p>{t.assistantDesc}</p>
         </button>
-
       </div>
     </>
   );
 }
 
-
 // ==========================================================
 // LESSON VIEW
 // ==========================================================
 
-function LessonView({
-  lesson,
-  language,
-  onBack
-}) {
+function LessonView({ lesson, language, onBack }) {
   const t = getTranslations(language);
 
-  const translatedLesson =
-    lesson[language] ||
-    lesson.English;
+  const translatedLesson = lesson[language] || lesson.English;
 
   return (
     <>
-      <button
-        className="back-button"
-        onClick={onBack}
-      >
+      <button className="back-button" onClick={onBack}>
         {t.back}
       </button>
 
-      <h1>
-        {translatedLesson.title}
-      </h1>
+      <h1>{translatedLesson.title}</h1>
 
-      <p>
-        {translatedLesson.description}
-      </p>
+      <p>{translatedLesson.description}</p>
 
-      {translatedLesson.sections.map(
-        (section, index) => (
-          <React.Fragment key={index}>
+      {translatedLesson.sections.map((section, index) => (
+        <React.Fragment key={index}>
+          <h3>{section.heading}</h3>
 
-            <h3>
-              {section.heading}
-            </h3>
+          <p
+            style={{
+              whiteSpace: "pre-line",
+            }}
+          >
+            {section.text}
+          </p>
+        </React.Fragment>
+      ))}
 
-            <p
-              style={{
-                whiteSpace: "pre-line"
-              }}
-            >
-              {section.text}
-            </p>
-
-          </React.Fragment>
-        )
-      )}
-
-      <Quiz
-        questions={
-          translatedLesson.questions
-        }
-        language={language}
-      />
+      <Quiz questions={translatedLesson.questions} language={language} />
     </>
   );
 }
-
 
 // ==========================================================
 // SCAM CHECK VIEW
@@ -2768,36 +2274,28 @@ function ScamCheckView({
   setScamResult,
   isCheckingScam,
   onAnalyze,
+  screenshotFile,
+  setScreenshotFile,
+  onAnalyzeScreenshot,
+  isAnalyzingScreenshot,
+  setIsAnalyzingScreenshot,
   onNavigate,
-  language
+  language,
 }) {
   const t = getTranslations(language);
 
-  const advice = scamResult
-    ? getScamAdvice(
-        scamResult.scamCategory,
-        t
-      )
-    : null;
+  const advice = scamResult ? getScamAdvice(scamResult.scamCategory, t) : null;
 
   const getRiskTitle = () => {
-    if (
-      scamResult.riskLevel === "HIGH"
-    ) {
+    if (scamResult.riskLevel === "HIGH") {
       return t.potentialScam;
     }
 
-    if (
-      scamResult.riskLevel ===
-      "SUSPICIOUS"
-    ) {
+    if (scamResult.riskLevel === "SUSPICIOUS") {
       return t.suspiciousMessage;
     }
 
-    if (
-      scamResult.riskLevel ===
-      "CAUTION"
-    ) {
+    if (scamResult.riskLevel === "CAUTION") {
       return t.proceedWithCaution;
     }
 
@@ -2805,23 +2303,15 @@ function ScamCheckView({
   };
 
   const getRiskDescription = () => {
-    if (
-      scamResult.riskLevel === "HIGH"
-    ) {
+    if (scamResult.riskLevel === "HIGH") {
       return t.highRiskDescription;
     }
 
-    if (
-      scamResult.riskLevel ===
-      "SUSPICIOUS"
-    ) {
+    if (scamResult.riskLevel === "SUSPICIOUS") {
       return t.suspiciousDescription;
     }
 
-    if (
-      scamResult.riskLevel ===
-      "CAUTION"
-    ) {
+    if (scamResult.riskLevel === "CAUTION") {
       return t.cautionDescription;
     }
 
@@ -2832,45 +2322,36 @@ function ScamCheckView({
     const warnings = {
       urgency: {
         title: t.urgencyTitle,
-        description:
-          t.urgencyDescription
+        description: t.urgencyDescription,
       },
 
       sensitive: {
         title: t.sensitiveTitle,
-        description:
-          t.sensitiveDescription
+        description: t.sensitiveDescription,
       },
 
       money: {
         title: t.moneyTitle,
-        description:
-          t.moneyDescription
+        description: t.moneyDescription,
       },
 
       reward: {
         title: t.rewardTitle,
-        description:
-          t.rewardDescription
+        description: t.rewardDescription,
       },
 
       link: {
         title: t.linkTitle,
-        description:
-          t.linkDescription
+        description: t.linkDescription,
       },
 
       threat: {
         title: t.threatTitle,
-        description:
-          t.threatDescription
-      }
+        description: t.threatDescription,
+      },
     };
 
-    return (
-      warnings[type] ||
-      warnings.urgency
-    );
+    return warnings[type] || warnings.urgency;
   };
 
   return (
@@ -2885,85 +2366,101 @@ function ScamCheckView({
         {t.back}
       </button>
 
-
       {/* USSD OPTION */}
 
       <div className="offline-option">
-
-        <div className="offline-icon">
-          📱
-        </div>
+        <div className="offline-icon">📱</div>
 
         <div className="offline-content">
+          <h3>{t.noInternet}</h3>
 
-          <h3>
-            {t.noInternet}
-          </h3>
-
-          <p>
-            {t.scamWithUSSD}
-          </p>
-
+          <p>{t.scamWithUSSD}</p>
         </div>
-
         <button
           className="ussd-button"
-          onClick={() =>
-            onNavigate("ussd")
-          }
+          onClick={() => {
+            window.location.href = "tel:*384*42807%23";
+          }}
         >
           {t.useUSSD}
         </button>
-
       </div>
-
 
       <div className="scam-header">
+        <div className="scam-icon">🛡️</div>
 
-        <div className="scam-icon">
-          🛡️
-        </div>
+        <h1>{t.safetyCheck}</h1>
 
-        <h1>
-          {t.safetyCheck}
-        </h1>
-
-        <p className="subtitle">
-          {t.safetySubtitle}
-        </p>
-
+        <p className="subtitle">{t.safetySubtitle}</p>
       </div>
 
-
       <div className="scam-card">
-
-        <label htmlFor="scam-message">
-          {t.pasteMessage}
-        </label>
+        <label htmlFor="scam-message">{t.pasteMessage}</label>
 
         <textarea
           id="scam-message"
           value={scamMessage}
-          onChange={(e) =>
-            setScamMessage(
-              e.target.value
-            )
-          }
+          onChange={(e) => setScamMessage(e.target.value)}
           placeholder={t.example}
           rows="7"
         />
 
-        <p className="privacy-note">
-          🔒 {t.privacyNote}
-        </p>
+        <div className="screenshot-upload">
+  <div className="screenshot-upload-icon">📸</div>
+
+  <div className="screenshot-upload-content">
+    <h3>Analyze a screenshot</h3>
+
+    <p>
+      Take a screenshot of a suspicious message and upload it here.
+    </p>
+
+    <label htmlFor="screenshot-input" className="screenshot-button">
+      📷 Choose Screenshot
+    </label>
+
+    <input
+      id="screenshot-input"
+      type="file"
+      accept="image/*"
+      hidden
+      onChange={(e) => {
+        const file = e.target.files?.[0];
+
+        if (file) {
+          setScreenshotFile(file);
+        }
+      }}
+    />
+
+    {screenshotFile && (
+      <p className="selected-screenshot">
+        ✓ {screenshotFile.name}
+      </p>
+    )}
+  </div>
+</div>
+
+{screenshotFile && (
+  <button
+    className="primary-button screenshot-analyze-button"
+    onClick={onAnalyzeScreenshot}
+    disabled={isAnalyzingScreenshot}
+  >
+    {isAnalyzingScreenshot
+      ? "🔎 Reading screenshot..."
+      : "🛡️ Analyze Screenshot"}
+  </button>
+)}
+
+        <p className="privacy-note">🔒 {t.privacyNote}</p>
 
         <div className="scam-actions">
-
           <button
             className="example-button"
             onClick={() =>
               setScamMessage(
-                "Congratulations! You have won UGX 500,000. Send your mobile money PIN within 10 minutes to claim your prize: https://example.com/claim"
+                "Congratulations! You have won UGX 500,000. Send your mobile money PIN within 10 minutes to claim your prize: https://example.com/claim",
               )
             }
           >
@@ -2972,311 +2469,169 @@ function ScamCheckView({
 
           <button
             className="primary-button"
-            onClick={() =>
-              onAnalyze(
-                scamMessage
-              )
-            }
-            disabled={
-              !scamMessage.trim() ||
-              isCheckingScam
-            }
+            onClick={() => onAnalyze(scamMessage)}
+            disabled={!scamMessage.trim() || isCheckingScam}
           >
-            {isCheckingScam
-              ? t.checking
-              : t.checkMessage}
+            {isCheckingScam ? t.checking : t.checkMessage}
           </button>
-
         </div>
       </div>
 
-
       {isCheckingScam && (
         <div className="checking-card">
+          <div className="loading-icon">🔎</div>
 
-          <div className="loading-icon">
-            🔎
-          </div>
+          <h2>{t.checkingSigns}</h2>
 
-          <h2>
-            {t.checkingSigns}
-          </h2>
-
-          <p>
-            {t.scamPatterns}
-          </p>
-
+          <p>{t.scamPatterns}</p>
         </div>
       )}
 
+      {scamResult && !isCheckingScam && (
+        <div className="scam-result">
+          {/* RISK */}
 
-      {scamResult &&
-        !isCheckingScam && (
-          <div className="scam-result">
-
-            {/* RISK */}
-
-            <div
-              className={`risk-card risk-${scamResult.riskLevel.toLowerCase()}`}
-            >
-
-              <div className="risk-top">
-
-                <div className="risk-icon">
-                  {scamResult.riskLevel ===
-                  "HIGH"
-                    ? "🚨"
-                    : scamResult.riskLevel ===
-                      "SUSPICIOUS"
+          <div
+            className={`risk-card risk-${scamResult.riskLevel.toLowerCase()}`}
+          >
+            <div className="risk-top">
+              <div className="risk-icon">
+                {scamResult.riskLevel === "HIGH"
+                  ? "🚨"
+                  : scamResult.riskLevel === "SUSPICIOUS"
                     ? "⚠️"
-                    : scamResult.riskLevel ===
-                      "CAUTION"
-                    ? "🟡"
-                    : "🟢"}
-                </div>
-
-                <div className="risk-heading">
-
-                  <span className="risk-label">
-                    {t.riskAssessment}
-                  </span>
-
-                  <h2>
-                    {getRiskTitle()}
-                  </h2>
-
-                  <span className="scam-category">
-                    🏷️{" "}
-                    {scamResult.scamCategory}
-                  </span>
-
-                </div>
-
-                <div className="risk-score">
-
-                  <strong>
-                    {scamResult.score}
-                  </strong>
-
-                  <span>
-                    /100
-                  </span>
-
-                </div>
-
+                    : scamResult.riskLevel === "CAUTION"
+                      ? "🟡"
+                      : "🟢"}
               </div>
 
+              <div className="risk-heading">
+                <span className="risk-label">{t.riskAssessment}</span>
 
-              <p className="risk-description">
-                {getRiskDescription()}
-              </p>
+                <h2>{getRiskTitle()}</h2>
 
-
-              <div className="risk-meter">
-
-                <div
-                  className="risk-meter-fill"
-                  style={{
-                    width:
-                      `${scamResult.score}%`
-                  }}
-                />
-
-              </div>
-
-
-              <div className="risk-meter-labels">
-
-                <span>
-                  {t.lowRisk}
+                <span className="scam-category">
+                  🏷️ {scamResult.scamCategory}
                 </span>
-
-                <span>
-                  {t.highRisk}
-                </span>
-
               </div>
 
+              <div className="risk-score">
+                <strong>{scamResult.score}</strong>
+
+                <span>/100</span>
+              </div>
             </div>
 
+            <p className="risk-description">{getRiskDescription()}</p>
 
-            {/* MESSAGE */}
-
-            <div className="message-preview">
-
-              <div className="message-preview-header">
-
-                <h2>
-                  🔎 {t.messageAnalysis}
-                </h2>
-
-                <span>
-                  {t.highlightedWarning}
-                </span>
-
-              </div>
-
-
-              <div className="message-content">
-                {highlightScamWords(
-                  scamMessage
-                )}
-              </div>
-
-
-              <div className="highlight-legend">
-
-                <span>
-                  <mark className="legend-highlight">
-                    {t.warningSign}
-                  </mark>
-                </span>
-
-                <span>
-                  {t.warningExplanation}
-                </span>
-
-              </div>
-
+            <div className="risk-meter">
+              <div
+                className="risk-meter-fill"
+                style={{
+                  width: `${scamResult.score}%`,
+                }}
+              />
             </div>
 
+            <div className="risk-meter-labels">
+              <span>{t.lowRisk}</span>
 
-            {/* WARNINGS */}
-
-            <div className="warning-section">
-
-              <h2>
-                {t.whyConcerned}
-              </h2>
-
-              {scamResult.warningSigns.length ===
-              0 ? (
-
-                <div className="no-warning">
-
-                  <span>✓</span>
-
-                  <p>
-                    {t.noWarning}
-                  </p>
-
-                </div>
-
-              ) : (
-
-                scamResult.warningSigns.map(
-                  (warning, index) => {
-
-                    const warningText =
-                      getWarningText(
-                        warning.type
-                      );
-
-                    return (
-                      <div
-                        className="warning-item"
-                        key={index}
-                      >
-
-                        <div className="warning-icon">
-                          {warning.icon}
-                        </div>
-
-                        <div>
-
-                          <h3>
-                            {
-                              warningText.title
-                            }
-                          </h3>
-
-                          <p>
-                            {
-                              warningText.description
-                            }
-                          </p>
-
-                        </div>
-
-                      </div>
-                    );
-                  }
-                )
-              )}
-
+              <span>{t.highRisk}</span>
             </div>
-
-
-            {/* ADVICE */}
-
-            {advice && (
-              <div className="safety-actions-card">
-
-                <div className="advice-header">
-
-                  <div className="advice-icon">
-                    {advice.icon}
-                  </div>
-
-                  <div>
-
-                    <span className="advice-label">
-                      {t.safetyAdvice}
-                    </span>
-
-                    <h2>
-                      {advice.title}
-                    </h2>
-
-                  </div>
-
-                </div>
-
-
-                <div className="advice-list">
-
-                  {advice.points.map(
-                    (point, index) => (
-
-                      <div
-                        className="advice-item"
-                        key={index}
-                      >
-
-                        <div className="advice-number">
-                          {index + 1}
-                        </div>
-
-                        <p>
-                          {point}
-                        </p>
-
-                      </div>
-                    )
-                  )}
-
-                </div>
-
-              </div>
-            )}
-
-
-            <button
-              className="secondary-button"
-              onClick={() => {
-                setScamMessage("");
-                setScamResult(null);
-              }}
-            >
-              {t.checkMessage}
-            </button>
-
           </div>
-        )}
+
+          {/* MESSAGE */}
+
+          <div className="message-preview">
+            <div className="message-preview-header">
+              <h2>🔎 {t.messageAnalysis}</h2>
+
+              <span>{t.highlightedWarning}</span>
+            </div>
+
+            <div className="message-content">
+              {highlightScamWords(scamMessage)}
+            </div>
+
+            <div className="highlight-legend">
+              <span>
+                <mark className="legend-highlight">{t.warningSign}</mark>
+              </span>
+
+              <span>{t.warningExplanation}</span>
+            </div>
+          </div>
+
+          {/* WARNINGS */}
+
+          <div className="warning-section">
+            <h2>{t.whyConcerned}</h2>
+
+            {scamResult.warningSigns.length === 0 ? (
+              <div className="no-warning">
+                <span>✓</span>
+
+                <p>{t.noWarning}</p>
+              </div>
+            ) : (
+              scamResult.warningSigns.map((warning, index) => {
+                const warningText = getWarningText(warning.type);
+
+                return (
+                  <div className="warning-item" key={index}>
+                    <div className="warning-icon">{warning.icon}</div>
+
+                    <div>
+                      <h3>{warningText.title}</h3>
+
+                      <p>{warningText.description}</p>
+                    </div>
+                  </div>
+                );
+              })
+            )}
+          </div>
+
+          {/* ADVICE */}
+
+          {advice && (
+            <div className="safety-actions-card">
+              <div className="advice-header">
+                <div className="advice-icon">{advice.icon}</div>
+
+                <div>
+                  <span className="advice-label">{t.safetyAdvice}</span>
+
+                  <h2>{advice.title}</h2>
+                </div>
+              </div>
+
+              <div className="advice-list">
+                {advice.points.map((point, index) => (
+                  <div className="advice-item" key={index}>
+                    <div className="advice-number">{index + 1}</div>
+
+                    <p>{point}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <button
+            className="secondary-button"
+            onClick={() => {
+              setScamMessage("");
+              setScamResult(null);
+            }}
+          >
+            {t.checkMessage}
+          </button>
+        </div>
+      )}
     </>
   );
 }
-
 
 // ==========================================================
 // USSD VIEW
@@ -3291,786 +2646,447 @@ function UssdView({
   scamResult,
   onCheckMessage,
   onNavigate,
-  language
+  language,
 }) {
   const t = getTranslations(language);
 
   return (
     <div className="ussd-page">
-
       {/* BACK */}
 
       <button
         className="back-button"
         onClick={() => {
-
           setUssdStep("menu");
           setUssdInput("");
 
-          if (
-            ussdMode ===
-            "learning"
-          ) {
+          if (ussdMode === "learning") {
             onNavigate("learn");
           } else {
             onNavigate("scamCheck");
           }
-
         }}
       >
-        {ussdMode === "learning"
-          ? t.backToSkills
-          : t.backToSafety}
+        {ussdMode === "learning" ? t.backToSkills : t.backToSafety}
       </button>
-
 
       {/* HEADER */}
 
       <div className="ussd-header">
-
-        <div className="ussd-large-icon">
-          📱
-        </div>
+        <div className="ussd-large-icon">📱</div>
 
         <h1>
-          {ussdMode ===
-          "learning"
+          {ussdMode === "learning"
             ? t.offlineDigitalSkills
             : t.offlineScamCheck}
         </h1>
 
         <p>
-          {ussdMode ===
-          "learning"
+          {ussdMode === "learning"
             ? t.offlineDigitalSkillsDesc
             : t.offlineScamCheckDesc}
         </p>
-
       </div>
-
 
       {/* PHONE */}
 
       <div className="phone-container">
-
         <div className="phone-screen">
-
           <div className="network-bar">
+            <span>MTN</span>
 
-            <span>
-              MTN
-            </span>
-
-            <span>
-              ▮▮▮▮
-            </span>
-
+            <span>▮▮▮▮</span>
           </div>
-
 
           {/* SCAM MENU */}
 
-          {ussdStep === "menu" &&
-            ussdMode === "scams" && (
-              <>
+          {ussdStep === "menu" && ussdMode === "scams" && (
+            <>
+              <div className="ussd-title">{t.scamCheckTitle}</div>
 
-                <div className="ussd-title">
-                  {t.scamCheckTitle}
-                </div>
+              <p>{t.welcome}</p>
 
-                <p>
-                  {t.welcome}
-                </p>
+              <p>{t.chooseOption}</p>
 
-                <p>
-                  {t.chooseOption}
-                </p>
+              <div className="ussd-menu">
+                <p>{t.checkSuspiciousMessage}</p>
 
-                <div className="ussd-menu">
+                <p>{t.safetyTips}</p>
 
-                  <p>
-                    {t.checkSuspiciousMessage}
-                  </p>
+                <p>{t.exit}</p>
+              </div>
 
-                  <p>
-                    {t.safetyTips}
-                  </p>
+              <input
+                type="text"
+                inputMode="numeric"
+                maxLength="1"
+                value={ussdInput}
+                onChange={(e) => setUssdInput(e.target.value)}
+                placeholder={t.enterOption}
+              />
 
-                  <p>
-                    {t.exit}
-                  </p>
-
-                </div>
-
-
-                <input
-                  type="text"
-                  inputMode="numeric"
-                  maxLength="1"
-                  value={ussdInput}
-                  onChange={(e) =>
-                    setUssdInput(
-                      e.target.value
-                    )
+              <button
+                onClick={() => {
+                  if (ussdInput === "1") {
+                    setUssdStep("message");
+                  } else if (ussdInput === "2") {
+                    setUssdStep("tips");
+                  } else if (ussdInput === "3") {
+                    setUssdStep("exit");
                   }
-                  placeholder={
-                    t.enterOption
-                  }
-                />
 
-
-                <button
-                  onClick={() => {
-
-                    if (
-                      ussdInput === "1"
-                    ) {
-                      setUssdStep(
-                        "message"
-                      );
-                    } else if (
-                      ussdInput === "2"
-                    ) {
-                      setUssdStep(
-                        "tips"
-                      );
-                    } else if (
-                      ussdInput === "3"
-                    ) {
-                      setUssdStep(
-                        "exit"
-                      );
-                    }
-
-                    setUssdInput("");
-
-                  }}
-                >
-                  {t.send}
-                </button>
-
-              </>
-            )}
-
+                  setUssdInput("");
+                }}
+              >
+                {t.send}
+              </button>
+            </>
+          )}
 
           {/* CHECK MESSAGE */}
 
-          {ussdStep === "message" &&
-            ussdMode === "scams" && (
-              <>
+          {ussdStep === "message" && ussdMode === "scams" && (
+            <>
+              <div className="ussd-title">{t.checkMessageTitle}</div>
 
-                <div className="ussd-title">
-                  {t.checkMessageTitle}
-                </div>
+              <p>{t.enterSuspiciousMessage}</p>
 
-                <p>
-                  {t.enterSuspiciousMessage}
-                </p>
+              <textarea
+                value={ussdInput}
+                onChange={(e) => setUssdInput(e.target.value)}
+                placeholder={t.typeMessage}
+                rows="5"
+              />
 
-                <textarea
-                  value={ussdInput}
-                  onChange={(e) =>
-                    setUssdInput(
-                      e.target.value
-                    )
-                  }
-                  placeholder={
-                    t.typeMessage
-                  }
-                  rows="5"
-                />
+              <button onClick={onCheckMessage}>{t.check}</button>
 
-                <button
-                  onClick={
-                    onCheckMessage
-                  }
-                >
-                  {t.check}
-                </button>
-
-                <button
-                  className="ussd-secondary"
-                  onClick={() => {
-                    setUssdStep("menu");
-                    setUssdInput("");
-                  }}
-                >
-                  {t.backButton}
-                </button>
-
-              </>
-            )}
-
+              <button
+                className="ussd-secondary"
+                onClick={() => {
+                  setUssdStep("menu");
+                  setUssdInput("");
+                }}
+              >
+                {t.backButton}
+              </button>
+            </>
+          )}
 
           {/* LEARNING MENU */}
 
-          {ussdStep ===
-            "learning" &&
-            ussdMode ===
-              "learning" && (
-              <>
+          {ussdStep === "learning" && ussdMode === "learning" && (
+            <>
+              <div className="ussd-title">{t.learnDigitalSkillsTitle}</div>
 
-                <div className="ussd-title">
-                  {
-                    t.learnDigitalSkillsTitle
+              <p>{t.whatLearn}</p>
+
+              <div className="ussd-menu">
+                <p>1. {t.cybersecurity}</p>
+
+                <p>2. {t.email}</p>
+
+                <p>3. {t.artificialIntelligence}</p>
+
+                <p>{t.backOption}</p>
+              </div>
+
+              <input
+                type="text"
+                inputMode="numeric"
+                maxLength="1"
+                value={ussdInput}
+                onChange={(e) => setUssdInput(e.target.value)}
+                placeholder={t.enterOption}
+              />
+
+              <button
+                onClick={() => {
+                  if (ussdInput === "1") {
+                    setUssdStep("cybersecurity");
+                  } else if (ussdInput === "2") {
+                    setUssdStep("email");
+                  } else if (ussdInput === "3") {
+                    setUssdStep("ai");
+                  } else if (ussdInput === "4") {
+                    onNavigate("learn");
                   }
-                </div>
 
-                <p>
-                  {t.whatLearn}
-                </p>
-
-                <div className="ussd-menu">
-
-                  <p>
-                    1.{" "}
-                    {t.cybersecurity}
-                  </p>
-
-                  <p>
-                    2.{" "}
-                    {t.email}
-                  </p>
-
-                  <p>
-                    3.{" "}
-                    {
-                      t.artificialIntelligence
-                    }
-                  </p>
-
-                  <p>
-                    {t.backOption}
-                  </p>
-
-                </div>
-
-
-                <input
-                  type="text"
-                  inputMode="numeric"
-                  maxLength="1"
-                  value={ussdInput}
-                  onChange={(e) =>
-                    setUssdInput(
-                      e.target.value
-                    )
-                  }
-                  placeholder={
-                    t.enterOption
-                  }
-                />
-
-
-                <button
-                  onClick={() => {
-
-                    if (
-                      ussdInput === "1"
-                    ) {
-                      setUssdStep(
-                        "cybersecurity"
-                      );
-                    } else if (
-                      ussdInput === "2"
-                    ) {
-                      setUssdStep(
-                        "email"
-                      );
-                    } else if (
-                      ussdInput === "3"
-                    ) {
-                      setUssdStep("ai");
-                    } else if (
-                      ussdInput === "4"
-                    ) {
-                      onNavigate("learn");
-                    }
-
-                    setUssdInput("");
-
-                  }}
-                >
-                  {t.send}
-                </button>
-
-              </>
-            )}
-
+                  setUssdInput("");
+                }}
+              >
+                {t.send}
+              </button>
+            </>
+          )}
 
           {/* CYBERSECURITY */}
 
-          {ussdStep ===
-            "cybersecurity" &&
-            ussdMode ===
-              "learning" && (
-              <>
+          {ussdStep === "cybersecurity" && ussdMode === "learning" && (
+            <>
+              <div className="ussd-title">{t.cyberTitle}</div>
 
-                <div className="ussd-title">
-                  {t.cyberTitle}
-                </div>
+              <p>🔑 {t.strongPasswords}</p>
 
-                <p>
-                  🔑{" "}
-                  {t.strongPasswords}
-                </p>
+              <p>📱 {t.neverSharePin}</p>
 
-                <p>
-                  📱{" "}
-                  {t.neverSharePin}
-                </p>
+              <p>🔗 {t.suspiciousLinks}</p>
 
-                <p>
-                  🔗{" "}
-                  {t.suspiciousLinks}
-                </p>
+              <p>👤 {t.verifyPeople}</p>
 
-                <p>
-                  👤{" "}
-                  {t.verifyPeople}
-                </p>
-
-                <button
-                  onClick={() => {
-                    setUssdStep(
-                      "learning"
-                    );
-                    setUssdInput("");
-                  }}
-                >
-                  {t.backButton}
-                </button>
-
-              </>
-            )}
-
+              <button
+                onClick={() => {
+                  setUssdStep("learning");
+                  setUssdInput("");
+                }}
+              >
+                {t.backButton}
+              </button>
+            </>
+          )}
 
           {/* EMAIL */}
 
-          {ussdStep === "email" &&
-            ussdMode ===
-              "learning" && (
-              <>
+          {ussdStep === "email" && ussdMode === "learning" && (
+            <>
+              <div className="ussd-title">{t.emailTitle}</div>
 
-                <div className="ussd-title">
-                  {t.emailTitle}
-                </div>
+              <p>📧 {t.emailDescription}</p>
 
-                <p>
-                  📧{" "}
-                  {t.emailDescription}
-                </p>
+              <p>✍️ {t.composeEmail}</p>
 
-                <p>
-                  ✍️{" "}
-                  {t.composeEmail}
-                </p>
+              <p>📎 {t.attachFiles}</p>
 
-                <p>
-                  📎{" "}
-                  {t.attachFiles}
-                </p>
+              <p>🔒 {t.neverShareEmailPassword}</p>
 
-                <p>
-                  🔒{" "}
-                  {t.neverShareEmailPassword}
-                </p>
+              <p>⚠️ {t.unknownAttachments}</p>
 
-                <p>
-                  ⚠️{" "}
-                  {t.unknownAttachments}
-                </p>
-
-                <button
-                  onClick={() => {
-                    setUssdStep(
-                      "learning"
-                    );
-                    setUssdInput("");
-                  }}
-                >
-                  {t.backButton}
-                </button>
-
-              </>
-            )}
-
+              <button
+                onClick={() => {
+                  setUssdStep("learning");
+                  setUssdInput("");
+                }}
+              >
+                {t.backButton}
+              </button>
+            </>
+          )}
 
           {/* AI */}
 
-          {ussdStep === "ai" &&
-            ussdMode ===
-              "learning" && (
-              <>
+          {ussdStep === "ai" && ussdMode === "learning" && (
+            <>
+              <div className="ussd-title">{t.aiTitle}</div>
 
-                <div className="ussd-title">
-                  {t.aiTitle}
-                </div>
+              <p>🤖 {t.aiDescription}</p>
 
-                <p>
-                  🤖{" "}
-                  {t.aiDescription}
-                </p>
+              <p>💬 {t.aiQuestions}</p>
 
-                <p>
-                  💬{" "}
-                  {t.aiQuestions}
-                </p>
+              <p>✍️ {t.aiWriting}</p>
 
-                <p>
-                  ✍️{" "}
-                  {t.aiWriting}
-                </p>
+              <p>⚠️ {t.aiMistakes}</p>
 
-                <p>
-                  ⚠️{" "}
-                  {t.aiMistakes}
-                </p>
+              <p>🔍 {t.verifyAI}</p>
 
-                <p>
-                  🔍{" "}
-                  {t.verifyAI}
-                </p>
-
-                <button
-                  onClick={() => {
-                    setUssdStep(
-                      "learning"
-                    );
-                    setUssdInput("");
-                  }}
-                >
-                  {t.backButton}
-                </button>
-
-              </>
-            )}
-
+              <button
+                onClick={() => {
+                  setUssdStep("learning");
+                  setUssdInput("");
+                }}
+              >
+                {t.backButton}
+              </button>
+            </>
+          )}
 
           {/* SAFETY TIPS */}
 
-          {ussdStep === "tips" &&
-            ussdMode ===
-              "scams" && (
-              <>
+          {ussdStep === "tips" && ussdMode === "scams" && (
+            <>
+              <div className="ussd-title">{t.safetyTips}</div>
 
-                <div className="ussd-title">
-                  {t.safetyTips}
-                </div>
+              <p>• {t.neverSharePIN}</p>
 
-                <p>
-                  • {t.neverSharePIN}
-                </p>
+              <p>• {t.dontSendMoney}</p>
 
-                <p>
-                  • {t.dontSendMoney}
-                </p>
+              <p>• {t.verifyMessages}</p>
 
-                <p>
-                  • {t.verifyMessages}
-                </p>
+              <p>• {t.dontClickLinks}</p>
 
-                <p>
-                  • {t.dontClickLinks}
-                </p>
+              <p>• {t.useStrongPasswords}</p>
 
-                <p>
-                  • {t.useStrongPasswords}
-                </p>
-
-                <button
-                  onClick={() => {
-                    setUssdStep("menu");
-                    setUssdInput("");
-                  }}
-                >
-                  {t.backButton}
-                </button>
-
-              </>
-            )}
-
+              <button
+                onClick={() => {
+                  setUssdStep("menu");
+                  setUssdInput("");
+                }}
+              >
+                {t.backButton}
+              </button>
+            </>
+          )}
 
           {/* RESULT */}
 
-          {ussdStep === "result" &&
-            ussdMode ===
-              "scams" && (
-              <>
+          {ussdStep === "result" && ussdMode === "scams" && (
+            <>
+              <div className="ussd-title">{t.result}</div>
 
-                <div className="ussd-title">
-                  {t.result}
-                </div>
-
-                {scamResult ? (
-                  <>
-
-                    <p>
-                      {t.risk}:{" "}
-                      <strong>
-                        {scamResult.riskLevel}
-                      </strong>
-                    </p>
-
-                    <p>
-                      {t.score}:{" "}
-                      {scamResult.score}
-                      /100
-                    </p>
-
-                    <p>
-                      {t.type}:
-                      <br />
-                      {
-                        scamResult.scamCategory
-                      }
-                    </p>
-
-                    <p>
-                      {t.warningSigns}:
-                    </p>
-
-                    {scamResult.warningSigns
-                      .slice(0, 3)
-                      .map(
-                        (
-                          warning,
-                          index
-                        ) => {
-
-                          const text =
-                            getTranslations(
-                              language
-                            );
-
-                          const titles = {
-                            urgency:
-                              text.urgencyTitle,
-                            sensitive:
-                              text.sensitiveTitle,
-                            money:
-                              text.moneyTitle,
-                            reward:
-                              text.rewardTitle,
-                            link:
-                              text.linkTitle,
-                            threat:
-                              text.threatTitle
-                          };
-
-                          return (
-                            <p
-                              key={index}
-                            >
-                              {
-                                warning.icon
-                              }{" "}
-                              {
-                                titles[
-                                  warning.type
-                                ]
-                              }
-                            </p>
-                          );
-                        }
-                      )}
-
-                    <p>
-                      🛡️{" "}
-                      {
-                        t.neverShareSensitive
-                      }
-                    </p>
-
-                  </>
-                ) : (
+              {scamResult ? (
+                <>
                   <p>
-                    {t.unableAnalyze}
+                    {t.risk}: <strong>{scamResult.riskLevel}</strong>
                   </p>
-                )}
 
-                <button
-                  onClick={() => {
-                    setUssdStep(
-                      "menu"
+                  <p>
+                    {t.score}: {scamResult.score}
+                    /100
+                  </p>
+
+                  <p>
+                    {t.type}:
+                    <br />
+                    {scamResult.scamCategory}
+                  </p>
+
+                  <p>{t.warningSigns}:</p>
+
+                  {scamResult.warningSigns.slice(0, 3).map((warning, index) => {
+                    const text = getTranslations(language);
+
+                    const titles = {
+                      urgency: text.urgencyTitle,
+                      sensitive: text.sensitiveTitle,
+                      money: text.moneyTitle,
+                      reward: text.rewardTitle,
+                      link: text.linkTitle,
+                      threat: text.threatTitle,
+                    };
+
+                    return (
+                      <p key={index}>
+                        {warning.icon} {titles[warning.type]}
+                      </p>
                     );
-                    setUssdInput("");
-                  }}
-                >
-                  {t.finish}
-                </button>
+                  })}
 
-              </>
-            )}
+                  <p>🛡️ {t.neverShareSensitive}</p>
+                </>
+              ) : (
+                <p>{t.unableAnalyze}</p>
+              )}
 
+              <button
+                onClick={() => {
+                  setUssdStep("menu");
+                  setUssdInput("");
+                }}
+              >
+                {t.finish}
+              </button>
+            </>
+          )}
 
           {/* EXIT */}
 
           {ussdStep === "exit" && (
             <>
+              <div className="ussd-title">DIGITALBUDDY</div>
 
-              <div className="ussd-title">
-                DIGITALBUDDY
-              </div>
+              <p>{t.thankYou}</p>
 
-              <p>
-                {t.thankYou}
-              </p>
-
-              <p>
-                {t.staySafe}
-              </p>
+              <p>{t.staySafe}</p>
 
               <button
                 onClick={() => {
-
-                  setUssdStep(
-                    "menu"
-                  );
+                  setUssdStep("menu");
 
                   setUssdInput("");
 
-                  if (
-                    ussdMode ===
-                    "learning"
-                  ) {
+                  if (ussdMode === "learning") {
                     onNavigate("learn");
                   } else {
-                    onNavigate(
-                      "scamCheck"
-                    );
+                    onNavigate("scamCheck");
                   }
-
                 }}
               >
                 {t.close}
               </button>
-
             </>
           )}
-
         </div>
       </div>
-
 
       {/* DEMO NOTE */}
 
       <div className="ussd-demo-note">
+        <strong>{t.developmentDemo}</strong>
 
-        <strong>
-          {t.developmentDemo}
-        </strong>
-
-        <p>
-          {t.simulation}
-        </p>
-
+        <p>{t.simulation}</p>
       </div>
-
     </div>
   );
 }
-
 
 // ==========================================================
 // MAIN APP
 // ==========================================================
 
 export default function App() {
-
-  const [page, setPage] =
-    useState("home");
-
+  const [page, setPage] = useState("home");
 
   // ========================================================
   // LANGUAGE
   // ========================================================
 
-  const [language, setLanguageState] =
-    useState(() => {
+  const [language, setLanguageState] = useState(() => {
+    return localStorage.getItem("digitalBuddyLanguage") || "English";
+  });
 
-      return (
-        localStorage.getItem(
-          "digitalBuddyLanguage"
-        ) || "English"
-      );
+  const setLanguage = (selectedLanguage) => {
+    setLanguageState(selectedLanguage);
 
-    });
-
-
-  const setLanguage = (
-    selectedLanguage
-  ) => {
-
-    setLanguageState(
-      selectedLanguage
-    );
-
-    localStorage.setItem(
-      "digitalBuddyLanguage",
-      selectedLanguage
-    );
-
+    localStorage.setItem("digitalBuddyLanguage", selectedLanguage);
   };
-
 
   // ========================================================
   // AI ASSISTANT
   // ========================================================
 
-  const [initialPrompt, setInitialPrompt] =
-    useState("");
+  const [initialPrompt, setInitialPrompt] = useState("");
 
-
-  const openAssistant = (
-    promptText = ""
-  ) => {
-
-    setInitialPrompt(
-      promptText
-    );
+  const openAssistant = (promptText = "") => {
+    setInitialPrompt(promptText);
 
     setPage("assistant");
-
   };
-
 
   // ========================================================
   // SCAM STATE
   // ========================================================
 
-  const [scamMessage, setScamMessage] =
-    useState("");
+  const [scamMessage, setScamMessage] = useState("");
+  const [screenshotFile, setScreenshotFile] = useState(null);
+const [isAnalyzingScreenshot, setIsAnalyzingScreenshot] = useState(false);
 
-  const [scamResult, setScamResult] =
-    useState(null);
+  const [scamResult, setScamResult] = useState(null);
 
-  const [isCheckingScam, setIsCheckingScam] =
-    useState(false);
-
+  const [isCheckingScam, setIsCheckingScam] = useState(false);
 
   // ========================================================
   // USSD STATE
   // ========================================================
 
-  const [ussdStep, setUssdStep] =
-    useState("menu");
+  const [ussdStep, setUssdStep] = useState("menu");
 
-  const [ussdInput, setUssdInput] =
-    useState("");
+  const [ussdInput, setUssdInput] = useState("");
 
-  const [ussdMode, setUssdMode] =
-    useState("scams");
-
+  const [ussdMode, setUssdMode] = useState("scams");
 
   // ========================================================
   // SCAM ANALYSIS
   // ========================================================
 
-  const handleAnalyzeScam = (
-    messageText
-  ) => {
-
+  const handleAnalyzeScam = (messageText) => {
     if (!messageText.trim()) {
       return;
     }
@@ -4078,419 +3094,277 @@ export default function App() {
     setIsCheckingScam(true);
     setScamResult(null);
 
-    const result =
-      analyzeMessageContent(
-        messageText
-      );
+    const result = analyzeMessageContent(messageText);
 
     setTimeout(() => {
-
       setScamResult(result);
       setIsCheckingScam(false);
-
     }, 900);
-
   };
 
+  const handleScreenshotAnalyze = async () => {
+  if (!screenshotFile) {
+    return;
+  }
+
+  const file = screenshotFile;
+
+  setIsAnalyzingScreenshot(true);
+  setIsCheckingScam(true);
+  setScamResult(null);
+
+  try {
+    const formData = new FormData();
+    formData.append("screenshot", file);
+
+    const response = await fetch(
+      "http://localhost:5000/api/analyze-screenshot",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    const responseText = await response.text();
+
+    let data;
+
+    try {
+      data = JSON.parse(responseText);
+    } catch {
+      console.error("Server returned non-JSON response:", responseText);
+
+      throw new Error(
+        `Server returned an invalid response (${response.status})`
+      );
+    }
+
+    if (!response.ok) {
+      throw new Error(data.error || "Could not analyze screenshot");
+    }
+
+    setScamMessage(data.extractedText || "");
+    setScamResult(data.analysis || null);
+
+    setScreenshotFile(null);
+  } catch (error) {
+    console.error("Screenshot analysis error:", error);
+
+    alert(
+      error.message ||
+        "Sorry, we could not read that screenshot. Please try again."
+    );
+  } finally {
+    setIsAnalyzingScreenshot(false);
+    setIsCheckingScam(false);
+  }
+};
 
   // ========================================================
   // USSD SCAM CHECK
   // ========================================================
 
   const handleUSSDCheck = () => {
-
     if (!ussdInput.trim()) {
       return;
     }
 
-    const message =
-      ussdInput;
+    const message = ussdInput;
 
-    setScamMessage(
-      message
-    );
+    setScamMessage(message);
 
-    const result =
-      analyzeMessageContent(
-        message
-      );
+    const result = analyzeMessageContent(message);
 
-    setScamResult(
-      result
-    );
+    setScamResult(result);
 
     setUssdInput("");
 
-    setUssdStep(
-      "result"
-    );
-
+    setUssdStep("result");
   };
-
 
   // ========================================================
   // TRANSLATION
   // ========================================================
 
-  const t =
-    getTranslations(language);
-
+  const t = getTranslations(language);
 
   return (
     <div className="app">
-
-
       {/* ==================================================
           HOME
           ================================================== */}
 
       {page === "home" && (
-
         <HomeView
           onNavigate={setPage}
-          onOpenAssistant={
-            openAssistant
-          }
+          onOpenAssistant={openAssistant}
           language={language}
-          setLanguage={
-            setLanguage
-          }
+          setLanguage={setLanguage}
         />
-
       )}
-
 
       {/* ==================================================
           SCAM CHECK
           ================================================== */}
 
       {page === "scamCheck" && (
-
         <ScamCheckView
-          scamMessage={
-            scamMessage
-          }
-          setScamMessage={
-            setScamMessage
-          }
-          scamResult={
-            scamResult
-          }
-          setScamResult={
-            setScamResult
-          }
-          isCheckingScam={
-            isCheckingScam
-          }
-          onAnalyze={
-            handleAnalyzeScam
-          }
-          language={
-            language
-          }
+          scamMessage={scamMessage}
+          isAnalyzingScreenshot={isAnalyzingScreenshot}
+setIsAnalyzingScreenshot={setIsAnalyzingScreenshot}
+  setScamMessage={setScamMessage}
+  scamResult={scamResult}
+  setScamResult={setScamResult}
+  isCheckingScam={isCheckingScam}
+  onAnalyze={handleAnalyzeScam}
+  screenshotFile={screenshotFile}
+  setScreenshotFile={setScreenshotFile}
+  onAnalyzeScreenshot={handleScreenshotAnalyze}
+  language={language}
           onNavigate={(target) => {
+            if (target === "ussd") {
+              setUssdMode("scams");
 
-            if (
-              target === "ussd"
-            ) {
-
-              setUssdMode(
-                "scams"
-              );
-
-              setUssdStep(
-                "menu"
-              );
+              setUssdStep("menu");
 
               setUssdInput("");
-
             }
 
             setPage(target);
-
           }}
         />
-
       )}
-
 
       {/* ==================================================
           LEARN DIGITAL SKILLS
           ================================================== */}
 
       {page === "learn" && (
-
         <>
+          <LanguageSelector language={language} setLanguage={setLanguage} />
 
-          <LanguageSelector
-            language={
-              language
-            }
-            setLanguage={
-              setLanguage
-            }
-          />
-
-          <button
-            className="back-button"
-            onClick={() =>
-              setPage("home")
-            }
-          >
+          <button className="back-button" onClick={() => setPage("home")}>
             {t.back}
           </button>
 
+          <h1>📚 {t.learnSkills}</h1>
 
-          <h1>
-            📚 {t.learnSkills}
-          </h1>
-
-          <p>
-            {t.chooseTopic}
-          </p>
-
+          <p>{t.chooseTopic}</p>
 
           <div className="lesson-options">
+            {Object.entries(LESSONS).map(([key, lesson]) => {
+              const translated = lesson[language] || lesson.English;
 
-            {Object.entries(
-              LESSONS
-            ).map(
-              ([
-                key,
-                lesson
-              ]) => {
+              return (
+                <button
+                  key={key}
+                  className="lesson-button"
+                  onClick={() => setPage(key)}
+                >
+                  <h3>{translated.title}</h3>
 
-                const translated =
-                  lesson[
-                    language
-                  ] ||
-                  lesson.English;
-
-                return (
-
-                  <button
-                    key={key}
-                    className="lesson-button"
-                    onClick={() =>
-                      setPage(
-                        key
-                      )
-                    }
-                  >
-
-                    <h3>
-                      {
-                        translated.title
-                      }
-                    </h3>
-
-                    <p>
-                      {
-                        translated.description
-                      }
-                    </p>
-
-                  </button>
-
-                );
-
-              }
-            )}
-
+                  <p>{translated.description}</p>
+                </button>
+              );
+            })}
           </div>
-
 
           {/* USSD */}
 
           <div className="offline-option">
-
-            <div className="offline-icon">
-              📱
-            </div>
+            <div className="offline-icon">📱</div>
 
             <div className="offline-content">
+              <h3>{t.noInternet}</h3>
 
-              <h3>
-                {t.noInternet}
-              </h3>
-
-              <p>
-                {t.learnWithUSSD}
-              </p>
-
+              <p>{t.learnWithUSSD}</p>
             </div>
 
             <button
               className="ussd-button"
               onClick={() => {
+                setUssdMode("learning");
 
-                setUssdMode(
-                  "learning"
-                );
-
-                setUssdStep(
-                  "learning"
-                );
+                setUssdStep("learning");
 
                 setUssdInput("");
 
-                setPage(
-                  "ussd"
-                );
-
+                setPage("ussd");
               }}
             >
               {t.useUSSD}
             </button>
-
           </div>
-
         </>
-
       )}
-
 
       {/* ==================================================
           LESSONS
           ================================================== */}
 
       {LESSONS[page] && (
-
         <LessonView
-          lesson={
-            LESSONS[page]
-          }
-          language={
-            language
-          }
-          onBack={() =>
-            setPage(
-              "learn"
-            )
-          }
+          lesson={LESSONS[page]}
+          language={language}
+          onBack={() => setPage("learn")}
         />
-
       )}
-
 
       {/* ==================================================
           USSD
           ================================================== */}
 
       {page === "ussd" && (
-
         <UssdView
-          ussdStep={
-            ussdStep
-          }
-          setUssdStep={
-            setUssdStep
-          }
-          ussdInput={
-            ussdInput
-          }
-          setUssdInput={
-            setUssdInput
-          }
-          ussdMode={
-            ussdMode
-          }
-          scamResult={
-            scamResult
-          }
-          onCheckMessage={
-            handleUSSDCheck
-          }
-          onNavigate={
-            setPage
-          }
-          language={
-            language
-          }
+          ussdStep={ussdStep}
+          setUssdStep={setUssdStep}
+          ussdInput={ussdInput}
+          setUssdInput={setUssdInput}
+          ussdMode={ussdMode}
+          scamResult={scamResult}
+          onCheckMessage={handleUSSDCheck}
+          onNavigate={setPage}
+          language={language}
         />
-
       )}
-
 
       {/* ==================================================
           AI ASSISTANT
           ================================================== */}
 
       {page === "assistant" && (
-
         <>
+          <LanguageSelector language={language} setLanguage={setLanguage} />
 
-          <LanguageSelector
-            language={
-              language
-            }
-            setLanguage={
-              setLanguage
-            }
-          />
-
-          <button
-            className="back-button"
-            onClick={() =>
-              setPage("home")
-            }
-          >
+          <button className="back-button" onClick={() => setPage("home")}>
             {t.back}
           </button>
 
-          <h1>
-            🤖 {t.digitalAssistant}
-          </h1>
+          <h1>🤖 {t.digitalAssistant}</h1>
 
-          <p>
-            {t.assistantSubtitle}
-          </p>
+          <p>{t.assistantSubtitle}</p>
 
           <div
             style={{
-              marginTop:
-                "20px",
-              display:
-                "flex",
-              justifyContent:
-                "center"
+              marginTop: "20px",
+              display: "flex",
+              justifyContent: "center",
             }}
           >
-
             <ChatAssistant
-              initialPrompt={
-                initialPrompt
-              }
-              isEmbedded={
-                true
-              }
-              language={
-                language
-              }
+              initialPrompt={initialPrompt}
+              isEmbedded={true}
+              language={language}
             />
-
           </div>
-
         </>
-
       )}
-
 
       {/* ==================================================
           FLOATING AI ASSISTANT
           ================================================== */}
 
-      {page !==
-        "assistant" && (
-
-        <ChatAssistant
-          language={
-            language
-          }
-        />
-
-      )}
-
+      {page !== "assistant" && <ChatAssistant language={language} />}
     </div>
   );
 }
